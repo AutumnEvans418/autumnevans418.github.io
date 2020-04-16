@@ -4,7 +4,7 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 _site/
-
+.jekyll-cache/
 # User-specific files
 *.rsuser
 *.suo
