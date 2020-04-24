@@ -40,3 +40,6 @@ games:
     downloadUrl: https://play.google.com/store/apps/details?id=com.evanssoftware.dotdodge
   - name: Pong4
   - name: 2048AI
+
+exclude:
+  - "site_mockup.xd"
