@@ -6,6 +6,7 @@
 body {
     margin: 60px auto;
     width: 70%;
+    background-color: #333;
     font-family: 'Cascadia Code';
 }
 nav ul, footer ul {
