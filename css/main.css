@@ -2,11 +2,15 @@
     font-family: "Cascadia Code";
     src: url("../fonts/Cascadia.ttf") format('truetype')
 }
+:root
+{
+    --whiteText: #d8d8d8;
+}
 
 body {
     margin: 60px auto;
     width: 70%;
-    background-color: #333;
+    background-color: black;
     font-family: 'Cascadia Code';
 }
 nav ul, footer ul {
@@ -30,12 +34,13 @@ a:hover {
 h1 {
     font-size: 3em;
     font-family: 'Cascadia Code';
+    color: var(--whiteText);
 }
 p {
     font-family: 'Cascadia Code';
     font-size: 1.5em;
     line-height: 1.4em;
-    color: #333;
+    color: var(--whiteText);
 }
 footer {
     border-top: 1px solid #d5d5d5;
