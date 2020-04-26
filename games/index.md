@@ -2,7 +2,7 @@
 layout: default
 title: Games
 ---
-{% for game in site.games %}
+{% for game in site.data.games %}
 {% if game.logo %}
 <img src="{{game.logo}}" alt="logo" width="200"/>
 {% endif %}
