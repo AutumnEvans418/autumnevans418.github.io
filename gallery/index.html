@@ -1,0 +1,13 @@
+---
+layout: content
+title: Gallery
+---
+<div class="row">
+    {% for image in site.data.gallery %}
+        <div class="col">
+            <img src="{{image.image}}" alt="logo">
+            {{image.caption}}  
+        </div>
+    {% endfor %}
+</div>
+
