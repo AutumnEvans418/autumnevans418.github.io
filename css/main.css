@@ -11,10 +11,12 @@
     --blackBackground: #302f2f;
 }
 
-button {
+a.button {
     background-color: var(--blackBackground);
-    border-color: var(--orangeText);
-    border: 1pt;
+    border: solid 1pt var(--orangeText);
+    color: var(--tanText);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .grayCard {
@@ -47,7 +49,7 @@ a {
     color: var(--tanText);
 }
 a:hover {
-    text-decoration: underline;
+    background-color: var(--orangeText);
 }
 h1 {
     font-size: 48pt;

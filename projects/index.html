@@ -1,0 +1,7 @@
+---
+layout: default
+title: Projects
+---
+{% for project in site.data.projects limit:3 %}
+    {{project.name}}
+{% endfor %}

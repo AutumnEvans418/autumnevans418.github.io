@@ -6,4 +6,11 @@ title: Chris Evans
 	<h1>Hi there, I'm Chris Evans!</h1>
 	<p>I'm a software developer. => <a href="/about">Read more about my life...</a></p>
 </div><!-- /.blurb -->
-
+<div>
+	<a class="button">View All</a>
+	<p>
+	{% for project in site.data.projects limit:3 %}
+		{{project.name}}
+	{% endfor %}
+	</p>
+</div>
