@@ -36,3 +36,8 @@
   buttons:
     - title: "Source Code"
       url: "https.example.com"
+- name: This Website!
+  description: "The website you are currently using, built with jekyll and hosted with github pages"
+  buttons:
+    - title: "Source Code"
+      url: "https.example.com"
