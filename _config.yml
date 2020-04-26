@@ -6,12 +6,12 @@ permalink: /blog/:year/:month/:day/:title
 urls:
     - text: Home
       url: /
-    - text: About Me
+    - text: About
       url: /about
+    - text: Projects
+      url: /projects
     - text: Games
       url: /games
-    #- text: Blog
-    #  url: /blog
     - text: Gallery
       url: /gallery
 
@@ -27,6 +27,10 @@ skills:
   - "Xamarin"
   - "WPF"
   - "Unity"
+
+projects:
+  - name: Visual Studio Gradebook
+
 
 games:
   - name: Plagueforce

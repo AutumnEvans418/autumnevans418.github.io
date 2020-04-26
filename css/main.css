@@ -5,16 +5,35 @@
 :root
 {
     --whiteText: #d8d8d8;
+    --tanText: #ffefc8;
+    --grayBackground: #323639;
+    --orangeText: #e29236;
+    --blackBackground: #302f2f;
+}
+
+button {
+    background-color: var(--blackBackground);
+    border-color: var(--orangeText);
+    border: 1pt;
+}
+
+.grayCard {
+    background-color: var(--grayBackground);
 }
 
 body {
     margin: 60px auto;
     width: 70%;
-    background-color: black;
+    background-color: var(--blackBackground);
     font-family: 'Cascadia Code';
+    color: var(--tanText);
 }
+
+.container {
+    border-top: 1pt solid var(--tanText);
+}
+
 nav ul, footer ul {
-    font-family: 'Cascadia Code';
     padding: 0px;
     list-style: none;
     font-weight: bold;
@@ -25,25 +44,37 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: #999;
-    font-family: 'Cascadia Code';
+    color: var(--tanText);
 }
 a:hover {
     text-decoration: underline;
 }
 h1 {
-    font-size: 3em;
+    font-size: 48pt;
     font-family: 'Cascadia Code';
-    color: var(--whiteText);
+    color: var(--tanText);
 }
+
+h2 {
+    font-size: 37pt;
+}
+
+h3 {
+    font-size: 30pt;
+}
+
+h4 {
+    font-size: 23pt;
+}
+
 p {
     font-family: 'Cascadia Code';
     font-size: 1.5em;
     line-height: 1.4em;
-    color: var(--whiteText);
+    color: var(--tanText);
 }
 footer {
-    border-top: 1px solid #d5d5d5;
+    border-top: 1px solid var(--tanText);
     font-size: .8em;
     font-family: 'Cascadia Code';
 }
@@ -56,3 +87,5 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+
