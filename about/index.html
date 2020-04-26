@@ -6,7 +6,7 @@ title: About
     <div class="row">
         <div class="col scard">
             <div class="row">
-                <div class="col-sm-auto">
+                <div class="col">
                     <img src="/assets/NoPath - Copy (4).png">
                 </div>
                 <div class="col">
@@ -50,7 +50,7 @@ title: About
         </div>
     </div>
     <div class="row">
-        <div class="col scard">
+        <div class="col-md-auto scard">
             <h1>Skills</h1>
             {% for type in site.data.profile.skill-types %}
                 <h2>{{type.name}}</h2>
@@ -60,11 +60,11 @@ title: About
             {% endfor %}
             <a class="btn" href="/projects/">See them in Action!</a>
         </div>
-        <div class="col-8 scard">
+        <div class="col-md-auto scard">
             <h1>Profession</h1>
             {% for prof in site.data.profile.professions %}
             <div class="row">
-                <div class="col">
+                <div class="col-sm-auto">
                     <img src="{{prof.logo}}">
                 </div>
                 <div class="col">
@@ -88,11 +88,11 @@ title: About
             {% endfor %}
         </div>
 
-        <div class="col-8 scard">
+        <div class="col scard">
             <h1>Education</h1>
             {% for ed in site.data.profile.educations %}
             <div class="row">
-                <div class="col">
+                <div class="col-sm-auto">
                     <img src="{{ed.logo}}">
                 </div>
                 <div class="col">
@@ -106,8 +106,13 @@ title: About
                     </div>
                     <div class="row">
                         <div class="col">
+                            <h3>{{ed.college}}</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
                             {% for section in ed.sections %}
-                                <h3>{{section.name}}</h3>
+                                <h4>{{section.name}}</h4>
                                 {% for att in section.attributes %}
                                 <p>- {{att}}</p>
                                 {% endfor %}

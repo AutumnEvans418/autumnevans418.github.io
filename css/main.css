@@ -102,26 +102,26 @@ a:hover {
     background-color: var(--orangeText);
 }
 h1 {
-    font-size: 48px;
+    font-size: 24px;
     font-family: 'Cascadia Code';
     color: var(--tanText);
 }
 
 h2 {
-    font-size: 37px;
+    font-size: 19px;
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 15px;
 }
 
 h4 {
-    font-size: 23px;
+    font-size: 12px;
 }
 
 p {
     font-family: 'Cascadia Code';
-    font-size: 23px;
+    font-size: 10px;
     color: var(--tanText);
 }
 footer {
