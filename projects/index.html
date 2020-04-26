@@ -1,7 +1,30 @@
 ---
-layout: default
+layout: content
 title: Projects
 ---
-{% for project in site.data.projects limit:3 %}
-    {{project.name}}
+<h1>Projects</h1>
+{% for project in site.data.projects %}
+<div class="row">
+    <div class="col">
+        <div class="row">
+            {% if project.logo %}
+            <div class="col-auto">
+                <img style="width: 50%;" src="{{project.logo}}">
+            </div>
+            {% endif %}
+            <div class="col">
+                <h2>{{project.name}}</h2>
+                <p>{{project.description}}</p>
+                <div class="row">
+                    {% for btn in project.buttons %}
+                       <div class="col-auto">
+                           <a class="btn" href="{{btn.url}}">{{btn.title}}</a>
+                       </div>
+                    {% endfor %}
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
 {% endfor %}

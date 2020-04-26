@@ -1,4 +1,21 @@
 - name: Visual Studio Gradebook
+  description: "Simplifying grading code in visual studio. No more sending compressed files, downloading, and opening student's code."
+  logo: "/assets/vsgradebook.png"
+  buttons:
+    - title: "Source Code"
+      url: "https.example.com"
+    - title: "VS Marketplace"
+      url: "marketplace"
 - name: entrepreneurchute
+  description: "The latest and greatest technology to connect aspiring entrepreneurs and experienced mentors."
+  logo: "/assets/entrepreneurchute.png"
 - name: How Far?
-- name: Pascal Compiler
+  description: "Compare any object to any other object using any measurement."
+  logo: "/assets/howfar.png"
+- name: Xaml Templates
+  description: "Generate Xamarin forms controls based on a basic template system at build time in Visual Studio."
+- name: Pascal.NET Compiler & IDE
+  description: "A pascal compiler that can translate pascal into .NET."
+- name: Fractal Tree Generator
+  description: "A fractal tree generator built in WPF."
+  logo: "/assets/tree.png"
