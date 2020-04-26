@@ -1,6 +1,18 @@
-skills:
-  - "C#"
-  - "F#"
-  - "Xamarin"
-  - "WPF"
-  - "Unity"
+name: "Chris Evans"
+title: "Software Engineer"
+ 
+skill-types:
+  - name: "Languages"
+    skills:
+      - "C#"
+      - "F#"
+      - "Python"
+      - "JavaScript"
+  - name: "Technologies"
+    skills:
+      - "ASP.NET Core"
+      - "EF Core"
+      - "Xamarin.Forms"
+      - "WPF"
+      - "UWP"
+      - "Unity3D"

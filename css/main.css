@@ -82,6 +82,14 @@ a {
     background-color: var(--grayBackground);
 }
 
+.center {
+    position: absolute;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
 a.link {
     text-decoration: underline;
     color: var(--orangeText);
