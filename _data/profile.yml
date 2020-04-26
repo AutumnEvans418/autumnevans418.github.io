@@ -6,6 +6,7 @@ professions:
     company: "Peerless Products Inc."
     logo: "/assets/peerless.png"
     date: "May 2016-Present"
+    id: peerless
     attributes:
       - "DevOps Supervisor"
       - "Database Administration"
@@ -19,6 +20,7 @@ educations:
     college: "Pittsburg State University"
     logo: "/assets/pittstate.png"
     date: "May 2017-Dec 2019"
+    id: pitt
     sections:
       - name: Awards
         attributes:
@@ -43,6 +45,7 @@ educations:
     college: "Crowder College"
     date: "May 2015-May 2017"
     logo: "/assets/crowder.png"
+    id: crowder
     sections:
       - name: Awards
         attributes:
