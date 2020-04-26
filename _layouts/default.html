@@ -11,7 +11,7 @@
 		</head>
 		<body>
 
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<nav class="navbar navbar-dark navbar-expand-lg">
 				<a class="navbar-brand" href="#">Chris Evans</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				  <span class="navbar-toggler-icon"></span>
@@ -27,27 +27,12 @@
 							<a class="nav-link" href="{{ site.url}}{{site.baseurl}}{{ i.url }}">{{ i.text }}</a>
 						{% endif %}
 					</li>
-				{% endfor %}
+					{% endfor %}
 
 				</div>
 			  </nav>
-
-			<!-- <nav class="navbar navbar-expand-lg navbar-dark">
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav">
-						{% for i in site.urls %}
-							<li class="nav-item">
-								{% if page.url == i.url %}
-									<a class="nav-link" href="{{ site.url}}{{site.baseurl}}{{ i.url }}">=>{{ i.text }}</a>
-								{% else %}
-									<a class="nav-link" href="{{ site.url}}{{site.baseurl}}{{ i.url }}">{{ i.text }}</a>
-								{% endif %}
-							</li>
-						{% endfor %}
-					</ul>
-				</div>
-			</nav> -->
-			<div class="container">
+			  <div class="break"></div>
+			<div class="container-fluid">
 			
 			{{ content }}
 			

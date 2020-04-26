@@ -2,6 +2,7 @@
   description: "Our greatest fears have come to life: the world is out of toilet paper. Fortunately, you have some to spare. Put on the mask, get in the plane, and prepare for a long flight. But beware! Infected bats are all over the skies! Shoot the bats with syringes before they touch you, collect toilet paper on your journey, and deliver as much toilet paper as you can!"
   projectUrl: https://github.com/chrisevans9629/DotDodge
   downloadUrl: https://play.google.com/store/apps/details?id=com.evanssoftware.coronaforce
+  playUrl: https://example.com
   logo: "/assets/plagueforce.png"
 - name: Dot Dodge
   description: "Dodge the dots is a simple arcade shooting game with a twist: You must stay in the air as gravity pulls you downwards and avoid crashing into the dots!"

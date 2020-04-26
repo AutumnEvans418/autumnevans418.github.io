@@ -11,12 +11,35 @@
     --blackBackground: #302f2f;
 }
 
-a.button {
+
+div.break {
+    border-top: solid 1px var(--tanText);
+    margin-bottom: 10px;
+}
+
+div.line-item {
+    margin-bottom: 10px;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color: var(--orangeText);
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--tanText);
+}
+
+.navbar-dark .navbar-brand {
+    color: var(--tanText);
+}
+
+.btn {
     background-color: var(--blackBackground);
     border: solid 1pt var(--orangeText);
     color: var(--tanText);
     padding: 10px;
     border-radius: 5px;
+    margin: 10px;
+    justify-content: center;
 }
 
 .grayCard {
@@ -31,9 +54,7 @@ body {
     color: var(--tanText);
 }
 
-.container {
-    border-top: 1pt solid var(--tanText);
-}
+
 
 nav ul, footer ul {
     padding: 0px;
@@ -48,31 +69,45 @@ a {
     text-decoration: none;
     color: var(--tanText);
 }
+
+.scard {
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--grayBackground);
+}
+
+a.link {
+    text-decoration: underline;
+    color: var(--orangeText);
+}
+a.link:hover {
+    text-decoration: underline;
+    color: var(--tanText);
+}
 a:hover {
     background-color: var(--orangeText);
 }
 h1 {
-    font-size: 48pt;
+    font-size: 48px;
     font-family: 'Cascadia Code';
     color: var(--tanText);
 }
 
 h2 {
-    font-size: 37pt;
+    font-size: 37px;
 }
 
 h3 {
-    font-size: 30pt;
+    font-size: 30px;
 }
 
 h4 {
-    font-size: 23pt;
+    font-size: 23px;
 }
 
 p {
     font-family: 'Cascadia Code';
-    font-size: 1.5em;
-    line-height: 1.4em;
+    font-size: 23px;
     color: var(--tanText);
 }
 footer {

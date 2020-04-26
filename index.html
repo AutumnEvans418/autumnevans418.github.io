@@ -2,15 +2,57 @@
 layout: default
 title: Chris Evans
 ---
-<div class="blurb">
-	<h1>Hi there, I'm Chris Evans!</h1>
-	<p>I'm a software developer. => <a href="/about">Read more about my life...</a></p>
-</div><!-- /.blurb -->
-<div>
-	<a class="button">View All</a>
-	<p>
-	{% for project in site.data.projects limit:3 %}
-		{{project.name}}
-	{% endfor %}
-	</p>
-</div>
+	<div class="row">
+		<div class="col scard">
+			<div class="container-fluid">
+				<div class="row">
+					<h1 class="col">Projects</h1>
+					<a class="btn col-md-auto" href="/projects">View All</a>
+				</div>
+				<div class="row">
+					<div class="break col"></div>
+				</div>
+			</div>
+			{% for project in site.data.projects limit:4 %}
+				<div class="line-item">=> {{ project.name }}</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col scard">
+			<div class="container">
+				<div class="row">
+					<img class="col-md-auto" src="assets/plagueforce.png" style="width: 25%;height: 25%;"  alt="plagueforce" >
+					<p class="col">Play Plagueforce now!  Available for <a class="link">Android</a> or <a class="link">play in your browser!</a></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col scard">
+			<div class="container-fluid">
+				<div class="row">
+					<h1 class="col">Games</h1>
+					<a class="btn col-md-auto" href="/games">View All</a>
+				</div>
+				<div class="row">
+					<div class="break col"></div>
+				</div>
+			</div>
+			{% for game in site.data.games limit:4 %}
+				<div class="line-item container">
+					<div class="row">
+						<div class="col-md-auto">
+							=> {{ game.name }}
+						</div>
+						{% if game.playUrl %}
+						<div class="col">
+							<a class="link" href="{{game.playUrl}}">Play</a>
+						</div>
+						{% endif %}
+					</div>
+					
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
