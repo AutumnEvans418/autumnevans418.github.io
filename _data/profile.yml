@@ -1,6 +1,56 @@
 name: "Chris Evans"
 title: "Software Engineer"
- 
+
+professions:
+  - title: "DevOps Supervisor"
+    company: "Peerless Products Inc."
+    logo: "/assets/peerless.png"
+    date: "May 2016-Present"
+    attributes:
+      - "DevOps Supervisor"
+      - "Database Administration"
+      - "Web Development"
+      - "Mobile Development"
+      - "Desktop Development"
+      - "Security Committee Member"
+
+educations:
+  - title: "Bachelors of Business Administration in Computer Information Systems"
+    college: "Pittsburg State University"
+    logo: "/assets/pittstate.png"
+    date: "May 2017-Dec 2019"
+    sections:
+      - name: Awards
+        attributes:
+          - "4.0 GPA"
+          - "Summa cum Laude"
+          - "Kelce Outstanding Senior"
+          - "Kelce Business Scholar"
+      - name: Membership
+        attributes:
+          - "President of CISSO"
+          - "Beta Alpha Psi Vice President"
+          - "Omicron Delta Kappa Member"
+          - "Phi Kappa Phi Member"
+          - "National Society of Leadership and Success Member"
+          - "Beta Gamma Sigma Member"
+      - name: Other Activities
+        attributes:
+          - "1st place in KC Federal Reserve Code-a-thon 2019"
+          - "Substituted for Introduction to Programming"
+          - "Honors Project Visual Studio Gradebook"
+  - title: "Associate of Arts in General Studies"
+    college: "Crowder College"
+    date: "May 2015-May 2017"
+    logo: "/assets/crowder.png"
+    sections:
+      - name: Awards
+        attributes:
+          - "4.0 GPA"
+          - "Summa Cum Laude"
+      - name: Membership
+        attributes:
+          - "Phi Theta Kappa"
 skill-types:
   - name: "Languages"
     skills:

@@ -60,5 +60,69 @@ title: About
             {% endfor %}
             <a class="btn" href="/projects/">See them in Action!</a>
         </div>
+        <div class="col-8 scard">
+            <h1>Profession</h1>
+            {% for prof in site.data.profile.professions %}
+            <div class="row">
+                <div class="col">
+                    <img src="{{prof.logo}}">
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                           <h2>{{prof.title}}</h2> 
+                        </div>
+                        <div class="col">
+                            <h2>{{prof.date}}</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            {% for att in prof.attributes %}
+                                <p>- {{att}}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="col-8 scard">
+            <h1>Education</h1>
+            {% for ed in site.data.profile.educations %}
+            <div class="row">
+                <div class="col">
+                    <img src="{{ed.logo}}">
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                           <h2>{{ed.title}}</h2> 
+                        </div>
+                        <div class="col">
+                            <h2>{{ed.date}}</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            {% for section in ed.sections %}
+                                <h3>{{section.name}}</h3>
+                                {% for att in section.attributes %}
+                                <p>- {{att}}</p>
+                                {% endfor %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col-6 scard">
+            <h1>Coding Activity</h1>
+            <figure><embed src="https://wakatime.com/share/@chrisevans9629/626b5001-68f5-4fdb-afe2-59cb1e69be24.svg"></embed></figure>
+        </div>
+
+        
     </div>
 </div>
