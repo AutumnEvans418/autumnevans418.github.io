@@ -4,130 +4,129 @@ title: About
 ---
 <div class="container-fluid" style="width: 90%;">
     <div class="row">
-        <div class="col scard">
-            <div class="row">
-                <div class="col">
-                    <img src="/assets/NoPath - Copy (4).png">
+        <div class="col">
+            <div class="col scard">
+                <div class="row">
+                    <div class="col">
+                        <img src="/assets/NoPath - Copy (4).png">
+                    </div>
+                    <div class="col">
+                        <div class="center">
+                            <h1>{{site.data.profile.name}}</h1>
+                            <h2>{{site.data.profile.title}}</h2>
+                            <div class="row">
+                                <div class="col">
+                                    Instagram
+                                </div>
+                                <div class="col">
+                                    Facebook
+                                </div>
+                                <div class="col">
+                                    LinkedIn
+                                </div>
+                                <div class="col">
+                                    Github
+                                </div>
+                                <div class="col">
+                                    Twitter
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
-                <div class="col">
-                    <div class="center">
-                        <h1>{{site.data.profile.name}}</h1>
-                        <h2>{{site.data.profile.title}}</h2>
+            </div>
+            <div class="col-md-auto scard">
+                <h1>Skills</h1>
+                {% for type in site.data.profile.skill-types %}
+                    <h2>{{type.name}}</h2>
+                    {% for skill in type.skills %}
+                        <p>=> {{skill}}</p>
+                    {% endfor %}
+                {% endfor %}
+                <a class="btn" href="/projects/">See them in Action!</a>
+            </div>
+            <div class="col scard">
+                <h1>Coding Activity</h1>
+                <figure><embed src="https://wakatime.com/share/@chrisevans9629/626b5001-68f5-4fdb-afe2-59cb1e69be24.svg"></embed></figure>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col scard">
+                <p>
+                    > I am Chris Evans, and I love building things...<br>
+                    > Welcome to my page, and I hope you'll enjoy your stay...<br>
+                    <br>
+                    What do you think?<br>
+                    1. This is great!<br>
+                    2. This is ok<br>
+                    3. Meh...<br>
+                    <br>
+                    >
+                </p>
+            </div>
+            <div class="col-md-auto scard">
+                <h1>Profession</h1>
+                {% for prof in site.data.profile.professions %}
+                <div class="row">
+                    <div class="col-sm-auto">
+                        <img src="{{prof.logo}}">
+                    </div>
+                    <div class="col">
                         <div class="row">
                             <div class="col">
-                                Instagram
+                               <h2>{{prof.title}}</h2> 
                             </div>
                             <div class="col">
-                                Facebook
+                                <h2>{{prof.date}}</h2>
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="col">
-                                LinkedIn
-                            </div>
-                            <div class="col">
-                                Github
-                            </div>
-                            <div class="col">
-                                Twitter
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="col scard">
-            <p>
-                > I am Chris Evans, and I love building things...<br>
-                > Welcome to my page, and I hope you'll enjoy your stay...<br>
-                <br>
-                What do you think?<br>
-                1. This is great!<br>
-                2. This is ok<br>
-                3. Meh...<br>
-                <br>
-                >
-            </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-auto scard">
-            <h1>Skills</h1>
-            {% for type in site.data.profile.skill-types %}
-                <h2>{{type.name}}</h2>
-                {% for skill in type.skills %}
-                    <p>=> {{skill}}</p>
-                {% endfor %}
-            {% endfor %}
-            <a class="btn" href="/projects/">See them in Action!</a>
-        </div>
-        <div class="col-md-auto scard">
-            <h1>Profession</h1>
-            {% for prof in site.data.profile.professions %}
-            <div class="row">
-                <div class="col-sm-auto">
-                    <img src="{{prof.logo}}">
-                </div>
-                <div class="col">
-                    <div class="row">
-                        <div class="col">
-                           <h2>{{prof.title}}</h2> 
-                        </div>
-                        <div class="col">
-                            <h2>{{prof.date}}</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            {% for att in prof.attributes %}
-                                <p>- {{att}}</p>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-
-        <div class="col scard">
-            <h1>Education</h1>
-            {% for ed in site.data.profile.educations %}
-            <div class="row">
-                <div class="col-sm-auto">
-                    <img src="{{ed.logo}}">
-                </div>
-                <div class="col">
-                    <div class="row">
-                        <div class="col">
-                           <h2>{{ed.title}}</h2> 
-                        </div>
-                        <div class="col">
-                            <h2>{{ed.date}}</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <h3>{{ed.college}}</h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            {% for section in ed.sections %}
-                                <h4>{{section.name}}</h4>
-                                {% for att in section.attributes %}
-                                <p>- {{att}}</p>
+                                {% for att in prof.attributes %}
+                                    <p>- {{att}}</p>
                                 {% endfor %}
-                            {% endfor %}
+                            </div>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
+            <div class="col scard">
+                <h1>Education</h1>
+                {% for ed in site.data.profile.educations %}
+                <div class="row">
+                    <div class="col-sm-auto">
+                        <img src="{{ed.logo}}">
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                               <h2>{{ed.title}}</h2> 
+                            </div>
+                            <div class="col">
+                                <h2>{{ed.date}}</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h3>{{ed.college}}</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                {% for section in ed.sections %}
+                                    <h4>{{section.name}}</h4>
+                                    {% for att in section.attributes %}
+                                    <p>- {{att}}</p>
+                                    {% endfor %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
-        <div class="col-6 scard">
-            <h1>Coding Activity</h1>
-            <figure><embed src="https://wakatime.com/share/@chrisevans9629/626b5001-68f5-4fdb-afe2-59cb1e69be24.svg"></embed></figure>
-        </div>
-
-        
     </div>
 </div>
