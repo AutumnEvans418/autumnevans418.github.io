@@ -138,6 +138,7 @@ footer {
     border-top: 1px solid var(--tanText);
     font-size: .8em;
     font-family: 'Cascadia Code';
+    padding: 5px;
 }
 
 ul.posts { 
