@@ -2,7 +2,7 @@
 layout: default
 title: About
 ---
-<div class="container-fluid" style="width: 90%;">
+<div class="container">
     <div class="row">
         <div class="col">
             <div class="col scard">
@@ -36,7 +36,7 @@ title: About
                     </div>
                 </div>
             </div>
-            <div class="col-md-auto scard">
+            <div class="col-md scard">
                 <h1>Skills</h1>
                 {% for type in site.data.profile.skill-types %}
                     <h2>{{type.name}}</h2>
@@ -65,7 +65,7 @@ title: About
                     >
                 </p>
             </div>
-            <div class="col-md-auto scard">
+            <div class="col-md scard">
                 <h1>Profession</h1>
                 {% for prof in site.data.profile.professions %}
                 <div class="row">
