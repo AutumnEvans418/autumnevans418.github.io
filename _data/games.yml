@@ -7,7 +7,7 @@
     - title: Android
       url: https://play.google.com/store/apps/details?id=com.evanssoftware.coronaforce
     - title: Play
-      url: "https://example.com"
+      url: https://chrisevans9629.itch.io/plagueforce
 - name: Dot Dodge
   description: "Dodge the dots is a simple arcade shooting game with a twist: You must stay in the air as gravity pulls you downwards and avoid crashing into the dots!"
   logo: "/assets/dotdodge.png"
@@ -15,18 +15,18 @@
     - title: "Source Code"
       url: https://github.com/chrisevans9629/DotDodge
     - title: Android
-      url: https://play.google.com/store/apps/details?id=com.evanssoftware.coronaforce
-    - title: Play
-      url: "https://example.com"
+      url: https://play.google.com/store/apps/details?id=com.evanssoftware.dotdodge
+#    - title: Play
+#      url: https://chrisevans9629.itch.io/plagueforce
 - name: QuadroPong
   description: "Four player pong made using monogame"
   logo: "/assets/pong.png"
   buttons:
     - title: "Source Code"
-      url: https://github.com/chrisevans9629/DotDodge
+      url: https://github.com/chrisevans9629/QuadroPong
 - name: Minesweeper
   description: "A crossplatform minesweeper"
   logo: "/assets/minesweeper.png"
   buttons:
     - title: "Source Code"
-      url: https://github.com/chrisevans9629/DotDodge
+      url: https://github.com/chrisevans9629/Minesweeper

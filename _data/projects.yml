@@ -3,41 +3,41 @@
   logo: "/assets/vsgradebook.png"
   buttons:
     - title: "Source Code"
-      url: "https.example.com"
+      url: https://github.com/chrisevans9629/VsGradeBook
     - title: "VS Marketplace"
-      url: "marketplace"
+      url: "https://marketplace.visualstudio.com/items?itemName=EvansSoftware.VsGradeBook"
 - name: entrepreneurchute
   description: "The latest and greatest technology to connect aspiring entrepreneurs and experienced mentors."
   logo: "/assets/entrepreneurchute.png"
   buttons:
     - title: "Source Code"
-      url: "https.example.com"
+      url: https://github.com/chrisevans9629/entrepreneurchute
 - name: How Far?
   description: "Compare any object to any other object using any measurement."
   logo: "/assets/howfar.png"
   buttons:
     - title: "Source Code"
-      url: "https.example.com"
+      url: https://github.com/chrisevans9629/HowFar
     - title: Android
-      url: "https.example.com"
+      url: https://play.google.com/store/apps/details?id=com.pittstate.howfar
 - name: Xaml Templates
   description: "Generate Xamarin forms controls based on a basic template system at build time in Visual Studio."
   buttons:
     - title: "Source Code"
-      url: "https.example.com"
+      url: https://github.com/chrisevans9629/Evans.XamlTemplates
 - name: Pascal.NET Compiler & IDE
   description: "A pascal compiler that can translate pascal into .NET."
   buttons:
     - title: "Source Code"
-      url: "https.example.com"
+      url: https://github.com/chrisevans9629/Compilers
 - name: Fractal Tree Generator
   description: "A fractal tree generator built in WPF."
   logo: "/assets/tree.png"
   buttons:
     - title: "Source Code"
-      url: "https.example.com"
+      url: https://github.com/chrisevans9629/Fractal-Tree-Generator
 - name: This Website!
   description: "The website you are currently using, built with jekyll and hosted with github pages"
   buttons:
     - title: "Source Code"
-      url: "https.example.com"
+      url: https://github.com/chrisevans9629/chrisevans9629.github.io
