@@ -1,6 +1,21 @@
 name: "Chris Evans"
 title: "Software Engineer"
-
+social:
+  - title: Github
+    url: https://github.com/chrisevans9629
+    logo: /assets/github.png
+  - title: Itch
+    url: https://chrisevans9629.itch.io
+    logo: /assets/itch.png
+  - title: LinkedIn
+    url: https://www.linkedin.com/in/chris-evans-3606ab19b/
+    logo: /assets/linkedin.png
+  - title: Facebook
+    url: https://www.facebook.com/chrisevans9629
+    logo: /assets/facebook.png
+  - title: Twitter
+    url: https://twitter.com/ChrisAlexEvans
+    logo: /assets/twitter.png
 professions:
   - title: "DevOps Supervisor"
     company: "Peerless Products Inc."
