@@ -7,6 +7,7 @@
     --whiteText: #d8d8d8;
     --tanText: #ffefc8;
     --grayBackground: #323639;
+    --grayBackgroundTran: rgba(50, 54, 57, 0.691);
     --orangeText: #e29236;
     --blackBackground: #302f2f;
 }
@@ -42,11 +43,16 @@ div.line-item {
     justify-content: center;
 }
 
+
+.card {
+    border-width: 0px;
+}
+
 .grayCard {
     background-color: var(--grayBackground);
 }
+
 .bgImgCenter{
-    background-image: url('/assets/Group\ 271.png');
     background-repeat: no-repeat;
     background-position: center; 
     position: relative;
@@ -80,6 +86,10 @@ a {
     margin: 10px;
     padding: 10px;
     background-color: var(--grayBackground);
+}
+
+.scard.trans {
+    background-color: var(--grayBackgroundTran);
 }
 
 .center {

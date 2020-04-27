@@ -2,12 +2,20 @@
 layout: content
 title: Gallery
 ---
-<div class="row">
+<h1>Gallery</h1>
+<h2>See what I have been doing</h2>
+<div class="card-columns">
     {% for image in site.data.gallery %}
-        <div class="col">
-            <img src="{{image.image}}" alt="logo">
-            {{image.caption}}  
-        </div>
+       
+            <div class="card">
+                <img class="card-img-top" src="{{image.image}}" alt="Card image">
+                <div class="card-img-overlay d-flex align-items-end" style="padding: 0px;">
+                    <div class="scard trans d-flex flex-fill" style="margin: 0px;">
+                        <h2>{{image.caption}}</h2>
+                    </div>
+                </div>
+              </div>
+        
     {% endfor %}
 </div>
 

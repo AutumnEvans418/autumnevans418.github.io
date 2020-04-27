@@ -1,4 +1,10 @@
+- image: /assets/kcfed.png
+  caption: 1st place in the KC Federal Reserve code-a-thon!
 - image: /assets/devconnect.png
-  caption: Presenting at Dev Connect
+  caption: Presenting at DevSquared Dev Connect
 - image: /assets/golf.png
   caption: Good 'ol code golf
+- image: /assets/james.png
+  caption: Meeting James at Xamarin Developer Summit
+- image: /assets/escape.png
+  caption: Xamarin Escape Room at Xamarin Developer Summit
