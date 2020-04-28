@@ -1,0 +1,28 @@
+<div class="col scard">
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="col">{{include.title}}</h1>
+            <a class="btn col-md-auto" href="{{include.url}}">View All</a>
+        </div>
+        <div class="row">
+            <div class="break col"></div>
+        </div>
+    </div>
+    {% for item in include.items limit:4 %}
+        <div class="line-item container">
+            <div class="row">
+                <div class="col d-flex align-items-center">
+                    => {{ item.name }}
+                </div>
+                {% for i in (0..1) %}
+                <div class="col d-flex align-items-center">
+                    {% if item.buttons[i] %}
+                    <a class="link" href="{{item.buttons[i].url}}">{{item.buttons[i].title}}</a>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            
+        </div>
+    {% endfor %}
+</div>

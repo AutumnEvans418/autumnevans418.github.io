@@ -13,20 +13,7 @@ title: Chris Evans
 </div>
 <div class="container">
 	<div class="row">
-		<div class="col scard">
-			<div class="container-fluid">
-				<div class="row">
-					<h1 class="col">Projects</h1>
-					<a class="btn col-md-auto" href="/projects">View All</a>
-				</div>
-				<div class="row">
-					<div class="break col"></div>
-				</div>
-			</div>
-			{% for project in site.data.projects limit:4 %}
-				<div class="line-item">=> {{ project.name }}</div>
-			{% endfor %}
-		</div>
+		{% include list.html title='Projects' url='/projects' items=site.data.projects %}
 	</div>
 	<div class="row">
 		<div class="col-md scard">
@@ -39,33 +26,8 @@ title: Chris Evans
 				</div>
 			</div>
 		</div>
-	
-		<div class="col scard">
-			<div class="container-fluid">
-				<div class="row">
-					<h1 class="col">Games</h1>
-					<a class="btn col-md-auto" href="/games">View All</a>
-				</div>
-				<div class="row">
-					<div class="break col"></div>
-				</div>
-			</div>
-			{% for game in site.data.games limit:4 %}
-				<div class="line-item container">
-					<div class="row">
-						<div class="col-md-auto">
-							=> {{ game.name }}
-						</div>
-						{% if game.playUrl %}
-						<div class="col">
-							<a class="link" href="{{game.playUrl}}">Play</a>
-						</div>
-						{% endif %}
-					</div>
-					
-				</div>
-			{% endfor %}
-		</div>
+	    {% include list.html title='Games' url='/games' items=site.data.games %}
+		
 	</div>
 </div>
 
