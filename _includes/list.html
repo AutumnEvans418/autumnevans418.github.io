@@ -1,28 +1,30 @@
 <div class="col scard">
     <div class="container-fluid">
         <div class="row">
-            <h1 class="col">{{include.title}}</h1>
-            <a class="btn col-md-auto" href="{{include.url}}">View All</a>
+            <h1 class="col d-flex align-items-center">{{include.title}}</h1>
+            <a class="btn col-md-auto d-flex align-items-center" href="{{include.url}}">View All</a>
         </div>
         <div class="row">
             <div class="break col"></div>
         </div>
-    </div>
-    {% for item in include.items limit:4 %}
-        <div class="line-item container">
-            <div class="row">
-                <div class="col d-flex align-items-center">
-                    => {{ item.name }}
-                </div>
-                {% for i in (0..1) %}
-                <div class="col d-flex align-items-center">
-                    {% if item.buttons[i] %}
-                    <a class="link" href="{{item.buttons[i].url}}">{{item.buttons[i].title}}</a>
-                    {% endif %}
-                </div>
-                {% endfor %}
+        <div class="row">
+                    {% for item in include.items limit:4 %}
+                    {% assign urlt=item.buttons[0].url %}
+            <div class="col-auto">
+                    <div class="card" style="width: 10rem;margin: 0.5rem;">
+                        <img class="card-img-top" src="{% if item.logo %}{{item.logo}}{% else %}/assets/empty.png{% endif %}" alt="{{item.name}}">
+                        <div class="card-img-overlay d-flex align-items-end" style="padding: 0px;">
+                            <div class="scard trans d-flex flex-fill" style="margin: 0px;">
+                                <h2 ><a class="stretched-link" href="{{urlt}}">{{item.name}}</a></h2>
+                            </div>
+                        </div>
+                    </div>
             </div>
-            
+            {% endfor %}
+
         </div>
-    {% endfor %}
+    </div>
+        
+  
+
 </div>

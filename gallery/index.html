@@ -7,14 +7,7 @@ title: Gallery
 <div class="card-columns">
     {% for image in site.data.gallery %}
        
-            <div class="card">
-                <img class="card-img-top" src="{{image.image}}" alt="Card image">
-                <div class="card-img-overlay d-flex align-items-end" style="padding: 0px;">
-                    <div class="scard trans d-flex flex-fill" style="margin: 0px;">
-                        <h2>{{image.caption}}</h2>
-                    </div>
-                </div>
-              </div>
+        {% include imageCard.html image=image.image caption=image.caption %}
         
     {% endfor %}
 </div>
