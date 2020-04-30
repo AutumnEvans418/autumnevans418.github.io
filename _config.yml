@@ -15,13 +15,5 @@ urls:
   - text: Gallery
     url: /gallery/
 
-images:
-  - image: ".png"
-    caption: "test2"
-  - image: ".png"
-    caption: "test"
-
-
-
 exclude:
   - "site_mockup.xd"

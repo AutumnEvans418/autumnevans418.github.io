@@ -30,6 +30,11 @@ title: Chris Evans
 	    {% include list.html title='Games' url='/games' items=site.data.games %}
 		
 	</div>
+	<div class="row">
+
+		{% assign test = site.posts %}
+		{% include list.html title='Posts' url='/blog' items=site.posts %}
+	</div>
 </div>
 
 <script src="/index.js"></script>
