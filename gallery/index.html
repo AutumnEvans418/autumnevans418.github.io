@@ -3,8 +3,8 @@ layout: content
 title: Gallery
 ---
 <h1>Gallery</h1>
-<h2>See what I have been doing</h2>
-<div class="card-columns">
+<p>See what I have been doing</p>
+<div class="card-columns x">
     {% for image in site.data.gallery %}
        
         {% include imageCard.html image=image.image caption=image.caption %}

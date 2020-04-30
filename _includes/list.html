@@ -1,7 +1,7 @@
 <div class="col scard">
     <div class="container">
         <div class="row">
-            <h1 class="col d-flex align-items-center">{{include.title}}</h1>
+            <h2 class="col d-flex align-items-center">{{include.title}}</h2>
             <a class="btn col-md-auto d-flex align-items-center" href="{{include.url}}">View All</a>
         </div>
         <div class="row">
@@ -16,9 +16,9 @@
                         <div class="card-img-overlay d-flex align-items-end" style="padding: 0px;">
                             <div class="scard trans flex-fill" style="margin: 0px;width: 13rem;">
                                 <div class="wrap">
-                                    <h2>
+                                    <h3>
                                         <a class="stretched-link" href="{% if urlt %}{{urlt}}{% else %}{{item.url}}{% endif %}">{{item.name}}</a>
-                                    </h2>
+                                    </h3>
                                 </div>
                                 
                             </div>

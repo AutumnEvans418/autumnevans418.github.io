@@ -5,15 +5,15 @@ title: About
 <div class="container">
     <div class="row">
         <div class="col">
-            <div class="col scard">
+            <div class="col scard p-3">
                 <div class="row">
                     <div class="col-sm-auto">
                         <img style="width: 200px;" src="/assets/NoPath - Copy (4).png">
                     </div>
                     <div class="col">
                         <div>
-                            <h1>{{site.data.profile.name}}</h1>
-                            <h2>{{site.data.profile.title}}</h2>
+                            <h2>{{site.data.profile.name}}</h2>
+                            <h3>{{site.data.profile.title}}</h3>
                             <div class="row">
                                 {% for soc in site.data.profile.social %}
                                     <div class="col">
@@ -27,9 +27,9 @@ title: About
                 </div>
             </div>
             <div class="col-md scard">
-                <h1>Skills</h1>
+                <h3>Skills</h3>
                 {% for type in site.data.profile.skill-types %}
-                    <h2>{{type.name}}</h2>
+                    <h4>{{type.name}}</h4>
                     {% for skill in type.skills %}
                         <p>=> {{skill}}</p>
                     {% endfor %}
@@ -56,7 +56,7 @@ title: About
                 </p>
             </div>
             <div class="col-md scard">
-                <h1>Profession</h1>
+                <h3>Profession</h3>
                 {% for prof in site.data.profile.professions %}
                 <div class="row">
                     <div class="col-sm-auto">
@@ -65,15 +65,15 @@ title: About
                     <div class="col">
                         <div class="row">
                             <div class="col">
-                               <h2>{{prof.title}}</h2> 
+                               <h4>{{prof.title}}</h4> 
                             </div>
                             <div class="col">
-                                <h2 class="special">{{prof.date}}</h2>
+                                <h4 class="special">{{prof.date}}</h4>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <h3>{{prof.company}}</h3>
+                                <p>{{prof.company}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -94,7 +94,7 @@ title: About
                 {% endfor %}
             </div>
             <div class="col scard">
-                <h1>Education</h1>
+                <h3>Education</h3>
                 {% for ed in site.data.profile.educations %}
                 <div class="row">
                     <div class="col-sm-auto">
@@ -103,15 +103,15 @@ title: About
                     <div class="col">
                         <div class="row">
                             <div class="col">
-                               <h2>{{ed.title}}</h2> 
+                               <h4>{{ed.title}}</h4> 
                             </div>
                             <div class="col">
-                                <h2 class="special">{{ed.date}}</h2>
+                                <h4 class="special">{{ed.date}}</h4>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <h3>{{ed.college}}</h3>
+                                <p>{{ed.college}}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -121,7 +121,7 @@ title: About
                                  </a>
                                    <div class="collapse" id="{{ed.id}}">
                                     {% for section in ed.sections %}
-                                        <h4>{{section.name}}</h4>
+                                        <h4 class="special">{{section.name}}</h4>
                                         {% for att in section.attributes %}
                                         <p>- {{att}}</p>
                                         {% endfor %}

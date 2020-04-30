@@ -3,9 +3,9 @@
     <div class="card-img-overlay d-flex align-items-end" style="padding: 0px;">
     <div class="scard trans d-flex flex-fill" style="margin: 0px;">
             {% if include.url %}
-                <h2><a href="{{include.url}}">{{include.caption}}</a></h2>
+                <p><a href="{{include.url}}">{{include.caption}}</a></p>
             {% else %}
-                <h2>{{include.caption}}</h2>
+                <p>{{include.caption}}</p>
             {% endif %}
         </div>
     </div>
