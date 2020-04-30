@@ -6,29 +6,9 @@
 2. Run ```bundle install```
 3. Run ```start.cmd```
 
+## Resources
 
+https://mikaberglund.com/2019/12/29/hosting-blazor-applications-on-github-pages/
 
-- 2.Create your feature branch
-`git checkout -b my-new-feature`
-
-- 3.Commit your changes
-`git commit -am 'Add some feature'`
-
-- 4.Push to the branch
-`git push origin my-new-feature`
-
-- 5.Create new Pull Request
-
-
-**asdf**
-
-- asdf
-- asdf
-- asdf
-
-# Test
-
-## Test
-
-### Test
+https://github.com/sujaykundu777/devlopr-jekyll
 
