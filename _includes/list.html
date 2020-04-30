@@ -11,13 +11,13 @@
                     {% for item in include.items limit:4 %}
                     {% assign urlt=item.buttons[0].url %}
             <div class="col d-flex justify-content-center">
-                    <div class="card" style="width: 13rem;margin: 0.5rem;">
+                    <div class="card" style="width: 13rem;margin: 0.5rem;background-color: var(--blackBackground);">
                         <img class="card-img-top" src="{% if item.logo %}{{item.logo}}{% else %}/assets/empty.png{% endif %}" alt="{{item.name}}">
                         <div class="card-img-overlay d-flex align-items-end" style="padding: 0px;">
                             <div class="scard trans flex-fill" style="margin: 0px;width: 13rem;">
                                 <div class="wrap">
                                     <h2>
-                                        <a class="stretched-link" href="{{urlt}}">{{item.name}}</a>
+                                        <a class="stretched-link" href="{% if urlt %}{{urlt}}{% else %}{{item.url}}{% endif %}">{{item.name}}</a>
                                     </h2>
                                 </div>
                                 

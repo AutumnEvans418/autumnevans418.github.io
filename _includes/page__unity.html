@@ -1,17 +1,41 @@
 <script src="{{ site.baseurl }}/assets/unity/{{page.unity_dir}}/TemplateData/UnityProgress.js"></script>  
 <script src="{{ site.baseurl }}/assets/unity/{{page.unity_dir}}/Build/UnityLoader.js"></script>
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/unity/{{page.unity_dir}}/TemplateData/style.css">
+<link rel="stylesheet" href="/css/main.css">
+
 <link rel="stylesheet" href="/css/page__unity.css">
-<script>
-  var unityInstance = UnityLoader.instantiate("unityContainer", "{{ site.baseurl}}/assets/unity/{{page.unity_dir}}/Build/PlagueforceWeb.json",{onProgress: UnityProgress});  
-</script>
-    <div class="webgl-content">
-        <div id="unityContainer" style="width: 960px; height: 600px"></div>
-        <div class="footer">
-          <div class="webgl-logo"></div>
-          <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-          <div class="title">{{page.title}}</div>
-        </div>
+
+
+<div class="webgl-content">
+    <div id="gameContainer"></div>
+    
+    <div id="loader">
+        <div class="spinner"></div>
+        <div class="progress"><div class="full"></div></div>
       </div>
+  </div>
+
+
+<script>
+  var unityInstance = UnityLoader.instantiate("gameContainer", "{{ site.baseurl}}/assets/unity/{{page.unity_dir}}/Build/PlagueforceWeb.json",{onProgress: UnityProgress});  
+  function UnityProgress(gameInstance, progress) {
+    if (!gameInstance.Module) {
+      return;
+    }
+    const loader = document.querySelector("#loader");
+    if (!gameInstance.progress) {
+      const progress = document.querySelector("#loader .progress");
+      progress.style.display = "block";
+      gameInstance.progress = progress.querySelector(".full");
+      loader.querySelector(".spinner").style.display = "none";
+    }
+    gameInstance.progress.style.transform = `scaleX(${progress})`;
+    if (progress === 1 && !gameInstance.removeTimeout) {
+      gameInstance.removeTimeout = setTimeout(function() {
+          loader.style.display = "none";
+      }, 2000);
+    }
+  }
+</script>
+ 
 
 
