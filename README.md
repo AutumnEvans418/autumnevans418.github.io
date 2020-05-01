@@ -25,3 +25,20 @@ https://docs.microsoft.com/en-us/aspnet/core/blazor/call-javascript-from-dotnet?
 - Add include in the _config.yml include: ["_framework","_bin"]
 - **Remove the unicode X from the index.html file.  Jekyll doesn't like that**
 
+Here is an example index.html file:
+All that is needed is the _framework folder.  Bootstrap is already used on the site and is inherited.  The baseurl is not needed in my case because there is no navigation
+```html
+---
+layout: default
+title: Xaml Templates
+---
+
+<link rel="stylesheet" href="highlight/styles/default.css">
+<script src="highlight/highlight.pack.js"></script>
+<script src="js/index.js"></script>
+<app>Loading...</app>
+
+<script src="_framework/blazor.webassembly.js"></script>
+
+
+```
