@@ -12,3 +12,10 @@ https://mikaberglund.com/2019/12/29/hosting-blazor-applications-on-github-pages/
 
 https://github.com/sujaykundu777/devlopr-jekyll
 
+https://github.com/jekyll/jekyll/issues/1352
+
+https://highlightjs.org/
+
+https://codemirror.net/
+
+https://docs.microsoft.com/en-us/aspnet/core/blazor/call-javascript-from-dotnet?view=aspnetcore-3.1
