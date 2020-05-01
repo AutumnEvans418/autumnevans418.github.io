@@ -24,3 +24,6 @@ include:
 
 exclude:
   - "site_mockup.xd"
+  - "README.md"
+  - ".vs"
+  - "start.cmd"

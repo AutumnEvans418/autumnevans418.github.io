@@ -19,3 +19,9 @@ https://highlightjs.org/
 https://codemirror.net/
 
 https://docs.microsoft.com/en-us/aspnet/core/blazor/call-javascript-from-dotnet?view=aspnetcore-3.1
+
+# Embedding Blazor into Jekyll
+
+- Add include in the _config.yml include: ["_framework","_bin"]
+- **Remove the unicode X from the index.html file.  Jekyll doesn't like that**
+
