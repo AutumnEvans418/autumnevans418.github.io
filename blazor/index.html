@@ -1,0 +1,12 @@
+---
+layout: content
+title: Blazor Projects
+---
+
+<h1>Blazor Projects</h1>
+<div class="break"></div>
+<div class="card-columns">
+    {% for r in site.data.blazor %}
+    {% include imageCard.html url=r.url caption=r.name %}
+    {% endfor %}
+</div>

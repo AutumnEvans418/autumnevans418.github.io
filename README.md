@@ -39,6 +39,6 @@ title: Xaml Templates
 <app>Loading...</app>
 
 <script src="_framework/blazor.webassembly.js"></script>
-
-
 ```
+
+https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/?view=aspnetcore-3.1&tabs=visual-studio#app-base-paths
