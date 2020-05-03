@@ -12,14 +12,14 @@
   buttons:
     - title: "Source Code"
       url: https://github.com/chrisevans9629/entrepreneurchute
-- name: How Far?
-  description: "Compare any object to any other object using any measurement."
-  logo: "/assets/howfar.png"
-  buttons:
-    - title: "Source Code"
-      url: https://github.com/chrisevans9629/HowFar
-    - title: Android
-      url: https://play.google.com/store/apps/details?id=com.pittstate.howfar
+#- name: How Far?
+#  description: "Compare any object to any other object using any measurement."
+#  logo: "/assets/howfar.png"
+#  buttons:
+#    - title: "Source Code"
+#      url: https://github.com/chrisevans9629/HowFar
+#    - title: Android
+#      url: https://play.google.com/store/apps/details?id=com.pittstate.howfar
 - name: Xaml Templates
   description: "Generate Xamarin forms controls based on a basic template system at build time in Visual Studio."
   buttons:
