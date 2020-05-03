@@ -4,7 +4,6 @@ category: project
 description: Simplifying grading code in visual studio
 logo: "/assets/vsgradebook.png"
 layout: post
-date: 2019-11-23
 buttons:
   - title: "Source Code"
     url: https://github.com/chrisevans9629/VsGradeBook
