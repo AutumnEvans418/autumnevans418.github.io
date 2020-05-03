@@ -1,2 +1,8 @@
 - name: Xaml Templates
   url: /blazor/xt/
+  date: 2020-05-02
+  description: "Generate Xamarin forms controls based on a basic template system at build time in Visual Studio."
+  category: project
+  buttons:
+    - title: "Source Code"
+      url: https://github.com/chrisevans9629/Evans.XamlTemplates
