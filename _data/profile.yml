@@ -22,6 +22,9 @@ social:
   - title: StackOverflow
     url: https://stackoverflow.com/users/6895913/cevans
     logo: /assets/stackoverflow.png
+  - title: Quora
+    url: https://www.quora.com/profile/Chris-Alexander-Evans
+    logo: /assets/quora.png
 professions:
   - title: "DevOps Supervisor"
     company: "Peerless Products Inc."
