@@ -4,13 +4,19 @@ title: Chris Evans' Blog
 ---
 <h1>{{ page.title }}</h1>
     {% for post in site.posts %}
-    <div class="scard wrap">
-        <div class="row">
-            <div class="col d-flex justify-content-center">
-               <a href="{{ post.url }}" title="{{ post.title }}"><img style="max-width: 300px;" src="{{post.logo}}"></a> 
-            </div>
+<div class="scard wrap">
+    {% if post.logo %}
+    <div class="row">
+        <div class="col d-flex justify-content-left">
+            <a href="{{ post.url }}" title="{{ post.title }}"><img style="max-width: 300px;" src="{{post.logo}}"></a>
         </div>
-        <h3 class="m-2">{{ post.date | date_to_string }}</h3>
-        <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
     </div>
+    {% endif %}
+    <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
+    <h3 class="m-2">{{ post.date | date_to_string }}</h3>
+    <h4 class="m-2">{{post.description}}</h4>
+    <div class="break"></div>
+    <p>{{post.excerpt}}</p>
+    <a href="{{post.url}}">Read More...</a>
+</div>
     {% endfor %}

@@ -5,7 +5,7 @@ unity_dir: plagueforce
 layout: game
 logo: /assets/plagueforce.png
 category: game
-description: "Our greatest fears have come to life: the world is out of toilet paper. Fortunately, you have some to spare. Put on the mask, get in the plane, and prepare for a long flight. But beware! Infected bats are all over the skies! Shoot the bats with syringes before they touch you, collect toilet paper on your journey, and deliver as much toilet paper as you can!"
+description: The world is out of toilet paper. Fortunately, you have some to spare.
 buttons:
   - title: "Source Code"
     url: https://github.com/chrisevans9629/DotDodge
@@ -14,9 +14,10 @@ buttons:
   - title: Play
     url: https://chrisevans9629.itch.io/plagueforce
 ---
-# Plagueforce!
+Since I am spending a lot more time at home these days, I decided to take the time to learn some unity3d.  This is my first full game with unity.  You can play here on this site and see how I made plagueforce.
 
-This is my first full game.  Hope you enjoy :)
+## Plot
+Our greatest fears have come to life: the world is out of toilet paper. Fortunately, you have some to spare. Put on the mask, get in the plane, and prepare for a long flight. But beware! Infected bats are all over the skies! Shoot the bats with syringes before they touch you, collect toilet paper on your journey, and deliver as much toilet paper as you can!
 
 ## Inpsiration 
 
