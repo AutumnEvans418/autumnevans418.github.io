@@ -3,9 +3,17 @@ title: Plagueforce
 date: 2020-04-29
 unity_dir: plagueforce
 layout: game
-name: Plagueforce Launched!
 logo: /assets/plagueforce.png
 category: game
+name: Plagueforce
+description: "Our greatest fears have come to life: the world is out of toilet paper. Fortunately, you have some to spare. Put on the mask, get in the plane, and prepare for a long flight. But beware! Infected bats are all over the skies! Shoot the bats with syringes before they touch you, collect toilet paper on your journey, and deliver as much toilet paper as you can!"
+buttons:
+  - title: "Source Code"
+    url: https://github.com/chrisevans9629/DotDodge
+  - title: Android
+    url: https://play.google.com/store/apps/details?id=com.evanssoftware.coronaforce
+  - title: Play
+    url: https://chrisevans9629.itch.io/plagueforce
 ---
 # Plagueforce!
 

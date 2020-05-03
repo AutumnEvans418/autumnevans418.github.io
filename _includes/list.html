@@ -15,12 +15,14 @@
                         <img class="card-img-top" src="{% if item.logo %}{{item.logo}}{% else %}/assets/empty.png{% endif %}" alt="{{item.name}}">
                         <div class="card-img-overlay d-flex align-items-end" style="padding: 0px;">
                             <div class="scard trans flex-fill" style="margin: 0px;width: 13rem;">
+                                <p class="meta">{{ include.date | date_to_string }}</p>
+
                                 <div class="wrap">
                                     <h3>
                                         <a class="stretched-link" href="{% if urlt %}{{urlt}}{% else %}{{item.url}}{% endif %}">{{item.name}}</a>
                                     </h3>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>

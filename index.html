@@ -14,27 +14,39 @@ title: Chris Evans
 </div>
 <div class="container">
 	<div class="row">
-		{% include list.html title='Projects' url='/projects' items=site.data.projects %}
+		{% for category in site.categories %}
+
+			{% if category[0] == "project" %}
+				{% assign projects = category[1] %}
+				{% include list.html title='Projects' url='/projects' items=projects %}
+			{% endif %}
+		{% endfor %}
 	</div>
 	<div class="row">
 		<div class="col-md scard d-flex align-items-center" style="text-align: center;">
 			<div class="row">
 				<div class="col-auto" style="padding-bottom: 5%;padding-right: 30%;padding-left: 30%;">
-					<img class="img-fluid" src="assets/plagueforce.png" alt="plagueforce" >
+					<img class="img-fluid" src="assets/plagueforce.png" alt="plagueforce">
 				</div>
 				<div class="col">
 					<h2>Play Plagueforce now!  Available for <a class="link" href="https://play.google.com/store/apps/details?id=com.evanssoftware.coronaforce">Android</a> or <a class="link" href="https://chrisevans9629.itch.io/plagueforce">play in your browser!</a></h2>
 				</div>
 			</div>
 		</div>
-	    {% include list.html title='Games' url='/games' items=site.data.games %}
-		
-	</div>
-	<div class="row">
 
-		{% assign test = site.posts %}
-		{% include list.html title='Posts' url='/blog' items=site.posts %}
+
+		{% for category in site.categories %}
+
+			{% if category[0] == "game" %}
+				{% assign games = category[1] %}
+				{% include list.html title='Games' url='/games' items=games %}
+
+			{% endif %}
+		{% endfor %}
+
+
 	</div>
+	
 </div>
 
 <script src="/index.js"></script>

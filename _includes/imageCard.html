@@ -1,12 +1,15 @@
 <div class="card" >
     <img class="card-img-top" src="{% if include.image %}{{include.image}}{% else %}/assets/empty.png{% endif %}" alt="{{include.caption}}">
     <div class="card-img-overlay d-flex align-items-end" style="padding: 0px;">
-    <div class="scard trans d-flex flex-fill" style="margin: 0px;">
+        <div class="scard trans d-flex flex-fill" style="margin: 0px;">
+            <p class="meta">{{ include.date | date_to_string }}</p>
+
             {% if include.url %}
-                <p><a href="{{include.url}}">{{include.caption}}</a></p>
+            <p><a href="{{include.url}}">{{include.caption}}</a></p>
             {% else %}
-                <p>{{include.caption}}</p>
+            <p>{{include.caption}}</p>
             {% endif %}
+
         </div>
     </div>
 </div>

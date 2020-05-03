@@ -3,9 +3,22 @@ layout: content
 title: Games
 ---
 {% for game in site.data.games %}
-{% include card.html 
-    logo=game.logo 
-    name=game.name 
-    description=game.description 
+{% include card.html
+    logo=game.logo
+    name=game.name
+    description=game.description
     buttons=game.buttons %}
 {% endfor %}
+
+{% for category in site.categories %}
+
+{% if category[0] == "game" %}
+    {% for project in category[1] %}
+        {% include card.html
+            logo=project.logo
+            name=project.name
+            description=project.description
+            buttons=project.buttons %}
+    {% endfor %}
+{% endif %}
+{% endfor %} 

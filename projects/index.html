@@ -3,15 +3,6 @@ layout: content
 title: Projects
 ---
 <h1>Projects</h1>
-{% for project in site.data.projects %}
-
-{% include card.html
-    logo=project.logo
-    name=project.name
-    description=project.description
-    buttons=project.buttons %}
-
-{% endfor %}
 
 {% for category in site.categories %}
 

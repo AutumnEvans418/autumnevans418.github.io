@@ -8,15 +8,16 @@
             {% endif %}
             <div class="col">
                 <h2>{{include.name}}</h2>
+                <p class="meta">{{ include.date | date_to_string }}</p>
                 <p>{{include.description}}</p>
                 <div class="row">
                     {% for btn in include.buttons %}
-                       <div class="col-auto">
-                           <a class="btn" href="{{btn.url}}">{{btn.title}}</a>
-                       </div>
+                    <div class="col-auto">
+                        <a class="btn" href="{{btn.url}}">{{btn.title}}</a>
+                    </div>
                     {% endfor %}
                 </div>
-                
+
             </div>
         </div>
     </div>
