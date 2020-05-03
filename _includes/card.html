@@ -3,11 +3,11 @@
         <div class="row">
             {% if include.logo %}
             <div class="col-auto">
-                <img style="width: 200px;" src="{{include.logo}}">
+                <a href="{{include.url}}"><img style="width: 200px;" src="{{include.logo}}"></a>
             </div>
             {% endif %}
             <div class="col">
-                <h2>{{include.name}}</h2>
+                <a href="{{include.url}}" class="special"><h2>{{include.name}}</h2></a> 
                 <p class="meta">{{ include.date | date_to_string }}</p>
                 <p>{{include.description}}</p>
                 <div class="row">
