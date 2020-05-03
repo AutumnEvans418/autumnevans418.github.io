@@ -5,7 +5,6 @@ unity_dir: plagueforce
 layout: game
 logo: /assets/plagueforce.png
 category: game
-name: Plagueforce
 description: "Our greatest fears have come to life: the world is out of toilet paper. Fortunately, you have some to spare. Put on the mask, get in the plane, and prepare for a long flight. But beware! Infected bats are all over the skies! Shoot the bats with syringes before they touch you, collect toilet paper on your journey, and deliver as much toilet paper as you can!"
 buttons:
   - title: "Source Code"

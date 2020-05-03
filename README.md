@@ -50,7 +50,6 @@ The index file has to exist with the files needed.  However, you can create a bl
 title: Xaml Templates
 date: 2020-05-01
 layout: post
-name: Razor for Xaml
 permalink: /blazor/xt/
 ---
 <script src="js/index.js"></script>

@@ -1,6 +1,5 @@
 ---
 layout: post
-name: Minesweeper
 title: Minesweeper
 category: game
 description: "A crossplatform minesweeper"

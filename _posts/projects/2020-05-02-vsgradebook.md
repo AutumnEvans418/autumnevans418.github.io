@@ -1,5 +1,4 @@
 ---
-name: Visual Studio Gradebook
 title: Visual Studio Gradebook
 category: project
 description: "Simplifying grading code in visual studio. No more sending compressed files, downloading, and opening student's code."
