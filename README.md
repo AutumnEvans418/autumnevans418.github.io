@@ -42,3 +42,21 @@ title: Xaml Templates
 ```
 
 https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/?view=aspnetcore-3.1&tabs=visual-studio#app-base-paths
+
+The index file has to exist with the files needed.  However, you can create a blog post with a permalink that will publish it to the desired location:
+
+```
+---
+title: Xaml Templates
+date: 2020-05-01
+layout: post
+name: Razor for Xaml
+permalink: /blazor/xt/
+---
+<script src="js/index.js"></script>
+<app>Loading...</app>
+Built with <3 using Blazor
+<script src="_framework/blazor.webassembly.js"></script>
+```
+
+This will show as a blog, but due to the `permalink` tag, it will navigate to our blazor app location
