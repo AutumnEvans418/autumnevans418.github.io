@@ -16,6 +16,12 @@ social:
   - title: Twitter
     url: https://twitter.com/ChrisAlexEvans
     logo: /assets/twitter.png
+  - title: SoundCloud
+    url: https://soundcloud.com/40daysunder?utm_source=embed&utm_medium=icon
+    logo: /assets/soundcloud.png
+  - title: StackOverflow
+    url: https://stackoverflow.com/users/6895913/cevans
+    logo: /assets/stackoverflow.png
 professions:
   - title: "DevOps Supervisor"
     company: "Peerless Products Inc."
