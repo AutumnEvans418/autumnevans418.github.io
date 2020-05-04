@@ -2,8 +2,8 @@
 layout: default
 ---
 <div class="container">
-   <img class="img-fluid" src="{{page.logo}}"/>
-  <h1>{{ page.title }}</h1>
+   <img style="max-width: 200px" src="{{page.logo}}"/>
+  <h1 style="margin-bottom: 3%;margin-top: 3%">{{ page.title }}</h1>
   <p class="meta">{{ page.date | date_to_string }}</p>
   
   <div class="row">
@@ -14,7 +14,7 @@ layout: default
       {% endfor %}
   </div>
   
-  <div class="post">
+  <div class="blog">
     
     {{ content }}
     

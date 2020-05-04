@@ -1,22 +1,23 @@
 ---
 layout: content
-title: Chris Evans' Blog
+title: Blogs
 ---
-<h1>{{ page.title }}</h1>
+<h1 style="margin: 5%">{{ page.title }}</h1>
     {% for post in site.posts %}
-<div class="scard wrap">
+<div class="scard wrap" style="padding: 5%;margin-bottom: 10%">
     {% if post.logo %}
-    <div class="row">
-        <div class="col d-flex justify-content-left">
-            <a href="{{ post.url }}" title="{{ post.title }}"><img style="max-width: 300px;" src="{{post.logo}}"></a>
+    <div class="row" style="margin-bottom: 3%">
+        <div class="col">
+            <a href="{{ post.url }}" title="{{ post.title }}"><img style="max-width: 150px;" src="{{post.logo}}"></a>
+        </div>
+        <div class="col d-flex justify-content-end">
+            <p class="m-2">{{ post.date | date_to_string }}</p>
         </div>
     </div>
     {% endif %}
-    <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
-    <h3 class="m-2">{{ post.date | date_to_string }}</h3>
-    <h4 class="m-2">{{post.description}}</h4>
-    <div class="break"></div>
-    <p>{{post.excerpt}}</p>
-    <a href="{{post.url}}">Read More...</a>
+    <h1 style="margin-bottom: 30px"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
+    <p class="blog">{{ post.content | strip_html | truncatewords: 50 }}</p>
+    <a class="btn" href="{{post.url}}">Read More</a>
 </div>
+
     {% endfor %}
