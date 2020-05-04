@@ -24,6 +24,8 @@
     width: 100%;
 }
 
+
+
 .wrap {
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -173,6 +175,22 @@ a.link:hover {
 a:hover {
     background-color: var(--orangeText);
 }
+
+.blog > p > a {
+    text-decoration: underline;
+    color: var(--orangeText);
+}
+
+.blog > p > a:hover {
+    text-decoration: underline;
+    color: var(--grayBackground);
+}
+
+pre {
+    padding: 1%;
+    color: var(--tanText);
+}
+
 h1 {
     font-size: 2.5em;
     font-family: 'Cascadia Code';
