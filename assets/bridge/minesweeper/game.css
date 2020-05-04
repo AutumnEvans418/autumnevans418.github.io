@@ -1,0 +1,62 @@
+﻿
+/*body {
+    background-color: black;
+    color: white;
+    padding: 30px;
+}*/
+
+#board {
+    background-color: white;
+}
+
+.game {
+    font-family: 'Cascadia Code';
+}
+
+.HighlightColor {
+    color: lightblue;
+}
+
+.DefaultFill {
+    color: black;
+}
+.CellColor {
+    color: white;
+}
+
+.CellStrokeColor {
+    color: black;
+}
+
+.BombColor {
+    color: red;
+}
+
+.BombBackgroundColor {
+    color: darkred;
+}
+
+.EmptyCellColor {
+    color: gray;
+}
+
+.FlagColor {
+    color: red;
+}
+
+.FlagFont {
+    font: 44px arial;
+}
+
+.ValueFont {
+    font: 18px arial;
+}
+
+.BombFont {
+    font: 55px arial;
+}
+
+.gamebtn {
+    padding: 10px;
+    margin: 10px;
+}
