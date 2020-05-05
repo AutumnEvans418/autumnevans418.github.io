@@ -17,7 +17,7 @@
 </div>
 
 <script>
-  var unityInstance = UnityLoader.instantiate("gameContainer", "{{ site.baseurl}}/assets/unity/{{page.unity_dir}}/Build/PlagueforceWeb.json",{onProgress: UnityProgress});  
+  var unityInstance = UnityLoader.instantiate("gameContainer", "{{ site.baseurl}}/assets/unity/{{page.unity_dir}}/Build/{{page.unityname}}.json",{onProgress: UnityProgress});  
   function UnityProgress(gameInstance, progress) {
     if (!gameInstance.Module) {
       return;

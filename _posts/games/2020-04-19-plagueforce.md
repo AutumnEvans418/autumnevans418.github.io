@@ -1,9 +1,11 @@
 ---
 title: Plagueforce
 unity_dir: plagueforce
+unityname: PlagueForceWeb
 layout: game
 logo: /assets/plagueforce.png
 category: game
+tags: interactive
 description: The world is out of toilet paper. Fortunately, you have some to spare.
 buttons:
   - title: "Source Code"

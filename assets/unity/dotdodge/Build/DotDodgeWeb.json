@@ -1,0 +1,16 @@
+{
+"companyName": "Evans Software",
+"productName": "Dot Dodge",
+"productVersion": "0.19",
+"dataUrl": "DotDodgeWeb.data.unityweb",
+"wasmCodeUrl": "DotDodgeWeb.wasm.code.unityweb",
+"wasmFrameworkUrl": "DotDodgeWeb.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.3f1"
+}
