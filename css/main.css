@@ -146,6 +146,20 @@ a {
     color: var(--tanText);
 }
 
+.tagcard {
+    background-color: var(--orangeText);
+    border-color: var(--blackBackground);
+    border-width: 1px;
+    color: var(--blackBackground);
+    margin: 10px;
+    padding: 10px;
+    display: block;
+}
+
+.tagcard > * {
+    color: var(--blackBackground)
+}
+
 .scard {
     margin: 10px;
     padding: 10px;
