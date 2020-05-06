@@ -1,0 +1,47 @@
+﻿
+
+
+.gamebtn {
+    padding: 10px;
+    margin: 10px;
+}
+
+.cell {
+    font-size: 4em;
+    padding: 10px;
+    width: 10vw;
+    height: 10vw;
+    float: left;
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+    line-height: 10vw;
+}
+
+.grid {
+    margin: 20px;
+}
+
+.gridrow {
+    width: 100%;
+}
+
+.cell-empty {
+    background-color: black;
+}
+
+.cell-value {
+    background-color: white;
+    color: black;
+}
+
+.grid {
+    overflow: hidden;
+}
+
+.gridrow {
+    overflow: hidden;
+}
