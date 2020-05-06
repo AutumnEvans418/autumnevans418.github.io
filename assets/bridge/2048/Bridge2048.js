@@ -37,8 +37,8 @@ Bridge.assembly("Bridge2048", function ($asm, globals) {
                 var $t;
                 this.$initialize();
                 this._twenty.PlaceRandom();
-
-                var maindiv = document.getElementById("game");
+                var gamediv = "game";
+                var maindiv = document.getElementById(gamediv);
                 var toolbar = document.getElementById("toolbar");
                 var startai = ($t = document.createElement("button"), $t.innerHTML = "Start Ai", $t.onclick = Bridge.fn.bind(this, $asm.$.Bridge2048.Game.f1), $t.className = Bridge2048.Game.gamebtn, $t);
                 var stopai = ($t = document.createElement("button"), $t.textContent = "Stop Ai", $t.onclick = Bridge.fn.bind(this, $asm.$.Bridge2048.Game.f2), $t.className = Bridge2048.Game.gamebtn, $t);
@@ -64,7 +64,16 @@ Bridge.assembly("Bridge2048", function ($asm, globals) {
 
                 }
 
-                document.onkeydown = Bridge.fn.bind(this, $asm.$.Bridge2048.Game.f4);
+                var test = document.getElementById(gamediv);
+
+
+                var hammertime = new Hammer(test);
+
+                hammertime.get("swipe").set({ direction: Hammer.DIRECTION_ALL });
+
+                hammertime.on("swipe", Bridge.fn.bind(this, $asm.$.Bridge2048.Game.f4));
+
+                document.onkeydown = Bridge.fn.bind(this, $asm.$.Bridge2048.Game.f5);
             }
         },
         methods: {
@@ -77,6 +86,14 @@ Bridge.assembly("Bridge2048", function ($asm, globals) {
                         this.SetValue(value, iter);
                         iter = (iter + 1) | 0;
                     }
+                }
+
+                if (this._twenty.Win()) {
+                    document.getElementById("game-notify").textContent = "Congrats! you won!";
+                }
+
+                if (this._twenty.Lost()) {
+                    document.getElementById("game-notify").textContent = "Uh oh, you lost!";
                 }
             },
             SetValue: function (value, iter) {
@@ -122,7 +139,7 @@ Bridge.assembly("Bridge2048", function ($asm, globals) {
                                         continue;
                                     }
                                     Bridge.sleep(100);
-                                    $task1 = System.Threading.Tasks.Task.run(Bridge.fn.bind(this, $asm.$.Bridge2048.Game.f5));
+                                    $task1 = System.Threading.Tasks.Task.run(Bridge.fn.bind(this, $asm.$.Bridge2048.Game.f6));
                                     $step = 3;
                                     if ($task1.isCompleted()) {
                                         continue;
@@ -134,7 +151,7 @@ Bridge.assembly("Bridge2048", function ($asm, globals) {
                                     $task1.getAwaitedResult();
                                     Bridge.sleep(100);
 
-                                    $task2 = System.Threading.Tasks.Task.run(Bridge.fn.bind(this, $asm.$.Bridge2048.Game.f6));
+                                    $task2 = System.Threading.Tasks.Task.run(Bridge.fn.bind(this, $asm.$.Bridge2048.Game.f7));
                                     $step = 4;
                                     if ($task2.isCompleted()) {
                                         continue;
@@ -146,7 +163,7 @@ Bridge.assembly("Bridge2048", function ($asm, globals) {
                                     $task2.getAwaitedResult();
                                     Bridge.sleep(100);
 
-                                    $task3 = System.Threading.Tasks.Task.run(Bridge.fn.bind(this, $asm.$.Bridge2048.Game.f7));
+                                    $task3 = System.Threading.Tasks.Task.run(Bridge.fn.bind(this, $asm.$.Bridge2048.Game.f8));
                                     $step = 5;
                                     if ($task3.isCompleted()) {
                                         continue;
@@ -158,7 +175,7 @@ Bridge.assembly("Bridge2048", function ($asm, globals) {
                                     $task3.getAwaitedResult();
                                     Bridge.sleep(100);
 
-                                    $task4 = System.Threading.Tasks.Task.run(Bridge.fn.bind(this, $asm.$.Bridge2048.Game.f8));
+                                    $task4 = System.Threading.Tasks.Task.run(Bridge.fn.bind(this, $asm.$.Bridge2048.Game.f9));
                                     $step = 6;
                                     if ($task4.isCompleted()) {
                                         continue;
@@ -199,37 +216,49 @@ Bridge.assembly("Bridge2048", function ($asm, globals) {
         f3: function (ev) {
             this.Reset();
         },
-        f4: function (keyboard) {
-            if (keyboard.keyCode === 38) {
+        f4: function (input) {
+            if (input.direction === Hammer.DIRECTION_LEFT) {
+                this._twenty.Play(PathFinder.Direction.Left);
+                this.Update();
+            } else if (input.direction === Hammer.DIRECTION_RIGHT) {
+                this._twenty.Play(PathFinder.Direction.Right);
+                this.Update();
+            } else if (input.direction === Hammer.DIRECTION_UP) {
                 this._twenty.Play(PathFinder.Direction.Up);
                 this.Update();
-            }
-            if (keyboard.keyCode === 40) {
+            } else if (input.direction === Hammer.DIRECTION_DOWN) {
                 this._twenty.Play(PathFinder.Direction.Down);
                 this.Update();
             }
-            if (keyboard.keyCode === 39) {
-                this._twenty.Play(PathFinder.Direction.Right);
-                this.Update();
-            }
-            if (keyboard.keyCode === 37) {
-                this._twenty.Play(PathFinder.Direction.Left);
-                this.Update();
-            }
         },
-        f5: function () {
+        f5: function (keyboard) {
+            if (keyboard.keyCode === 38 || keyboard.keyCode === 87) {
+                this._twenty.Play(PathFinder.Direction.Up);
+            }
+            if (keyboard.keyCode === 40 || keyboard.keyCode === 83) {
+                this._twenty.Play(PathFinder.Direction.Down);
+            }
+            if (keyboard.keyCode === 39 || keyboard.keyCode === 68) {
+                this._twenty.Play(PathFinder.Direction.Right);
+            }
+            if (keyboard.keyCode === 37 || keyboard.keyCode === 65) {
+                this._twenty.Play(PathFinder.Direction.Left);
+            }
+            this.Update();
+        },
+        f6: function () {
         this._twenty.Play(PathFinder.Direction.Up);
         this.Update();
     },
-        f6: function () {
+        f7: function () {
         this._twenty.Play(PathFinder.Direction.Right);
         this.Update();
     },
-        f7: function () {
+        f8: function () {
         this._twenty.Play(PathFinder.Direction.Down);
         this.Update();
     },
-        f8: function () {
+        f9: function () {
         this._twenty.Play(PathFinder.Direction.Left);
         this.Update();
     }

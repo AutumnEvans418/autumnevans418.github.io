@@ -7,26 +7,39 @@
 }
 
 .cell {
-    font-size: 4em;
-    padding: 10px;
-    width: 10vw;
-    height: 10vw;
-    float: left;
-    border-width: 2px;
+    font-size: 5vw;
+    text-align: center;
+    display: block;
+    flex: 1 1 auto;
+    line-height: 5vw;
     border-color: white;
     border-style: solid;
-    text-align: center;
-    margin: auto;
-    vertical-align: middle;
-    line-height: 10vw;
+    margin: 1%;
+    padding: 1%;
+    width: 100%;
+    min-height: 5vw;
 }
 
+
 .grid {
-    margin: 20px;
+    width: 70%;
 }
+
+@media only screen and (max-width: 768px) {
+    .grid {
+        width: 100%;
+    }
+}
+
+
+
 
 .gridrow {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 0px;
 }
 
 .cell-empty {
