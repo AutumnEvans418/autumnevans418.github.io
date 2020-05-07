@@ -12,6 +12,13 @@
     --blackBackground: #302f2f;
 }
 
+textarea {
+    min-width: 100px;
+    min-height: 300px;
+    white-space: nowrap;
+    overflow: auto;
+}
+
 .blog {
     line-height: 200%;
 }
