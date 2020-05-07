@@ -1,0 +1,18 @@
+---
+layout: post
+category: project
+title: Desktop Cleaner
+description: "Keep your dev environment clean."
+tags: Downloadable
+buttons:
+    - title: "Source Code"
+      url: https://github.com/chrisevans9629/Desktop-Cleaner
+    - title: Download
+      url: https://github.com/chrisevans9629/Desktop-Cleaner/releases/download/1.0.0.0/release-1.0.0.0.zip
+---
+
+As developers we use a lot of different apps.  We download samples, take screenshots, and clutter our desktop with files.  It's a pain to try to keep our desktop clean, so I created a program that will do it for me.  Desktop Cleaner is a console app that will move files on my desktop to folders based on their file type.  In most cases this makes it really easy for me to find what I need.
+
+There is some logic and associations.  Images will all be put into one folder (jpg,png, etc.)
+
+The code is less than 100 lines of code and a really simple solution for a common problem that I have.
