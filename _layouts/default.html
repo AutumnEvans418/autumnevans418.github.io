@@ -47,10 +47,11 @@
 				{{ content }}
 				
 			<footer>
-	    		<ul>
-	        		<li><a href="mailto:chrisevans9629@gmail.com">email</a></li>
-	        		<li><a href="https://github.com/chrisevans9629">github.com/chrisevans9629</a></li>
-				</ul>
+	    		<div class="row m-1">
+	        		<div class="col"><a href="mailto:chrisevans9629@gmail.com">email</a></div>
+	        		<div class="col"><a href="https://github.com/chrisevans9629">github.com/chrisevans9629</a></div>
+					<div class="col"><p>Last Modified at {{ page.last_modified_at | date: '%-d %B %Y %r' }}</p></div>
+				</div>
 			</footer>
 		</body>
 	</html>
