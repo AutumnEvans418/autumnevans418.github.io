@@ -26,11 +26,13 @@ Bridge.assembly("Bridge2048", function ($asm, globals) {
         fields: {
             _buttons: null,
             _twenty: null,
+            notify: null,
             shouldStop: false
         },
         ctors: {
             init: function () {
                 this._twenty = new PathFinder.TwentyFortyEight.$ctor1(4, 4, 123);
+                this.notify = document.getElementById("game-notify");
                 this.shouldStop = false;
             },
             ctor: function () {
@@ -89,11 +91,11 @@ Bridge.assembly("Bridge2048", function ($asm, globals) {
                 }
 
                 if (this._twenty.Win()) {
-                    document.getElementById("game-notify").textContent = "Congrats! you won!";
+                    this.notify.textContent = "Congrats! you won!";
                 }
 
                 if (this._twenty.Lost()) {
-                    document.getElementById("game-notify").textContent = "Uh oh, you lost!";
+                    this.notify.textContent = "Uh oh, you lost!";
                 }
             },
             SetValue: function (value, iter) {
@@ -107,6 +109,7 @@ Bridge.assembly("Bridge2048", function ($asm, globals) {
             },
             Reset: function () {
                 this._twenty.Reset();
+                this.notify.textContent = "";
                 this.Update();
             },
             StartMiniMax: function () {
