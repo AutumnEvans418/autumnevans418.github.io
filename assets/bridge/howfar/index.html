@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>HowFar.Bridge</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="bridge.js"></script>
+    <script src="bridge.console.js"></script>
+    <script src="bridge.meta.js"></script>
+    <script src="newtonsoft.json.js"></script>
+    <script src="HowFar.Bridge.js"></script>
+    <script src="HowFar.Bridge.meta.js"></script>
+    <!--<link rel="stylesheet" href="docsupport/style.css">-->
+    <!--<link rel="stylesheet" href="docsupport/prism.css">-->
+    <link rel="stylesheet" href="chosen.css">
+    <link href="howfar.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+    <div class="vertical-center">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="text-center">
+                        <h1>How Far?</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <p>
+                        How many
+                        <select id="from" class="choose"></select>
+                        can go into
+                        <input type="number" size="3" id="num" aria-describedby="emailHelp" placeholder="ex. 12" value="1">
+                        <select id="to" class="choose">
+                          
+                        </select>?
+                    </p>
+                </div>
+            </div>
+            <div class="row text-center btn-group">
+                <div class="col ">
+                    <button id="reverse" class="btn">Reverse</button>
+                </div>
+                <div class="col">
+                    <button id="random" class="btn">Random</button>
+                </div>
+            </div>
+            <div class="row md-space">
+                <div class="col text-center">
+                    <h1 id="answer">12 Pencils = 0.0000001 Earths</h1>
+                </div>
+            </div>
+            <div class="row lg-space">
+                <div class="col text-center">
+                    <div class="form-group">
+                        <h3>Add your own</h3>
+                        <input id="add_name" placeholder="plural name" class="form-control" type="text"/>
+                        <input id="add_num" placeholder="number of units" class="form-control" type="number"/>
+                        <label for="add_unit">Units</label>
+                        <select id="add_unit" class="choose"></select>
+                        <button id="add_btn" class="btn">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+<script src="chosen.jquery.js" type="text/javascript"></script>
+<!--<script src="docsupport/prism.js" type="text/javascript" charset="utf-8"></script>-->
+<!--<script src="docsupport/init.js" type="text/javascript" charset="utf-8"></script>-->
+<script>
+    var choose = function() {
+        $('.choose').chosen({ width: "auto"});
+    }
+    var update = function() {
+        $('.choose').trigger('chosen:updated');
+    }
+
+    function numberWithCommas(x) {
+        x = toFixed(x);
+        return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    function toFixed(x) {
+        if (Math.abs(x) < 1.0) {
+            var e = parseInt(x.toString().split('e-')[1]);
+            if (e) {
+                x *= Math.pow(10,e-1);
+                x = '0.' + (new Array(e)).join('0') + x.toString().substring(2);
+            }
+        } else {
+            var e = parseInt(x.toString().split('+')[1]);
+            if (e > 20) {
+                e -= 20;
+                x /= Math.pow(10,e);
+                x += (new Array(e+1)).join('0');
+            }
+        }
+        return x;
+    }
+    
+</script>
+</body>
+</html>

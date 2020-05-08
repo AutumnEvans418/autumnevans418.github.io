@@ -1,0 +1,92 @@
+    
+    <script src="/assets/bridge/howfar/bridge.js"></script>
+    <script src="/assets/bridge/howfar/bridge.console.js"></script>
+    <script src="/assets/bridge/howfar/bridge.meta.js"></script>
+    <script src="/assets/bridge/howfar/newtonsoft.json.js"></script>
+    <script src="/assets/bridge/howfar/HowFar.Bridge.js"></script>
+    <script src="/assets/bridge/howfar/HowFar.Bridge.meta.js"></script>
+    <link  href="/assets/bridge/howfar/chosen.css" rel="stylesheet" >
+    <link  href="/assets/bridge/howfar/howfar.css" rel="stylesheet" />
+    <div class="vertical-center">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="text-center">
+                        <p>Change the Sentence Below...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h4>
+                        How many
+                        <select id="from" class="choose"></select>
+                        can go into
+                        <input type="number" size="3" id="num" aria-describedby="emailHelp" placeholder="ex. 12" value="1">
+                        <select id="to" class="choose">
+                          
+                        </select>?
+                    </h4>
+                </div>
+            </div>
+            <div class="row text-center btn-group">
+                <div class="col ">
+                    <button id="reverse" class="btn">Reverse</button>
+                </div>
+                <div class="col">
+                    <button id="random" class="btn">Random</button>
+                </div>
+            </div>
+            <div class="row md-space">
+                <div class="col text-center">
+                    <h1 id="answer">12 Pencils = 0.0000001 Earths</h1>
+                </div>
+            </div>
+            <div class="row lg-space">
+                <div class="col text-center">
+                    <div class="form-group">
+                        <h3>Add your own</h3>
+                        <input id="add_name" placeholder="plural name" class="form-control" type="text"/>
+                        <input id="add_num" placeholder="number of units" class="form-control" type="number"/>
+                        <label for="add_unit">Units</label>
+                        <select id="add_unit" class="choose"></select>
+                        <button id="add_btn" class="btn">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+<script src="/assets/bridge/howfar/chosen.jquery.js" type="text/javascript"></script>
+<script>
+    var choose = function() {
+        $('.choose').chosen({ width: "auto"});
+    }
+    var update = function() {
+        $('.choose').trigger('chosen:updated');
+    }
+
+    function numberWithCommas(x) {
+        x = toFixed(x);
+        return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    function toFixed(x) {
+        if (Math.abs(x) < 1.0) {
+            var e = parseInt(x.toString().split('e-')[1]);
+            if (e) {
+                x *= Math.pow(10,e-1);
+                x = '0.' + (new Array(e)).join('0') + x.toString().substring(2);
+            }
+        } else {
+            var e = parseInt(x.toString().split('+')[1]);
+            if (e > 20) {
+                e -= 20;
+                x /= Math.pow(10,e);
+                x += (new Array(e+1)).join('0');
+            }
+        }
+        return x;
+    }
+    
+</script>
