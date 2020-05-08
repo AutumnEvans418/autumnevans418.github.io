@@ -59,3 +59,7 @@ Built with <3 using Blazor
 ```
 
 This will show as a blog, but due to the `permalink` tag, it will navigate to our blazor app location
+
+Add a .gitattributes with `* binary` in it
+https://github.com/dotnet/aspnetcore/issues/19796
+
