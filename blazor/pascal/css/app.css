@@ -1,0 +1,58 @@
+﻿
+html, body {
+    font-family: 'Cascadia Code';
+    background-color: black;
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: black;
+    background-color: white;
+}
+
+.right-tab {
+    align-content:end;
+}
+
+.main {
+    margin: 1%;
+}
+
+.tab-pane {
+    width: 100%;
+    padding: 1%;
+}
+
+#editor {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-height: 300px;
+}
+
+.branch {
+    padding-left: 10%;
+}
+
+textarea {
+    background-color: black;
+    color: white;
+    width: 100%;
+    min-height: 50vh;
+}
+
+pre {
+    color: white;
+    font-family: 'Cascadia Code';
+    width: 100%;
+}
+
+.error-list {
+    color: red;
+}
+
