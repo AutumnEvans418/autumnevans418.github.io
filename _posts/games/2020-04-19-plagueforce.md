@@ -1,7 +1,7 @@
 ---
 title: Plagueforce
 unity_dir: plagueforce
-unityname: PlagueForceWeb
+unityname: PlagueforceWeb
 layout: game
 logo: /assets/plagueforce.png
 category: game
