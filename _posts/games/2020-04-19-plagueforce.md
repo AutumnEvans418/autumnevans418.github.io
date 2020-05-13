@@ -5,7 +5,7 @@ unityname: PlagueforceWeb
 layout: game
 logo: /assets/plagueforce.png
 category: game
-tags: playable
+tags: [playable,unity,android]
 description: The world is out of toilet paper. Fortunately, you have some to spare.
 buttons:
   - title: "Source Code"

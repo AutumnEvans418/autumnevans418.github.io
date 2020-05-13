@@ -1,0 +1,18 @@
+---
+layout: content
+title: Tags
+---
+{% for category in site.tags %}
+    <div class="scard">
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+    <div id="#{{ category_name | slugize }}"></div>
+    <a name="{{ category_name | slugize }}"></a>
+
+    <h1 class="special">{{ category_name | capitalize }}</h1>
+    {% for post in site.tags[category_name] %}
+    <article class="m-4">
+        <h4><a style="text-decoration: underline;" href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+    </article>
+    {% endfor %}
+    </div>
+{% endfor %}

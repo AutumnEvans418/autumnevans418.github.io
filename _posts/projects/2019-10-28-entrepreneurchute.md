@@ -7,6 +7,7 @@ layout: post
 buttons:
   - title: "Source Code"
     url: https://github.com/chrisevans9629/entrepreneurchute
+tags: [code-a-thon]
 ---
 
 Entrepreneurchute was a solution we created at Pittstate for the annual Kansas City Federal Reserve Code-a-thon in October 2019.  We got first place against 11 other universities by creating an app that connects mentors and entreprenuers together.

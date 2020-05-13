@@ -164,9 +164,13 @@ a {
 }
 
 .tagcard > * {
-    color: var(--blackBackground)
+    color: var(--blackBackground);
+    font-size: x-small;
 }
 
+.tagcard-link {
+    color: var(--blackBackground)
+}
 .scard {
     margin: 10px;
     padding: 10px;

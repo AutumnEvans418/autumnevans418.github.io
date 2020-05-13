@@ -13,16 +13,12 @@ title: Blogs
         {% endif %}
         {% for category in post.categories %}
         <div class="col-auto">
-            <div class="tagcard">
-                <p class="m-2">{{ category | capitalize }}</p>
-            </div>
+            {% include tagcard.html link='categories' name=category %}
         </div>
         {% endfor %}
         {% for tag in post.tags %}
         <div class="col-auto">
-            <div class="tagcard">
-                <p class="m-2">{{ tag | capitalize }}</p>
-            </div>
+            {% include tagcard.html link='tags' name=tag %}
         </div>
         {% endfor %}
         <div class="col d-flex justify-content-end">

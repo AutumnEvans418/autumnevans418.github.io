@@ -3,7 +3,7 @@ layout: post
 category: project
 title: Desktop Cleaner
 description: "Keep your dev environment clean."
-tags: Downloadable
+tags: [downloadable]
 buttons:
     - title: "Source Code"
       url: https://github.com/chrisevans9629/Desktop-Cleaner

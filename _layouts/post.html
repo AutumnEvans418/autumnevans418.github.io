@@ -8,16 +8,13 @@ layout: default
     </div>
         {% for category in page.categories %}
         <div class="col-auto">
-          <div class="tagcard">
-              <p class="m-2">{{ category | capitalize }}</p>
-          </div>
+          {% include tagcard.html link='categories' name=category %}
+
         </div>
         {% endfor %}
         {% for tag in page.tags %}
         <div class="col-auto">
-          <div class="tagcard">
-              <p class="m-2">{{ tag | capitalize }}</p>
-          </div>
+          {% include tagcard.html link='tags' name=tag %}
         </div>
         {% endfor %}
   </div>
