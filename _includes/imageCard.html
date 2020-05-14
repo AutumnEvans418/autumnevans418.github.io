@@ -1,5 +1,9 @@
 <div class="card" >
-    <img class="card-img-top" src="{% if include.image %}{{include.image}}{% else %}/assets/empty.png{% endif %}" alt="{{include.caption}}">
+    {% if include.image %}
+        <img class="card-img-top" src="{{include.image}}" alt="{{include.caption}}">
+    {% else %}
+        <img class="card-img-top empty" src="/assets/empty.png" alt="{{include.caption}}">
+    {% endif %}
     <div class="card-img-overlay d-flex align-items-end" style="padding: 0px;">
         <div class="scard trans d-flex flex-fill" style="margin: 0px;">
             <p class="meta">{{ include.date | date_to_string }}</p>

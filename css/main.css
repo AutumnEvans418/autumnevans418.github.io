@@ -10,6 +10,8 @@ html
     --grayBackgroundTran: rgba(50, 54, 57, 0.691);
     --orangeText: #e29236;
     --blackBackground: #302f2f;
+    --foregroundText: #ffefc8;
+    --empty-contrast: 100%;
 }
 
 html[data-theme="light"] {
@@ -19,6 +21,17 @@ html[data-theme="light"] {
     --grayBackgroundTran: #dadadab0;
     --orangeText: #e29236;
     --blackBackground: #ffffff;
+    --foregroundText: #d8d8d8;
+    --empty-contrast: 0%;
+}
+
+.empty {
+    background-color: var(--blackBackground);
+    filter: contrast(var(--empty-contrast));
+}
+
+.foreground {
+    color: var(--foregroundText);
 }
 
 textarea {

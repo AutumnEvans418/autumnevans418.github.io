@@ -11,7 +11,11 @@
                     {% for item in include.items limit:4 %}
             <div class="col d-flex justify-content-center">
                     <div class="card" style="width: 13rem;margin: 0.5rem;background-color: var(--blackBackground);">
-                        <img class="card-img-top" src="{% if item.logo %}{{item.logo}}{% else %}/assets/empty.png{% endif %}" alt="{{item.title}}">
+                        {% if item.logo %}
+                            <img class="card-img-top" src="{{item.logo}}" alt="{{item.title}}">
+                        {% else %}
+                            <img class="card-img-top empty" src="/assets/empty.png" alt="{{item.title}}">
+                        {% endif %}
                         <div class="card-img-overlay d-flex align-items-end" style="padding: 0px;">
                             <div class="scard trans flex-fill" style="margin: 0px;width: 13rem;">
                                 <p class="meta">{{ include.date | date_to_string }}</p>

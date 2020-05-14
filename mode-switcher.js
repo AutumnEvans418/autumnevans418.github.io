@@ -37,16 +37,21 @@ function modeSwitcher() {
 		// document.getElementById("theme-toggle").innerHTML = "Light Mode";
 	}
 }
+
+if (theme === "dark") {
+	document.documentElement.setAttribute('data-theme', 'dark');
+	sessionStorage.setItem('theme', 'dark');
+	// document.getElementById("theme-toggle").innerHTML = "Light Mode";
+} else if (theme === "light") {
+	document.documentElement.setAttribute('data-theme', 'light');
+	sessionStorage.setItem('theme', 'light');
+	// document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+}
+
 window.onload = e => {
 	if (theme === "dark") {
-		document.documentElement.setAttribute('data-theme', 'dark');
-		sessionStorage.setItem('theme', 'dark');
 		document.getElementById("theme-toggle").checked = false;
-		// document.getElementById("theme-toggle").innerHTML = "Light Mode";
 	} else if (theme === "light") {
-		document.documentElement.setAttribute('data-theme', 'light');
-		sessionStorage.setItem('theme', 'light');
 		document.getElementById("theme-toggle").checked = true;
-		// document.getElementById("theme-toggle").innerHTML = "Dark Mode";
 	}
 }
