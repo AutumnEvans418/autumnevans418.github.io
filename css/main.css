@@ -2,7 +2,7 @@
     font-family: "Cascadia Code";
     src: url("../fonts/Cascadia.ttf") format('truetype')
 }
-:root
+html
 {
     --whiteText: #d8d8d8;
     --tanText: #ffefc8;
@@ -10,6 +10,15 @@
     --grayBackgroundTran: rgba(50, 54, 57, 0.691);
     --orangeText: #e29236;
     --blackBackground: #302f2f;
+}
+
+html[data-theme="light"] {
+    --whiteText: #302f2f;
+    --tanText:  #323639;
+    --grayBackground: #dadada;
+    --grayBackgroundTran: #dadadab0;
+    --orangeText: #e29236;
+    --blackBackground: #ffffff;
 }
 
 textarea {
