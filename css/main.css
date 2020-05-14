@@ -24,7 +24,9 @@ html[data-theme="light"] {
     --foregroundText: #d8d8d8;
     --empty-contrast: 0%;
 }
-
+.fa {
+    color: var(--tanText);
+}
 .empty {
     background-color: var(--blackBackground);
     filter: contrast(var(--empty-contrast));
