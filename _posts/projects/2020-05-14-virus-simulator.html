@@ -1,0 +1,94 @@
+---
+layout: post
+title: Virus Simulator
+date: 2020-05-03
+description: Simulating the spread of viruses using the SIR model with vuejs & chartjs
+category: project
+tags: [vuejs,chartjs]
+---
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<div id="app">
+    <div class="col">
+        <label>((days)) Days</label>
+        <input type="range" min="1" max="365" v-model="days">
+    </div>
+    <div>
+        <button class="btn" v-on:click="calculate">Calculate</button>
+    </div>
+</div>
+
+<script>
+    var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!',
+    days: 30,
+  },
+  delimiters: ["((","))"],
+  methods: {
+      calculate: function() {
+          myChart.data = setupData();
+
+          for (let index = 0; index < this.days; index++) {
+                addData(myChart,"Day " + index + 1,15);
+          }
+      }
+  }
+})
+</script>
+
+<canvas id="myChart" ></canvas>
+
+
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: setupData(),
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+function addData(chart, label, data) {
+    chart.data.labels.push(label);
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(data);
+    });
+    chart.update();
+}
+
+function removeData(chart) {
+    chart.data.labels.pop();
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.pop();
+    });
+    chart.update();
+}
+
+function setupData() {
+    return {
+        labels: [],
+        datasets: [{
+            label: 'Infected',
+            data: [],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)'
+            ],
+            borderWidth: 1
+        }]
+    };
+}
+
+setupData(myChart);
+</script>
