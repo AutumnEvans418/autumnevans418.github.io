@@ -5,14 +5,31 @@ date: 2020-05-03
 description: Simulating the spread of viruses using the SIR model with vuejs & chartjs
 category: project
 tags: [vuejs,chartjs]
+published: false
 ---
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
 <div id="app">
-    <div class="col">
-        <label>((days)) Days</label>
+    <div class="form-group">
+        <label> Days</label>
         <input type="range" min="1" max="365" v-model="days">
+        <p>((days))</p>
+    </div>
+    <div class="form-group">
+        <label>R0</label>
+        <input type="range" min="0.01" max="40" step="0.1" v-model="r0">
+        <p>((r0))</p>
+    </div>
+    <div class="form-group">
+        <label>Infected</label>
+        <input type="range" min="0.01" max="40" step="0.1" v-model="infected_start">
+        <p>((infected_start))</p>
+    </div>
+    <div class="form-group">
+        <label>Population</label>
+        <input type="range" min="0.01" max="40" step="0.1" v-model="pop">
+        <p>((pop))</p>
     </div>
     <div>
         <button class="btn" v-on:click="calculate">Calculate</button>
@@ -24,23 +41,47 @@ tags: [vuejs,chartjs]
   el: '#app',
   data: {
     message: 'Hello Vue!',
-    days: 30,
+    days: 30.0,
+    r0: 2,
+    pop: 1000,
+    infected_start: 10,
+    brecovery: 0.3,
   },
   delimiters: ["((","))"],
   methods: {
       calculate: function() {
           myChart.data = setupData();
-
+          let s = this.pop;
+          let i = this.infected_start;
+          let infectionRate = this.r0 / this.pop;
+          let recoveryRate = this.brecovery;
+          let recovered = 0;
           for (let index = 0; index < this.days; index++) {
-                addData(myChart,"Day " + index + 1,15);
+            i += infectionRate * s * i - recoveryRate * i;
+            i = Math.min(this.pop,i);
+
+            s -= i;
+            s = Math.max(0,s);
+            
+            recovered = this.pop - s - i;
+            addData(myChart,"Day " + index + 1,i, s, recovered, s + i + recovered);
           }
-      }
+      },
+      
+
   }
 })
 </script>
 
 <canvas id="myChart" ></canvas>
 
+<style>
+    :root {
+        --infected-color: #bb393986;
+        --susceptible-color: #c2c5259f;
+        --recovered-color: #3939d3ad;
+    }
+</style>
 
 <script>
 var ctx = document.getElementById('myChart').getContext('2d');
@@ -57,10 +98,23 @@ var myChart = new Chart(ctx, {
         }
     }
 });
-function addData(chart, label, data) {
+function addData(chart, label, data, sus, rec, total) {
     chart.data.labels.push(label);
+
+    
     chart.data.datasets.forEach((dataset) => {
-        dataset.data.push(data);
+        if(dataset.label == "Infected"){
+            dataset.data.push(data);
+        }
+        if(dataset.label == "Susceptible"){
+            dataset.data.push(sus);
+        }
+        if(dataset.label == "Recovery"){
+            dataset.data.push(rec);
+        }
+        if(dataset.label == "Total"){
+            dataset.data.push(total);
+        }
     });
     chart.update();
 }
@@ -79,13 +133,26 @@ function setupData() {
         datasets: [{
             label: 'Infected',
             data: [],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)'
-            ],
+            backgroundColor: '#bb393986',
             borderColor: [
                 'rgba(255, 99, 132, 1)'
             ],
             borderWidth: 1
+        },
+        {
+            label: 'Susceptible',
+            data: [],
+            backgroundColor: '#c2c5259f'
+        },
+        {
+            label: 'Recovery',
+            data: [],
+            backgroundColor: '#3939d3ad'
+        },
+        {
+            label: 'Total',
+            data: [],
+            backgroundColor: 'green'
         }]
     };
 }
