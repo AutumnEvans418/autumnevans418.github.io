@@ -225,12 +225,12 @@ a:hover {
     background-color: var(--orangeText);
 }
 
-.blog > p > a {
+.blog a {
     text-decoration: underline;
     color: var(--orangeText);
 }
 
-.blog > p > a:hover {
+.blog a:hover {
     text-decoration: underline;
     color: var(--grayBackground);
 }

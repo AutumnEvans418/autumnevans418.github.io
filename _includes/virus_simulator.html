@@ -1,0 +1,249 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<div id="app">
+    <div class="row">
+        <div class="col">
+            <label>Outbreak</label>
+            <select v-model="selectedOutbreak" v-on:change="onchange()">
+                <option v-for="option in outbreaks" v-bind:value="option">
+                    (( option ))
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label> Days</label>
+            <input type="range" min="1" max="365" v-model="days">
+            <p>((days))</p>
+        </div>
+      
+        <div class="col">
+            <label>Recovery Time</label>
+            <input type="range" min="1" max="30" step="1" v-model="recoveryTime">
+            <p>((recoveryTime)) Days</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label>Infection Chance</label>
+            <input type="range" min="0.01" max="1" step="0.01" v-model="infectionRate">
+            <p>((infectionRate*100))%</p>
+        </div>
+        <div class="col form-group">
+            <label>Death Rate</label>
+            <input type="range" min="0.000001" max="1" step="0.000001" v-model="deathrate">
+            <p>((deathrate*100))%</p>
+        </div>
+    </div>
+   <div class="row">
+    
+    <div class="col form-group">
+        <label>Infected</label>
+        <input type="range" min="1" max="5000" step="1" v-model="infected_start">
+        <p>((infected_start))</p>
+    </div>
+    <div class="col form-group">
+        <label>Susceptible</label>
+        <input type="range" min="1" max="5000" step="1" v-model="s">
+        <p>((s))</p>
+    </div>
+   </div>
+   
+    
+    <div class="row">
+        <div class="col">
+            <button class="btn" v-on:click="calculate">Calculate</button>
+        </div>
+       
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2>Results</h2>
+            <ul>
+                <li>((ts)) people out of ((s)) did not get sick.</li>
+                <li>((ti)) people are still infected.</li>
+                <li>((tr)) out of ((s)) people recovered.</li>
+                <li>((td)) people died.</li>
+                <li>The r0 value is ((infectionRate * recoveryTime))</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<canvas id="myChart" ></canvas>
+
+
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: setupData(),
+        responsive: true,
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+    function addData(chart, label, data, sus, rec, deaths) {
+        chart.data.labels.push(label);
+    
+        
+        chart.data.datasets.forEach((dataset) => {
+            if(dataset.label == "Infected"){
+                dataset.data.push(data);
+            }
+            if(dataset.label == "Susceptible"){
+                dataset.data.push(sus);
+            }
+            if(dataset.label == "Recovery"){
+                dataset.data.push(rec);
+            }
+            if(dataset.label == "Deaths"){
+                dataset.data.push(deaths);
+            }
+        });
+        chart.update();
+    }
+    
+    function removeData(chart) {
+        chart.data.labels.pop();
+        chart.data.datasets.forEach((dataset) => {
+            dataset.data.pop();
+        });
+        chart.update();
+    }
+    
+    function setupData() {
+        return {
+            labels: [],
+            datasets: [{
+                label: 'Infected',
+                data: [],
+                backgroundColor: '#bb393986',
+                borderColor: [
+                    'rgba(255, 99, 132, 1)'
+                ],
+                borderWidth: 1
+            },
+            {
+                label: 'Susceptible',
+                data: [],
+                backgroundColor: '#c2c5259f'
+            },
+            {
+                label: 'Recovery',
+                data: [],
+                backgroundColor: '#3939d3ad'
+            },
+            {
+                label: 'Deaths',
+                data: [],
+                backgroundColor: '#291515bc'
+            }]
+        };
+    }
+    
+    setupData(myChart);
+    </script>
+<script>
+    var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!',
+    days: 180,
+    infectionRate: 0.5,
+    s: 1000,
+    infected_start: 1,
+    recoveryTime: 14,
+    deathrate: 0.01,
+    ts: 0,
+    ti: 0,
+    td: 0,
+    tr: 0,
+    selectedOutbreak: 'Covid 19',
+    outbreaks: ['Covid 19','Measles','Influenza','Ebola'],
+  },
+  delimiters: ["((","))"],
+  beforeMount(){
+     this.onchange();
+  },
+  methods: {
+      onchange: function() {
+          if(this.selectedOutbreak == 'Covid 19'){
+              this.infectionRate = 0.25;
+              this.recoveryTime = 21;
+              this.deathrate = 0.1;
+          }
+          if(this.selectedOutbreak == 'Measles'){
+              this.infectionRate = 0.8;
+              this.recoveryTime = 21;
+              this.deathrate = 0.2;
+          }
+          if(this.selectedOutbreak == 'Influenza'){
+              this.infectionRate = 0.2;
+              this.recoveryTime = 14;
+              this.deathrate = 0.01;
+          }
+          if(this.selectedOutbreak == 'Ebola'){
+              this.infectionRate = 0.5;
+              this.recoveryTime = 30;
+              this.deathrate = 0.5;
+          }
+        this.calculate();
+
+      },
+      calculate: function() {
+          myChart.data = setupData();
+          let s = 1;
+          let i = this.infected_start / this.s;
+          let b = this.infectionRate;
+          let k = 1 / this.recoveryTime;
+          let recovered = 0;
+          let pop = i + s + recovered;
+          let dr = this.deathrate * k;
+          let d = 0;
+          for (let index = 0; index < this.days; index++) {
+            addData(myChart,"Day " + index,i * this.s, s * this.s, recovered * this.s, d * this.s);
+            //infect rate * pop * current infected;
+            let ns = s - (b * s * i);
+
+
+            let ni = i + (b * s * i - (k * i + dr * i));
+            
+            let nr = recovered + (k * i - dr * i);
+
+            let nd = d + (dr * i);
+            s = ns;
+            i = ni;
+            recovered = nr;
+            d = nd;
+          }
+
+          this.ts = Math.round(s * this.s);
+          this.ti = Math.round(i * this.s);
+          this.td = Math.round(d * this.s);
+          this.tr = Math.round(recovered * this.s);
+      },
+      
+
+  }
+})
+</script>
+
+
+<style>
+    :root {
+        --infected-color: #bb393986;
+        --susceptible-color: #c2c5259f;
+        --recovered-color: #3939d3ad;
+        --death-color: #291515bc;
+    }
+</style>
+
