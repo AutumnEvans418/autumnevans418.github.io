@@ -5,7 +5,6 @@ date: 2020-05-03
 description: Simulating the spread of viruses using the SIR model with vuejs & chartjs
 category: project
 tags: [vuejs,chartjs]
-published: false
 ---
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -17,19 +16,24 @@ published: false
         <p>((days))</p>
     </div>
     <div class="form-group">
-        <label>R0</label>
-        <input type="range" min="0.01" max="40" step="0.1" v-model="r0">
-        <p>((r0))</p>
+        <label>Infection Chance</label>
+        <input type="range" min="0.01" max="1" step="0.01" v-model="r0">
+        <p>((r0*100))%</p>
+    </div>
+    <div class="form-group">
+        <label>Recovery Time</label>
+        <input type="range" min="1" max="30" step="1" v-model="recoveryTime">
+        <p>((recoveryTime)) Days</p>
     </div>
     <div class="form-group">
         <label>Infected</label>
-        <input type="range" min="0.01" max="40" step="0.1" v-model="infected_start">
+        <input type="range" min="1" max="5000" step="1" v-model="infected_start">
         <p>((infected_start))</p>
     </div>
     <div class="form-group">
-        <label>Population</label>
-        <input type="range" min="0.01" max="40" step="0.1" v-model="pop">
-        <p>((pop))</p>
+        <label>Susceptible</label>
+        <input type="range" min="1" max="5000" step="1" v-model="s">
+        <p>((s))</p>
     </div>
     <div>
         <button class="btn" v-on:click="calculate">Calculate</button>
@@ -41,29 +45,34 @@ published: false
   el: '#app',
   data: {
     message: 'Hello Vue!',
-    days: 30.0,
-    r0: 2,
-    pop: 1000,
-    infected_start: 10,
-    brecovery: 0.3,
+    days: 60,
+    r0: 0.5,
+    s: 1000,
+    infected_start: 1,
+    recoveryTime: 14,
   },
   delimiters: ["((","))"],
   methods: {
       calculate: function() {
           myChart.data = setupData();
-          let s = this.pop;
-          let i = this.infected_start;
-          let infectionRate = this.r0 / this.pop;
-          let recoveryRate = this.brecovery;
+          let s = 1;
+          let i = this.infected_start / this.s;
+          let b = this.r0;
+          let k = 1 / this.recoveryTime;
           let recovered = 0;
+          let pop = i + s + recovered;
+          addData(myChart, "Day 0",i,s,recovered,pop);
           for (let index = 0; index < this.days; index++) {
-            i += infectionRate * s * i - recoveryRate * i;
-            i = Math.min(this.pop,i);
-
-            s -= i;
-            s = Math.max(0,s);
             
-            recovered = this.pop - s - i;
+            let ns = s - b * s * i;
+
+            let ni = i + (b * s * i - k * i);
+            
+            let nr = recovered + k * i;
+
+            s = ns;
+            i = ni;
+            recovered = nr;
             addData(myChart,"Day " + index + 1,i, s, recovered, s + i + recovered);
           }
       },
