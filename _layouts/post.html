@@ -6,17 +6,22 @@ layout: default
     <div class="col-auto">
       <img style="max-width: 200px" src="{{page.logo}}"/>
     </div>
-        {% for category in page.categories %}
-        <div class="col-auto">
-          {% include tagcard.html link='categories' name=category %}
+    <div class="col">
+     <div class="row">
+      {% for category in page.categories %}
+      <div class="col-auto">
+        {% include tagcard.html link='categories' name=category %}
 
-        </div>
-        {% endfor %}
-        {% for tag in page.tags %}
-        <div class="col-auto">
-          {% include tagcard.html link='tags' name=tag %}
-        </div>
-        {% endfor %}
+      </div>
+      {% endfor %}
+      {% for tag in page.tags %}
+      <div class="col-auto">
+        {% include tagcard.html link='tags' name=tag %}
+      </div>
+      {% endfor %}
+     </div>
+    </div>
+       
   </div>
   <h1 style="margin-bottom: 3%;margin-top: 3%">{{ page.title }}</h1>
   <p class="meta">{{ page.date | date_to_string }}</p>
