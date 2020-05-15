@@ -168,7 +168,7 @@
     td: 0,
     tr: 0,
     selectedOutbreak: 'Covid 19',
-    outbreaks: ['Covid 19','Measles','Influenza','Ebola'],
+    outbreaks: ['Covid 19','Measles','Influenza','Ebola','Zombie Virus'],
   },
   delimiters: ["((","))"],
   beforeMount(){
@@ -196,6 +196,12 @@
               this.recoveryTime = 30;
               this.deathrate = 0.5;
           }
+          if(this.selectedOutbreak == 'Zombie Virus'){
+              this.infectionRate = 0.99;
+              this.recoveryTime = 360 * 5;
+              this.deathrate = 0.0001;
+              this.days = 360 * 10;
+          }
         this.calculate();
 
       },
@@ -209,8 +215,14 @@
           let pop = i + s + recovered;
           let dr = this.deathrate * k;
           let d = 0;
-          for (let index = 0; index < this.days; index++) {
-            addData(myChart,"Day " + index,i * this.s, s * this.s, recovered * this.s, d * this.s);
+
+          let increment = Math.max(1,Math.round(this.days / 60));
+
+          for (let index = 0; index < this.days; index += increment) {
+              if(index % increment == 0) {
+                addData(myChart,"Day " + index,i * this.s, s * this.s, recovered * this.s, d * this.s);
+
+              }
             //infect rate * pop * current infected;
             let ns = s - (b * s * i);
 
@@ -224,6 +236,8 @@
             i = ni;
             recovered = nr;
             d = nd;
+
+            
           }
 
           this.ts = Math.round(s * this.s);
