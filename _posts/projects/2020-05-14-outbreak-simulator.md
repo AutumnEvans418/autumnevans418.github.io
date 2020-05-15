@@ -5,6 +5,7 @@ date: 2020-05-03
 description: Simulating the spread of diseases using the SIR model with vuejs & chartjs
 category: project
 tags: [vuejs,chartjs,interactive]
+logo: /assets/images/outbreak.gif
 ---
 ```Try it out below!```  
 The spread of the disease is something that has been studied for a long time, and there are a variety of ways to predict what will happen when a population is exposed to a new disease.  One way of modeling these scenerios is the susceptible, infected, recovered (SIR) model.
