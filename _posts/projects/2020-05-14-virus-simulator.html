@@ -26,6 +26,11 @@ tags: [vuejs,chartjs]
         <p>((recoveryTime)) Days</p>
     </div>
     <div class="form-group">
+        <label>Death Rate</label>
+        <input type="range" min="0.000001" max="1" step="0.000001" v-model="deathrate">
+        <p>((deathrate*100))%</p>
+    </div>
+    <div class="form-group">
         <label>Infected</label>
         <input type="range" min="1" max="5000" step="1" v-model="infected_start">
         <p>((infected_start))</p>
@@ -50,6 +55,7 @@ tags: [vuejs,chartjs]
     s: 1000,
     infected_start: 1,
     recoveryTime: 14,
+    deathrate: 0.01,
   },
   delimiters: ["((","))"],
   methods: {
@@ -61,19 +67,23 @@ tags: [vuejs,chartjs]
           let k = 1 / this.recoveryTime;
           let recovered = 0;
           let pop = i + s + recovered;
-          addData(myChart, "Day 0",i,s,recovered,pop);
+          let dr = this.deathrate * k;
+          let d = 0;
           for (let index = 0; index < this.days; index++) {
-            
-            let ns = s - b * s * i;
+            addData(myChart,"Day " + index,i * this.s, s * this.s, recovered * this.s, d * this.s);
+            //infect rate * pop * current infected;
+            let ns = s - (b * s * i);
 
-            let ni = i + (b * s * i - k * i);
-            
-            let nr = recovered + k * i;
 
+            let ni = i + (b * s * i - (k * i + dr * i));
+            
+            let nr = recovered + (k * i - dr * i);
+
+            let nd = d + (dr * i);
             s = ns;
             i = ni;
             recovered = nr;
-            addData(myChart,"Day " + index + 1,i, s, recovered, s + i + recovered);
+            d = nd;
           }
       },
       
@@ -89,6 +99,7 @@ tags: [vuejs,chartjs]
         --infected-color: #bb393986;
         --susceptible-color: #c2c5259f;
         --recovered-color: #3939d3ad;
+        --death-color: #291515bc;
     }
 </style>
 
@@ -107,7 +118,7 @@ var myChart = new Chart(ctx, {
         }
     }
 });
-function addData(chart, label, data, sus, rec, total) {
+function addData(chart, label, data, sus, rec, deaths) {
     chart.data.labels.push(label);
 
     
@@ -121,8 +132,8 @@ function addData(chart, label, data, sus, rec, total) {
         if(dataset.label == "Recovery"){
             dataset.data.push(rec);
         }
-        if(dataset.label == "Total"){
-            dataset.data.push(total);
+        if(dataset.label == "Deaths"){
+            dataset.data.push(deaths);
         }
     });
     chart.update();
@@ -159,9 +170,9 @@ function setupData() {
             backgroundColor: '#3939d3ad'
         },
         {
-            label: 'Total',
+            label: 'Deaths',
             data: [],
-            backgroundColor: 'green'
+            backgroundColor: '#291515bc'
         }]
     };
 }
