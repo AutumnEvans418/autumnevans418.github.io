@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Outbreak Simulator
+title: Simulating an Outbreak
 date: 2020-05-03
 description: Simulating the spread of diseases using the SIR model with vuejs & chartjs
 category: project
