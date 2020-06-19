@@ -40,7 +40,7 @@ html[data-theme="light"] {
 @media screen and (max-width: 800px) {
     .left-column, .right-column {
       width: 100%;
-      padding-left: 3em;
+      padding-left: 0em;
     }
   }
 
