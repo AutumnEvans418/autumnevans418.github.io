@@ -25,6 +25,10 @@ html[data-theme="light"] {
     --empty-contrast: 0%;
 }
 
+.share {
+    margin-bottom: 1em;
+}
+
 .left-column {
     float: left;
     width: 75%;
