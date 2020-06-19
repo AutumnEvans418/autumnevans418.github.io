@@ -1,0 +1,21 @@
+<div style="width: 500px;">
+    <h3>Players</h3>
+    <ul id="players">
+        <li v-for="player in players">
+            <div class="row">
+                <div class="col-auto">
+                    <img class="avatar" v-if="player.avatarUrl" :src="player.avatarUrl">
+                </div>
+                <div class="col">
+                    <p><span :style="player.style">((player.name))</span> team ((player.team.teamId))</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <h3>Chat</h3>
+    <ul id="chat">
+        <li v-for="msg in chat">
+            <p class="message"><span :style="msg.player.style">((msg.name)):</span> ((msg.message))</p>
+        </li>
+    </ul>
+</div>

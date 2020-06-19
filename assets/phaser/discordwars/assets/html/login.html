@@ -1,0 +1,23 @@
+
+<!-- <div id="login-app">
+    <label>Enter your bot token</label>
+    <input v-model="token" type="password" class="form-control">
+    <button v-on:click="tokenLogin(token)" class="btn">Start</button>
+</div> -->
+<div class="d-flex justify-content-center flex-column text-center">
+    <h1 class="mb-4" style="font-size: 4em;">Discord Wars</h1>
+    <label>Enter your discord bot token</label>
+    <input class="form-control" name="token" placeholder="your token" type="password">
+    <button class="btn form-control" name="login">Login</button>
+    
+</div>
+<div class="help mt-4">
+    <h2>Why do you need my bot token?</h2>
+    <p>Because it costs money to run a server with a bot and it's dangerous to store a bot token on the client, it made more sense for the bot token to be entered by the user.  The token is cached only for the session.</p>
+    <p>Fortunately, no permissions are needed for this game to work, and it's easy to create a bot.  To create a bot, you need to created a discord application <a href="https://discord.com/developers/applications">Here</a></p>
+    <p>After creating an application, you can get the bot token by going to the "Bot" tab and clicking on the "Copy" button.</p>
+    <p>To add the bot to a server, use this url with the client id from the "General Information" page of the discord application page: https://discordapp.com/oauth2/authorize?client_id=CLIENT_ID_HERE&scope=bot</p>
+    
+    <p>For more info, <a href="https://www.howtogeek.com/364225/how-to-make-your-own-discord-bot/">follow this easy guide</a></p>
+</div>
+

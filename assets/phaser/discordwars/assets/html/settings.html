@@ -1,0 +1,30 @@
+<div style="width: 300px;">
+  <button id="settings" v-on:click="settings" class="btn">Settings</button>
+  <button id="exit" class="btn">Exit</button>
+  <button id="help" class="btn">Help</button>
+  <div id="isHelp" class="help" style="font-family: Arial, Helvetica, sans-serif;">
+    <h3>How to Play</h3>
+    <p>Discord Wars is played using discord chat and a person streaming the game.  There are a few commands used to control the game</p>
+    <p>Every command can be typed with just the first letter, like '!j 1' instead of '!join 1'</p>
+    <ul>
+      <li>!join 1 = joins team 1. !join red or !j r can also be used</li>
+      <li>!leave = leaves the game.  Can also do !l</li>
+      <li>!move 1 2 = moves units from base 1 to 2.  Can also do !m 1 2</li>
+      <li>!move 1 = moves all units to base 1.</li>
+      <li>!upgrade 1 = upgrade/heals base 1.  Can also do !u 1</li>
+      <li>!say hello! = puts a message in chat.  Can also do !s hello!</li>
+      <li>!retreat 1 = sends all units away from base 1.  Can also do !r 1</li>
+    </ul>
+  </div>
+  <div v-if="isSettings" id="isSettings">
+    <label>Speed</label>
+    <input id="speed" type="range" min="1" max="5" step="1">
+    <label>Master</label>
+    <input id="master" type="range" v-model="master" min="0" max="1" step="0.1">
+    <label>Music</label>
+    <input id="music" type="range" v-model="music" min="0" max="1" step="0.1">
+    <label>Effects</label>
+    <input id="effects" type="range" v-model="effects" min="0" max="1" step="0.1">
+    <button id="saveSettings" v-on:click="saveSettings" class="btn form-control">Save</button>
+  </div>
+</div>
