@@ -24,6 +24,26 @@ html[data-theme="light"] {
     --foregroundText: #d8d8d8;
     --empty-contrast: 0%;
 }
+
+.left-column {
+    float: left;
+    width: 75%;
+    padding-left: 3em;
+}
+
+.right-column {
+    float: left;
+    width: 25%;
+    padding-right: 1em;
+}
+
+@media screen and (max-width: 800px) {
+    .left-column, .right-column {
+      width: 100%;
+      padding-left: 3em;
+    }
+  }
+
 .fa {
     color: var(--tanText);
 }
