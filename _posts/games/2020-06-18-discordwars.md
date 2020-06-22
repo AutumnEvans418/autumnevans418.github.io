@@ -9,6 +9,8 @@ description: An RTS game played by the discord chat watching the stream
 buttons:
   - title: Source Code
     url: https://github.com/chrisevans9629/DiscordWars
+  - title: Play
+    url: /assets/phaser/discordwars/index.html
 ---
 
 My brother came up with an idea of a game that could be streamed and played with the people watching the live stream.  We planned it out and expected to get it done in about week, but like all other projects, it ended up taking far longer (more like a month).
@@ -19,5 +21,4 @@ However, once I learned how to use PhaserJS and webpack, everything went pretty 
 
 The game is actually really fun and has a lot of features for such a short time.  Definitly give it a try!
 
-## [Play the fullscreen version here](/assets/phaser/discordwars/index.html)
-{% include discordwars.html %}
+## [Play here](/assets/phaser/discordwars/index.html)
