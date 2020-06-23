@@ -15,16 +15,19 @@
       <li>!say hello! = puts a message in chat.  Can also do !s hello!</li>
       <li>!retreat 1 = sends all units away from base 1.  Can also do !r 1</li>
     </ul>
+    <h3>Local Play</h3>
+    <p>To play without discord chat, you can use the command line provided at the bottom of the screen</p>
   </div>
   <div v-if="isSettings" id="isSettings">
+    <button id="restart" class="btn form-control">Restart Game</button>
     <label>Speed</label>
     <input id="speed" type="range" min="1" max="5" step="1">
     <label>Master</label>
-    <input id="master" type="range" v-model="master" min="0" max="1" step="0.1">
+    <input id="master" type="range" v-model="master" min="0" max="1" step="0.05">
     <label>Music</label>
-    <input id="music" type="range" v-model="music" min="0" max="1" step="0.1">
+    <input id="music" type="range" v-model="music" min="0" max="1" step="0.05">
     <label>Effects</label>
-    <input id="effects" type="range" v-model="effects" min="0" max="1" step="0.1">
+    <input id="effects" type="range" v-model="effects" min="0" max="1" step="0.05">
     <button id="saveSettings" v-on:click="saveSettings" class="btn form-control">Save</button>
   </div>
 </div>

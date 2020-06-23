@@ -6,29 +6,14 @@
 
 :root {
     --textColor: white;
-    font-family: ethno;
-    font-size: 0.75em;
 }
 
-html {
+.game-control, .game-control * {
     color: var(--textColor);
     font-family: ethno;
+    font-size: 1em;
 }
 
-li {
-    color: var(--textColor);
-}
-
-label {
-    color: var(--textColor);
-    width: 100%;
-    font-family: ethno;
-}
-
-h1, h2, h3, h4, p {
-    color: var(--textColor);
-    font-family: ethno;
-}
 .btn {
     border: solid 1px white;
     margin: 10px;
@@ -56,9 +41,5 @@ z-index: 1;
 }
 
 .help * {
-    font-family: Arial, Helvetica, sans-serif !important;
-}
-
-.help p {
-    font-size: 1.5em !important;
+    font-family: Arial, Helvetica, sans-serif;
 }
