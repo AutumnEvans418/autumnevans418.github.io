@@ -17,6 +17,8 @@ urls:
     url: /blog/
   - text: Music
     url: /music/
+  - text: RSS
+    url: /feed.xml
 
 #has to be done this way due to a bug: https://github.com/jekyll/jekyll/issues/1352
 include:
@@ -31,6 +33,11 @@ exclude:
 
 plugins:
   - jekyll-last-modified-at
+  - jekyll-feed
+
+title: Chris Evans' Dev Blog
+description: Welcome to my dev blog!
+author: Chris Evans
 
 # Optional. The default date format, used if none is specified in the tag.
 last-modified-at:
