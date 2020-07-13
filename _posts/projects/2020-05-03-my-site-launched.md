@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Building My Website!
-date: 2020-05-03
 logo: /icon-512x512.png
 description: The website you are currently using, built with jekyll and hosted with github pages.
 category: project
