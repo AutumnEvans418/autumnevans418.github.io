@@ -5,14 +5,14 @@ description: Simplifying grading code in visual studio
 logo: "/assets/vsgradebook.png"
 layout: post
 buttons:
-  - title: "Source Code"
+  - title: Source Code
     url: https://github.com/chrisevans9629/VsGradeBook
-  - title: "VS Marketplace"
+  - title: VS Marketplace
     url: "https://marketplace.visualstudio.com/items?itemName=EvansSoftware.VsGradeBook"
 tags: [downloadable,Visual Studio]
 ---
 
-Learning to program is hard.  Dedication is required to master software development.  Students often struggle with the lack of feedback from their code.  How do you know if you are doing it right?  Professors also struggle to grade code.  Grading student's code requires professors to download it, compile it, run it, and review the source code.  Visual Studio Gradebook solves all these problems by providing a unit test style feedback system for students and publishing of their code right in visual studio.  Professors can view student's code and see the results without the need to download their project or running it.  It will also show how many tests the student's code passed.  They can also see if the code was plagarized.
+Learning to program is hard to learn for beginners and hard to teach.  Students often struggle with the lack of feedback from their code.  How do you know if you are doing it right?  Professors also struggle to grade code.  Grading student's code requires professors to download it, compile it, run it, and review the source code.  Visual Studio Gradebook solves all these problems by providing a unit test style feedback system for students, and provides publishing of student's code right in visual studio.  Professors can view student's code and see the results without the need to download or run their project.  In addition to above Visual Studio Gradebook also checks for plagiarism
 
 ## Example
 
@@ -52,8 +52,8 @@ class MainClass
 
 ## How does this work?
 
-VS Gradebook uses roslyn analyzers to find all the calls to `Console` and replaces it with my own class with the same name.  I can then inject the input into the ReadLines and read the output from the WriteLines.  This allows me to provide a percent of passing.
+VS Gradebook uses roslyn analyzers to find all the calls to `Console` and replaces it with my own class with the same name.  I can then inject the input into the `Console.ReadLines` and read the output from the `Console.WriteLines`.  This allows me to provide a percent of passing.
 
 ## Inspiration
 
-This was done as an honors project at Pittsburg State University my senior year.  I wanted to create something that is new and useful.
+This was done as an honors project at Pittsburg State University my senior year.  I wanted to create something that is new and useful to students and professors.
