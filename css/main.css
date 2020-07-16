@@ -71,7 +71,10 @@ textarea {
     line-height: 200%;
 }
 
-.blog > h2, .blog > h1 {
+.blog > h2,
+.blog > h1,
+.blog > h3,
+.blog > h4 {
     color: var(--orangeText);
 }
 
