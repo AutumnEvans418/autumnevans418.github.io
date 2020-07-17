@@ -3,7 +3,7 @@ layout: post
 title: Minesweeper
 category: game
 description: "A crossplatform minesweeper, playable in the browser"
-logo: "/assets/minesweeper.png"
+logo: "/assets/images/minesweeper.png"
 buttons:
   - title: "Source Code"
     url: https://github.com/chrisevans9629/Minesweeper

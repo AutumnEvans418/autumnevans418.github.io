@@ -2,7 +2,7 @@
 title: entrepreneurchute
 category: project
 description: "The latest and greatest technology to connect aspiring entrepreneurs and experienced mentors."
-logo: "/assets/entrepreneurchute.png"
+logo: "/assets/images/entrepreneurchute.png"
 layout: post
 buttons:
   - title: "Source Code"
@@ -18,7 +18,7 @@ Watch our video below to see what we built.
 
 Below is the dream team.  So glad that I had the chance to work with all these great developers.
 
-![kcfed](/assets/kcfed.png)
+![kcfed](/assets/images/kcfed.png)
 
 ## Development
 You can see the tech we used below to develop this site.  We were able to specialize quite a bit with 3 backend developers and 2 front developers.
