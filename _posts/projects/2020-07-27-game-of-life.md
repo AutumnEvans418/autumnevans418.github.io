@@ -49,6 +49,7 @@ let grid: ICell[][] = [];
 ```
 This is one of the results you can get.
 Notice the cells that keep flipping back and forth.  These are called oscillators.  In the top left, you can see cells being generated.  The cells being generated that are moving down are called gliders, and are being created by the glider gun.
+
 ![result](/assets/babylon/life/assets/cellatomata2.gif)
 
 The code above can be optimized by storing the previous value and only changing cells that have changed.  This reduces the number of calls that are made to the HTML canvas.
