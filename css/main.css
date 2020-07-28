@@ -29,24 +29,7 @@ html[data-theme="light"] {
     margin-bottom: 1em;
 }
 
-.left-column {
-    float: left;
-    width: 75%;
-    padding-left: 3em;
-}
 
-.right-column {
-    float: left;
-    width: 25%;
-    padding-right: 1em;
-}
-
-@media screen and (max-width: 800px) {
-    .left-column, .right-column {
-      width: 100%;
-      padding: 2em;
-    }
-  }
 
 .fa {
     color: var(--tanText);
@@ -65,21 +48,6 @@ textarea {
     min-height: 300px;
     white-space: nowrap;
     overflow: auto;
-}
-
-.blog {
-    line-height: 200%;
-}
-
-.blog > h2,
-.blog > h1,
-.blog > h3,
-.blog > h4 {
-    color: var(--orangeText);
-}
-
-.blog > p > img {
-    width: 100%;
 }
 
 
@@ -252,15 +220,6 @@ a:hover {
     background-color: var(--orangeText);
 }
 
-.blog a {
-    text-decoration: underline;
-    color: var(--orangeText);
-}
-
-.blog a:hover {
-    text-decoration: underline;
-    color: var(--grayBackground);
-}
 
 pre {
     padding: 1%;

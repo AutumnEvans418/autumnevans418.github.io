@@ -1,0 +1,51 @@
+.recent-blog {
+    min-width: 200px;
+}
+.recent-blog > div > a > img {
+    max-width: 150px;
+}
+
+.left-column {
+    float: left;
+    width: 75%;
+    padding-left: 25%;
+}
+
+.right-column {
+    float: left;
+    width: 25%;
+    padding-right: 1em;
+}
+
+@media screen and (max-width: 800px) {
+    .left-column, .right-column {
+      width: 100%;
+      padding: 2em;
+    }
+}
+
+.blog {
+    line-height: 200%;
+}
+
+.blog > h2,
+.blog > h1,
+.blog > h3,
+.blog > h4 {
+    color: var(--orangeText);
+}
+
+.blog > p > img {
+    width: 100%;
+}
+
+
+.blog a {
+    text-decoration: underline;
+    color: var(--orangeText);
+}
+
+.blog a:hover {
+    text-decoration: underline;
+    color: var(--grayBackground);
+}

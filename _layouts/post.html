@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
- <div class="row">
-  <div class="left-column">
+<div class="row">
+<div class="left-column">
     <div class="row">
       <div class="col-auto">
         <img style="max-width: 200px" src="{{page.logo}}"/>
@@ -57,13 +57,13 @@ layout: default
     
 </div>
 <div class="right-column">
-    <h3 >Recent Articles</h3>
+    <h3 >Recent Blogs</h3>
     <div class="break"></div>
     {% for post in site.posts limit: 3 %}
-    <div class="scard">
+    <div class="scard recent-blog">
       <div>
         {% if post.logo %}
-        <a href="{{ post.url }}" title="{{ post.title }}"><img style="max-width: 150px;" src="{{post.logo}}"></a>
+        <a href="{{ post.url }}" title="{{ post.title }}"><img src="{{post.logo}}"></a>
         {% endif %}
       </div>
       <div>
@@ -75,5 +75,5 @@ layout: default
 
     
 </div>
- </div>
-   
+
+</div>
