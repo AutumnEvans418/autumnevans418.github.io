@@ -14,10 +14,7 @@ jobs:
     name: Promote
     runs-on: ubuntu-latest
     steps:
-    - name: greet
-      run: |
-        echo $hello
     - name: great pwsh
       shell: pwsh
-      run: |
-        $env:hello + ' from powershell'
+      run: build.ps1
+        
