@@ -1,0 +1,19 @@
+#syntax at https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
+
+name: Promote Blogs
+on: 
+  push:
+  schedule:
+    - cron: '0 0 12 ? * SAT *'
+
+env:
+  hello: HelloWorld
+
+jobs:
+  my_job:
+    name: Promote
+    runs-on: ubuntu-latest
+    steps:
+    - name: greet
+      run: |
+        echo $hello
