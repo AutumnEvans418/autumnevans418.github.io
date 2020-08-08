@@ -1,0 +1,15 @@
+
+.special {
+    font-weight: bold;
+}
+
+html {
+    background-color: white;
+}
+
+
+@media print {
+    .btn-print {
+        visibility: hidden;
+    }
+}

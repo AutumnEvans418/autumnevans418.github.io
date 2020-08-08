@@ -1,0 +1,105 @@
+---
+title: Resume
+---
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>{{ page.title }}</title>
+		{% if page.baseUrl %}
+		<base href="{{page.baseUrl}}" />
+		{% endif %}
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+		<!-- link to main stylesheet -->
+		<!-- <link rel="stylesheet" type="text/css" href="/css/main.css"> -->
+        <link rel="shortcut icon" href="/favicon.ico?" />
+        <link rel="stylesheet" type="text/css" href="resume.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+	</head>
+<body>
+
+    <div class="container">
+        <a class="btn btn-primary btn-print m-2" onclick="window.print()">Print</a>
+    
+    
+        <div class="col text-center mb-4">
+            <h1>{{site.data.profile.name}}</h1>
+            <h2>{{site.data.profile.title}}</h2>
+            <p>{{site.data.profile.github}}</p>
+            <p>{{site.data.profile.email}}</p>
+            <p>{{site.data.profile.phone}}</p>
+            <p>{{site.data.profile.address}}</p>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="special">Profession</h3>
+                        <div>
+                            {% for p in site.data.profile.professions %}
+                                <h4>{{p.title}}</h4>
+                                <h5>{{p.company}}</h5>
+                                <p>{{p.date}}</p>
+                                <ul>
+                                    {% for a in p.attributes %}
+                                        <li>{{a}}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3 class="special">Skills</h3>
+                        <div>
+                            {% for st in site.data.profile.skill-types %}
+            
+                                <p>{{st.name}}</p>
+                                <ul>
+                                    {% for s in st.skills %}
+                                        <li>{{s}}</li>
+                                    {% endfor %}
+                                </ul>
+                                
+                            {% endfor %}
+                        </div>
+                    </div>
+            
+                    </div>
+                    
+                
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="special">Education</h3>
+                        {% for e in site.data.profile.educations %}
+                            <h4>{{e.title}}</h4>
+                            <h5>{{e.college}}</h5>
+                            <p>{{e.date}}</p>
+                            <div>
+                                {% for s in e.sections %}
+                                    <p>{{s.name}}</p>
+                                    <ul>
+                                        {% for a in s.attributes %}
+                                            <li>{{a}}</li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>

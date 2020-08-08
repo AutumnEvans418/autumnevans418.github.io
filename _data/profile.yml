@@ -1,5 +1,10 @@
 name: "Chris Evans"
 title: "Software Engineer"
+email: chrisevans9629@gmail.com
+phone: 417-283-1656
+github: https://github.com/chrisevans9629
+address: Fort Scott, KS
+
 social:
   - title: Github
     url: https://github.com/chrisevans9629
@@ -46,7 +51,7 @@ educations:
     date: "May 2017-Dec 2019"
     id: pitt
     sections:
-      - name: Awards
+      - name: Achievements
         attributes:
           - "4.0 GPA"
           - "Summa Cum Laude"
@@ -60,6 +65,7 @@ educations:
           - "Phi Kappa Phi Member"
           - "National Society of Leadership and Success Member"
           - "Beta Gamma Sigma Member"
+          - "Tau Sigma National Honor Society Member"
       - name: Other Activities
         attributes:
           - "1st place in KC Federal Reserve Code-a-thon 2019"
@@ -71,7 +77,7 @@ educations:
     logo: "/assets/images/crowder.png"
     id: crowder
     sections:
-      - name: Awards
+      - name: Achievements
         attributes:
           - "4.0 GPA"
           - "Summa Cum Laude"
