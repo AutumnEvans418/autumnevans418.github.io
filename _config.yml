@@ -35,6 +35,9 @@ plugins:
   - jekyll-last-modified-at
   - jekyll-feed
 
+feed:
+  posts_limit: 25
+
 title: Chris Evans' Dev Blog
 description: Welcome to my dev blog!
 author: Chris Evans

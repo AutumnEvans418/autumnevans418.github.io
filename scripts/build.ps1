@@ -1,13 +1,13 @@
-$env:hello + ' from powershell'
+# $env:hello + ' from powershell'
 
-$posts = Get-ChildItem "_posts" -Recurse `
-    | Where-Object {$_.Name -like "*.md" -or $_.Name -like "*.html" } `
-    | Select-Object -Property Name, @{ Name= 'content'; Expression={ $_ | Get-Content } } `
-    | Where-Object {$_.content.Contains('published: false') -ne $true } `
-    | Sort-Object -Property Name -Descending `
-    | Select-Object -First 1
+# $posts = Get-ChildItem "_posts" -Recurse `
+#     | Where-Object {$_.Name -like "*.md" -or $_.Name -like "*.html" } `
+#     | Select-Object -Property Name, @{ Name= 'content'; Expression={ $_ | Get-Content } } `
+#     | Where-Object {$_.content.Contains('published: false') -ne $true } `
+#     | Sort-Object -Property Name -Descending `
+#     | Select-Object -First 1
 
-$posts
+# $posts
 
 $file = ".\scripts\atom.xml"
 
@@ -26,7 +26,36 @@ foreach ($entry in $entries) {
     # get the first two sentences
     $sum = $summary.Split(".")[0] + "." + $summary.Split(".")[1] + "..."
 
-    $array.Add({$title;$ref;$sum})
+    $oof = $array.Add(($title,$ref,$sum))
 }
 
-$array
+#$random = [System.Random]::new()
+#Get Random: $blog = $array[$random.Next(0, $array.Count-1)]
+$blog = $array[0]
+
+$file = $PSScriptRoot + "/lastblog.txt"
+
+$lastblog = Get-Content $file
+
+if($lastblog -ne $blog[0])
+{
+    & pip install facebook-sdk
+    "posting update"
+    # $blog
+
+    $prFile = $PSScriptRoot + "/promote.py"
+
+    & python $prFile
+
+    $blog[0] > $file
+
+    & git diff
+    & git config --global user.email "readme-bot@example.com"
+    & git config --global user.name "README-bot"
+    #& git add -A
+    #& git commit -m "Posted update" > exit 0
+    #& git push
+}
+
+
+
