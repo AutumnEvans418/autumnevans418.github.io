@@ -17,3 +17,7 @@ jobs:
     - name: greet
       run: |
         echo $hello
+    - name: great pwsh
+      shell: pwsh
+      run: |
+        echo $hello
