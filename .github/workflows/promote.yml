@@ -20,4 +20,4 @@ jobs:
     - name: great pwsh
       shell: pwsh
       run: |
-        $hello + ' from powershell'
+        $env:hello + ' from powershell'
