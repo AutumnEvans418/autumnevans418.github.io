@@ -43,8 +43,18 @@ professions:
       - "Mobile Development"
       - "Desktop Development"
       - "Security Committee Member"
+      - "Safety Champion"
 
 educations:
+  - title: "Masters of Computer Science"
+    college: "University of Missouri Kansas City"
+    logo: "/assets/images/umkc.png"
+    date: "January 2021-Present"
+    id: umkc
+    sections:
+      - name: Achievements
+        attributes:
+          - "4.0 GPA"
   - title: "Bachelors of Business Administration in Computer Information Systems"
     college: "Pittsburg State University"
     logo: "/assets/images/pittstate.png"
@@ -100,3 +110,4 @@ skill-types:
       - "UWP"
       - "Unity3D"
       - "Jekyll"
+      - "Blender"
