@@ -17,7 +17,7 @@ title: About
                             <div class="row p-2">
                                 {% for soc in site.data.profile.social %}
                                     <div class="col-2 p-2">
-                                        <a href="{{soc.url}}"><img style="width: 25px" alt="{{soc.title}}" src="{{soc.logo}}"></a>
+                                        <a href="{{soc.url}}"><img style="width: 25px" alt="{{soc.title}}" src="{{soc.image}}"></a>
                                     </div>
                                 {% endfor %}
                             </div>
@@ -51,7 +51,7 @@ title: About
                 {% for prof in site.data.profile.professions %}
                 <div class="row">
                     <div class="col-sm-auto">
-                        <img src="{{prof.logo}}">
+                        <img src="{{prof.image}}">
                     </div>
                     <div class="col">
                         <div class="row">
@@ -89,7 +89,7 @@ title: About
                 {% for ed in site.data.profile.educations %}
                 <div class="row">
                     <div class="col-sm-auto">
-                        <img src="{{ed.logo}}">
+                        <img src="{{ed.image}}">
                     </div>
                     <div class="col">
                         <div class="row">

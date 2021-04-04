@@ -5,7 +5,7 @@ layout: default
 <div class="left-column">
     <div class="row">
       <div class="col-auto">
-        <img style="max-width: 200px" src="{{page.logo}}"/>
+        <img style="max-width: 200px" src="{{page.image}}"/>
       </div>
       <div class="col">
        <div class="row">
@@ -62,8 +62,8 @@ layout: default
     {% for post in site.posts limit: 3 %}
     <div class="scard recent-blog">
       <div>
-        {% if post.logo %}
-        <a href="{{ post.url }}" title="{{ post.title }}"><img src="{{post.logo}}"></a>
+        {% if post.image %}
+        <a href="{{ post.url }}" title="{{ post.title }}"><img src="{{post.image}}"></a>
         {% endif %}
       </div>
       <div>

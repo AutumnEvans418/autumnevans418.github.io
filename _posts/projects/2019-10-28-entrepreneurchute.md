@@ -2,7 +2,7 @@
 title: entrepreneurchute
 category: project
 description: "The latest and greatest technology to connect aspiring entrepreneurs and experienced mentors."
-logo: "/assets/images/entrepreneurchute.png"
+image: "/assets/images/entrepreneurchute.png"
 layout: post
 buttons:
   - title: "Source Code"

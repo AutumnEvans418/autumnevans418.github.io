@@ -11,8 +11,8 @@
                     {% for item in include.items limit:4 %}
             <div class="col d-flex justify-content-center">
                     <div class="card" style="width: 13rem; height: 13rem;margin: 0.5rem;background-color: var(--blackBackground);">
-                        {% if item.logo %}
-                            <img class="card-img-top" src="{{item.logo}}" alt="{{item.title}}">
+                        {% if item.image %}
+                            <img class="card-img-top" src="{{item.image}}" alt="{{item.title}}">
                         {% else %}
                             <img class="card-img-top empty" src="/assets/images/empty.png" alt="{{item.title}}">
                         {% endif %}

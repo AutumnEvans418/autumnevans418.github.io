@@ -5,7 +5,7 @@ description: How you can use Github Actions to promote your blogs anytime you ad
 category: project
 tags: [web]
 published: false
-# logo: /assets/images/life.jpg
+# image: /assets/images/life.jpg
 # buttons:
 #   - title: Source Code
 #     url: https://github.com/chrisevans9629/GameOfLife

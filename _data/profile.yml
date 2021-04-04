@@ -8,32 +8,32 @@ address: Fort Scott, KS
 social:
   - title: Github
     url: https://github.com/chrisevans9629
-    logo: /assets/images/github.png
+    image: /assets/images/github.png
   - title: Itch
     url: https://chrisevans9629.itch.io
-    logo: /assets/images/itch.png
+    image: /assets/images/itch.png
   - title: LinkedIn
     url: https://www.linkedin.com/in/chris-evans-3606ab19b/
-    logo: /assets/images/linkedin.png
+    image: /assets/images/linkedin.png
   - title: Facebook
     url: https://www.facebook.com/chrisevans9629
-    logo: /assets/images/facebook.png
+    image: /assets/images/facebook.png
   - title: Twitter
     url: https://twitter.com/ChrisAlexEvans
-    logo: /assets/images/twitter.png
+    image: /assets/images/twitter.png
   - title: SoundCloud
     url: https://soundcloud.com/40daysunder?utm_source=embed&utm_medium=icon
-    logo: /assets/images/soundcloud.png
+    image: /assets/images/soundcloud.png
   - title: StackOverflow
     url: https://stackoverflow.com/users/6895913/cevans
-    logo: /assets/images/stackoverflow.png
+    image: /assets/images/stackoverflow.png
   - title: Quora
     url: https://www.quora.com/profile/Chris-Alexander-Evans
-    logo: /assets/images/quora.png
+    image: /assets/images/quora.png
 professions:
   - title: "DevOps Supervisor"
     company: "Peerless Products Inc."
-    logo: "/assets/images/peerless.png"
+    image: "/assets/images/peerless.png"
     date: "May 2016-Present"
     id: peerless
     attributes:
@@ -48,7 +48,7 @@ professions:
 educations:
   - title: "Masters of Computer Science"
     college: "University of Missouri Kansas City"
-    logo: "/assets/images/umkc.png"
+    image: "/assets/images/umkc.png"
     date: "January 2021-Present"
     id: umkc
     sections:
@@ -57,7 +57,7 @@ educations:
           - "4.0 GPA"
   - title: "Bachelors of Business Administration in Computer Information Systems"
     college: "Pittsburg State University"
-    logo: "/assets/images/pittstate.png"
+    image: "/assets/images/pittstate.png"
     date: "May 2017-Dec 2019"
     id: pitt
     sections:
@@ -84,7 +84,7 @@ educations:
   - title: "Associate of Arts in General Studies"
     college: "Crowder College"
     date: "May 2015-May 2017"
-    logo: "/assets/images/crowder.png"
+    image: "/assets/images/crowder.png"
     id: crowder
     sections:
       - name: Achievements

@@ -6,9 +6,9 @@ title: Blogs
     {% for post in site.posts %}
 <div class="scard wrap" style="padding: 5%;margin-bottom: 10%">
     <div class="row" style="margin-bottom: 3%">
-        {% if post.logo %}
+        {% if post.image %}
         <div class="col">
-            <a href="{{ post.url }}" title="{{ post.title }}"><img style="max-width: 150px;" src="{{post.logo}}"></a>
+            <a href="{{ post.url }}" title="{{ post.title }}"><img style="max-width: 150px;" src="{{post.image}}"></a>
         </div>
         {% endif %}
         <div class="col">

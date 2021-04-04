@@ -4,7 +4,7 @@ title: Blender & 3D Animation
 description: Where a month of learning blender has taken me
 category: project
 tags: [blender]
-logo: /assets/images/blender/ores.png
+image: /assets/images/blender/ores.png
 buttons:
   - title: Source Code
     url: https://github.com/chrisevans9629/GameOfLife

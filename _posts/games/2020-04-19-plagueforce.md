@@ -3,7 +3,7 @@ title: Plagueforce
 unity_dir: plagueforce
 unityname: PlagueforceWeb
 layout: game
-logo: /assets/images/plagueforce.png
+image: /assets/images/plagueforce.png
 category: game
 tags: [playable,unity,android]
 description: The world is out of toilet paper. Fortunately, you have some to spare.

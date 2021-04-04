@@ -1,7 +1,7 @@
 ---
 title: DiscordWars
 layout: post
-logo: /assets/images/discordwars.png
+image: /assets/images/discordwars.png
 category: game
 baseUrl: /assets/phaser/discordwars/
 tags: [playable,phaser,web]

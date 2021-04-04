@@ -2,7 +2,7 @@
 title: Visual Studio Gradebook
 category: project
 description: Simplifying grading code in visual studio
-logo: "/assets/images/vsgradebook.png"
+image: "/assets/images/vsgradebook.png"
 layout: post
 buttons:
   - title: Source Code

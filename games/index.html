@@ -8,7 +8,7 @@ title: Games
 {% if category[0] == "game" %}
     {% for project in category[1] %}
         {% include card.html
-            logo=project.logo
+            image=project.image
             title=project.title
             description=project.description
             buttons=project.buttons
