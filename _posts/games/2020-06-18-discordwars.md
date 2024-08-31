@@ -8,7 +8,7 @@ tags: [playable,phaser,web]
 description: An RTS game played by the discord chat watching the stream
 buttons:
   - title: Source Code
-    url: https://github.com/chrisevans9629/DiscordWars
+    url: https://github.com/autumnevans418/DiscordWars
   - title: Play
     url: /assets/phaser/discordwars/index.html
 ---

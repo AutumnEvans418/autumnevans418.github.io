@@ -1,4 +1,4 @@
-name: Chris Evans
+name: Autumn Evans
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 
@@ -38,9 +38,9 @@ plugins:
 feed:
   posts_limit: 25
 
-title: Chris Evans' Dev Blog
+title: Autumn Evans' Dev Blog
 description: Welcome to my dev blog!
-author: Chris Evans
+author: Autumn Evans
 
 # Optional. The default date format, used if none is specified in the tag.
 last-modified-at:

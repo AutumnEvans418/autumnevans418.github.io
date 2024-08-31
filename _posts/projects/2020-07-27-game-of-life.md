@@ -7,7 +7,7 @@ tags: [phaser,babylon,interactive]
 image: /assets/images/life.jpg
 buttons:
   - title: Source Code
-    url: https://github.com/chrisevans9629/GameOfLife
+    url: https://github.com/autumnevans418/GameOfLife
   - title: Play
     url: /assets/babylon/life/index.html
 ---

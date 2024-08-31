@@ -6,7 +6,7 @@ tags: [winforms]
 description: Unit Test winforms with mvp pattern
 buttons:
   - title: "Source Code"
-    url: https://github.com/chrisevans9629/PresenterPatternGenerator
+    url: https://github.com/autumnevans418/PresenterPatternGenerator
 ---
 
 Windows Forms is a mature .NET framework, with the unfortunate design of being tightly coupled to the view by default.  This makes winforms really hard to unit test and separate business logic from the view.  My first attempt in separating the view was by using bindings and MVVM.  Unfortunately, I was not satisfied with the binding capabilities of winforms, which is pretty limited without the use of 3rd party libraries and controls, such as DevExpress.  I ended up going with the model-view-presenter pattern and successfully converted forms to use the mvp pattern.  This took a long time, so I eventually wrote a program to generate the starting code for me!  This made it easy for me to migrate code and start unit testing logic and track down bugs.
@@ -57,4 +57,4 @@ public class Form1Presenter
 }
 ```
 
-You can see how it works on my [github](https://github.com/chrisevans9629/PresenterPatternGenerator)
+You can see how it works on my [github](https://github.com/autumnevans418/PresenterPatternGenerator)

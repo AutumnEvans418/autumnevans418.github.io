@@ -6,7 +6,7 @@ description: "A crossplatform minesweeper, playable in the browser"
 image: "/assets/images/minesweeper.png"
 buttons:
   - title: "Source Code"
-    url: https://github.com/chrisevans9629/Minesweeper
+    url: https://github.com/autumnevans418/Minesweeper
 tags: [playable,bridge.net,android]
 ---
 

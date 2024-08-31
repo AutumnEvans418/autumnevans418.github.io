@@ -6,7 +6,7 @@ image: "/assets/images/vsgradebook.png"
 layout: post
 buttons:
   - title: Source Code
-    url: https://github.com/chrisevans9629/VsGradeBook
+    url: https://github.com/autumnevans418/VsGradeBook
   - title: VS Marketplace
     url: "https://marketplace.visualstudio.com/items?itemName=EvansSoftware.VsGradeBook"
 tags: [downloadable,Visual Studio]
@@ -16,7 +16,7 @@ Learning to program is hard to learn for beginners and hard to teach.  Students 
 
 ## Example
 
-Below is an example from the [documentation](https://github.com/chrisevans9629/VsGradeBook)  
+Below is an example from the [documentation](https://github.com/autumnevans418/VsGradeBook)  
 
 Tax System (Multiple Inputs Example)
 Create a program that takes the price of an item and then the percent of sales tax as inputs in that order. The program should then output the original price, the tax percent, the tax cost, and the price + tax cost.

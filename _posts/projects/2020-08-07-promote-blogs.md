@@ -8,7 +8,7 @@ published: false
 # image: /assets/images/life.jpg
 # buttons:
 #   - title: Source Code
-#     url: https://github.com/chrisevans9629/GameOfLife
+#     url: https://github.com/autumnevans418/GameOfLife
 #   - title: Play
 #     url: /assets/babylon/life/index.html
 ---
@@ -63,7 +63,7 @@ You can fix this by following [this comment](https://github.com/gitextensions/gi
 Our RSS feed is simply an XML file that represents our posts on our website:
 ```xml
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://chrisevans9629.github.io/feed.xml</id>
+    <id>https://autumnevans418.github.io/feed.xml</id>
     <title type="html">Chris Evans’ Dev Blog</title>
     <subtitle>Welcome to my dev blog!</subtitle>
     <author>
@@ -71,7 +71,7 @@ Our RSS feed is simply an XML file that represents our posts on our website:
     </author>
     <entry>
         <title type="html">Building Conway’s Game of Life in 3D</title>
-        <link href="https://chrisevans9629.github.io/blog/2020/07/27/game-of-life" rel="alternate" type="text/html" title="Building Conway's Game of Life in 3D"/>
+        <link href="https://autumnevans418.github.io/blog/2020/07/27/game-of-life" rel="alternate" type="text/html" title="Building Conway's Game of Life in 3D"/>
     </entry>
 </feed>
 ```
@@ -81,7 +81,7 @@ We can parse this in powershell like this:
 ```powershell
 $file = ".\scripts\atom.xml"
 
-Invoke-WebRequest "https://chrisevans9629.github.io/feed.xml" -OutFile $file
+Invoke-WebRequest "https://autumnevans418.github.io/feed.xml" -OutFile $file
 # This is done to ensure we use the correct encoding
 [xml]$result = Get-Content $file -Encoding UTF8 -Raw
 
