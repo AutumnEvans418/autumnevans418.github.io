@@ -7,10 +7,6 @@ urls:
     url: /
   - text: About
     url: /about/
-  - text: Projects
-    url: /projects/
-  - text: Games
-    url: /games/
   - text: Blog
     url: /blog/
   - text: Music

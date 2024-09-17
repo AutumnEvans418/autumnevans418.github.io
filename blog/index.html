@@ -2,7 +2,20 @@
 layout: content
 title: Blogs
 ---
+
+
 <h1 style="margin: 5%" class="special">{{ page.title }}</h1>
+
+<div class="row">
+
+    <div class="col-auto scard">
+        <a href="/blog/projects/">Projects</a>
+    </div>
+    <div class="col-auto scard">
+        <a href="/blog/games/">Games</a>
+    </div>
+</div>
+
     {% for post in site.posts %}
 <div class="scard wrap" style="padding: 5%;margin-bottom: 10%">
     <div class="row" style="margin-bottom: 3%">
