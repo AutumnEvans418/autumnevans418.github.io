@@ -13,7 +13,7 @@ buttons:
   - title: Android
     url: https://play.google.com/store/apps/details?id=com.evanssoftware.coronaforce
   - title: Play
-    url: https://chrisevans9629.itch.io/plagueforce
+    url: https://autumnevans.itch.io/plagueforce
 ---
 Since I am spending a lot more time at home these days, I decided to take the time to learn some Unity3D.  Plagueforce is my first full game made with unity, which you can play here on this site.
 

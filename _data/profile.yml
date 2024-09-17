@@ -1,4 +1,4 @@
-name: "Chris Evans"
+name: "Autumn Evans"
 title: "Software Engineer"
 email: autumnfox418@gmail.com
 phone: 417-283-1656
@@ -10,26 +10,15 @@ social:
     url: https://github.com/autumnevans418
     image: /assets/images/github.png
   - title: Itch
-    url: https://chrisevans9629.itch.io
+    url: https://autumnevans.itch.io
     image: /assets/images/itch.png
   - title: LinkedIn
-    url: https://www.linkedin.com/in/chris-evans-3606ab19b/
+    url: https://www.linkedin.com/in/autumn-evans-3606ab19b/
     image: /assets/images/linkedin.png
-  - title: Facebook
-    url: https://www.facebook.com/chrisevans9629
-    image: /assets/images/facebook.png
-  - title: Twitter
-    url: https://twitter.com/ChrisAlexEvans
-    image: /assets/images/twitter.png
-  - title: SoundCloud
-    url: https://soundcloud.com/40daysunder?utm_source=embed&utm_medium=icon
-    image: /assets/images/soundcloud.png
   - title: StackOverflow
-    url: https://stackoverflow.com/users/6895913/cevans
+    url: https://stackoverflow.com/users/6895913/autumn
     image: /assets/images/stackoverflow.png
-  - title: Quora
-    url: https://www.quora.com/profile/Chris-Alexander-Evans
-    image: /assets/images/quora.png
+
 professions:
   - title: "DevOps Supervisor"
     company: "Peerless Products Inc."

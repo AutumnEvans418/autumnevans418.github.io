@@ -64,10 +64,10 @@ Our RSS feed is simply an XML file that represents our posts on our website:
 ```xml
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://autumnevans418.github.io/feed.xml</id>
-    <title type="html">Chris Evans’ Dev Blog</title>
+    <title type="html">Autumn Evans’ Dev Blog</title>
     <subtitle>Welcome to my dev blog!</subtitle>
     <author>
-        <name>Chris Evans</name>
+        <name>Autumn Evans</name>
     </author>
     <entry>
         <title type="html">Building Conway’s Game of Life in 3D</title>
