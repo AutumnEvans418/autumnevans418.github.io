@@ -4,25 +4,15 @@
 }
 html
 {
-    --whiteText: #d8d8d8;
-    --tanText: #ffefc8;
-    --grayBackground: #323639;
+    --whiteText: #f9eae4ff;
+    --tanText: #f9eae4ff;
+    --grayBackground: #8a2e35;
     --grayBackgroundTran: rgba(50, 54, 57, 0.691);
-    --orangeText: #e29236;
-    --blackBackground: #302f2f;
-    --foregroundText: #ffefc8;
+    --orangeText: #e99d99;
+    --blackBackground: #501f30;
+    --foregroundText: #ffffff;
     --empty-contrast: 100%;
-}
-
-html[data-theme="light"] {
-    --whiteText: #302f2f;
-    --tanText:  #323639;
-    --grayBackground: #dadada;
-    --grayBackgroundTran: #dadadab0;
-    --orangeText: #e29236;
-    --blackBackground: #ffffff;
-    --foregroundText: #d8d8d8;
-    --empty-contrast: 0%;
+    --hoverColor: #A6CB99;
 }
 
 .share {
@@ -93,7 +83,7 @@ textarea {
 
 
 .special {
-    color: var(--orangeText);
+    color: var(--tanText);
 }
 
 div.break {
@@ -112,6 +102,14 @@ div.line-item {
     color: var(--tanText);
 }
 
+
+
+a.link:hover, a.stretched-link:hover, .navbar-nav .nav-link:hover, .special:hover, a:hover {
+    color: var(--hoverColor) !important;
+    background-color: transparent !important;
+}
+
+
 .navbar-dark .navbar-brand {
     color: var(--tanText);
 }
@@ -125,6 +123,13 @@ div.line-item {
     margin: 10px;
     justify-content: center;
 }
+
+.btn:hover {
+    background-color: var(--hoverColor);
+    color: var(--blackBackground);
+}
+
+
 
 
 .card {
@@ -180,6 +185,7 @@ a {
     margin: 10px;
     padding: 10px;
     display: block;
+    border-radius: 10px;
 }
 
 .tagcard > * {
