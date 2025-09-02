@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Building My Website!
-image: /assets/images/icon-512x512.png
+image: /assets/images/fox-logo.svg
 description: The website you are currently using, built with jekyll and hosted with github pages.
 category: project
 tags: [update]

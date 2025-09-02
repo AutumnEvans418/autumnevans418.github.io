@@ -1,40 +1,34 @@
-<div class="col scard">
+<div class="col">
     <div class="container">
         <div class="row">
             <h2 class="col d-flex align-items-center">{{include.title}}</h2>
             <a class="btn col-md-auto d-flex align-items-center" href="{{include.url}}">View All</a>
         </div>
         <div class="row">
-            <div class="break col"></div>
-        </div>
-        <div class="row">
-                    {% for item in include.items limit:4 %}
-            <div class="col d-flex justify-content-center">
-                    <div class="card" style="width: 13rem; height: 13rem;margin: 0.5rem;background-color: var(--blackBackground);">
-                        {% if item.image %}
-                            <img class="card-img-top" src="{{item.image}}" alt="{{item.title}}">
-                        {% else %}
-                            <img class="card-img-top empty" src="/assets/images/empty.png" alt="{{item.title}}">
-                        {% endif %}
-                        <div class="card-img-overlay d-flex align-items-end" style="padding: 0px;">
-                            <div class="scard trans flex-fill" style="margin: 0px;width: 13rem;">
-                                <p class="meta">{{ include.date | date_to_string }}</p>
+            {% for item in include.items limit:4 %}
+            <div class="col-sm-12 col-md-6 d-flex justify-content-center">
+                <div class="card card-list">
+                    {% if item.image %}
+                    <img class="card-img-top card-list-img" src="{{item.image}}" alt="{{item.title}}">
+                    {% else %}
+                    <img class="card-img-top empty card-list-img" src="/assets/images/empty.png" alt="{{item.title}}">
+                    {% endif %}
+                    <div class="card-body">
+                        <p class="meta">{{ include.date | date_to_string }}</p>
 
-                                <div class="wrap">
-                                    <h3>
-                                        <a class="stretched-link" href="{{item.url}}">{{item.title}}</a>
-                                    </h3>
-                                </div>
+                        <h3 class="card-title wrap">
+                            <a class="stretched-link" href="{{item.url}}">{{item.title}}</a>
+                        </h3>
 
-                            </div>
-                        </div>
+                        <p class="card-text wrap">{{item.description}}</p>
                     </div>
+                </div>
             </div>
             {% endfor %}
 
         </div>
     </div>
-        
-  
+
+
 
 </div>

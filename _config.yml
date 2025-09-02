@@ -9,8 +9,6 @@ urls:
     url: /about/
   - text: Blog
     url: /blog/
-  - text: Music
-    url: /music/
 
 #has to be done this way due to a bug: https://github.com/jekyll/jekyll/issues/1352
 include:
@@ -22,13 +20,19 @@ exclude:
   - "README.md"
   - ".vs"
   - "start.cmd"
+  - "run.sh"
+  - "Dockerfile"
+  - "docker-compose.yml"
+  - "conf"
+  - "Cache"
+  - ".devcontainer"
+  - ".github"
+  - ".jekyll-cache"
+  - ".jekyll-metadata"
+
 
 plugins:
   - jekyll-last-modified-at
-  - jekyll-feed
-
-feed:
-  posts_limit: 25
 
 title: Autumn Evans' Dev Blog
 description: Welcome to my dev blog!

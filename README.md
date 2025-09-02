@@ -1,19 +1,35 @@
 # autumnevans418.github.io
+My personal site where I post about the various projects I am working on. [Link Here](https://autumnevans418.github.io/)
 
 ## How to run the site
 
+### With Docker
+1. Clone the repo
+1. Run `docker build -t mywebsite .`
+1. Run `docker-compose up -d`
+1. This will create a docker container with the jekyll application mounted and served with nginx at http://localhost:8080/
+
+### Local
+1. Clone the repo
 1. Install Jekyll
-2. Run ```bundle install```
-3. Run ```start.cmd```
+1. Run ```bundle install```
+1. Run ```start.cmd```
 
 ## Resources
 
+### Theme Inspiration
+https://colorffy.com/dark-theme-generator?colors=FF8400-121212
+
+### Hosting Blazor 
 https://mikaberglund.com/2019/12/29/hosting-blazor-applications-on-github-pages/
 
+### Starting Theme
 https://github.com/sujaykundu777/devlopr-jekyll
 
+### Workarounds
 https://github.com/jekyll/jekyll/issues/1352
 
+### Code Editor
 https://highlightjs.org/
 
 https://codemirror.net/

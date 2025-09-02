@@ -1,18 +1,55 @@
+
+
+
 @font-face {
     font-family: "Cascadia Code";
     src: url("../fonts/Cascadia.ttf") format('truetype')
 }
 html
 {
-    --whiteText: #f9eae4ff;
-    --tanText: #f9eae4ff;
-    --grayBackground: #8a2e35;
+    /** Base colors */
+    --clr-dark-a0: #000000;
+    --clr-light-a0: #ffffff;
+
+    /** Theme primary colors */
+    --clr-primary-a0: #ff8400;
+    --clr-primary-a10: #ff9230;
+    --clr-primary-a20: #ffa04d;
+    --clr-primary-a30: #ffae66;
+    --clr-primary-a40: #ffbb80;
+    --clr-primary-a50: #ffc999;
+
+    /** Theme surface colors */
+    --clr-surface-a0: #121212;
+    --clr-surface-a10: #282828;
+    --clr-surface-a20: #3f3f3f;
+    --clr-surface-a30: #575757;
+    --clr-surface-a40: #717171;
+    --clr-surface-a50: #8b8b8b;
+
+    /** Theme tonal surface colors */
+    --clr-surface-tonal-a0: #271d15;
+    --clr-surface-tonal-a10: #3c322a;
+    --clr-surface-tonal-a20: #514841;
+    --clr-surface-tonal-a30: #686059;
+    --clr-surface-tonal-a40: #807872;
+    --clr-surface-tonal-a50: #98918d;
+
+    --whiteText: var(--clr-light-a0);
+    --tanText: var(--clr-light-a0);
+    --grayBackground: var(--clr-surface-a10);
     --grayBackgroundTran: rgba(50, 54, 57, 0.691);
-    --orangeText: #e99d99;
-    --blackBackground: #501f30;
-    --foregroundText: #ffffff;
+    --orangeText: var(--clr-primary-a0);
+    --blackBackground: var(--clr-surface-a0);
+    --foregroundText: var(--clr-light-a0);
     --empty-contrast: 100%;
-    --hoverColor: #A6CB99;
+    --hoverColor: var(--clr-primary-a50);
+
+    --btnColor: var(--clr-dark-a0);
+    --btnBgColor: var(--clr-primary-a20);
+
+    --btnHoverColor: var(--clr-dark-a0);
+    --btnHoverBgColor: var(--clr-primary-a50);
 }
 
 .share {
@@ -105,8 +142,8 @@ div.line-item {
 
 
 a.link:hover, a.stretched-link:hover, .navbar-nav .nav-link:hover, .special:hover, a:hover {
-    color: var(--hoverColor) !important;
-    background-color: transparent !important;
+    color: var(--hoverColor);
+    background-color: transparent;
 }
 
 
@@ -115,9 +152,8 @@ a.link:hover, a.stretched-link:hover, .navbar-nav .nav-link:hover, .special:hove
 }
 
 .btn {
-    background-color: var(--blackBackground);
-    border: solid 1pt var(--orangeText);
-    color: var(--tanText);
+    background-color: var(--btnBgColor);
+    color: var(--btnColor);
     padding: 10px;
     border-radius: 5px;
     margin: 10px;
@@ -125,8 +161,8 @@ a.link:hover, a.stretched-link:hover, .navbar-nav .nav-link:hover, .special:hove
 }
 
 .btn:hover {
-    background-color: var(--hoverColor);
-    color: var(--blackBackground);
+    background-color: var(--btnHoverBgColor);
+    color: var(--btnHoverColor);
 }
 
 
@@ -137,6 +173,17 @@ a.link:hover, a.stretched-link:hover, .navbar-nav .nav-link:hover, .special:hove
     -webkit-box-shadow: 5px 5px 21px -5px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 5px 21px -5px rgba(0,0,0,0.75);
     box-shadow: 5px 5px 21px -5px rgba(0,0,0,0.75);
+}
+
+.card-list {
+    margin: 0.5rem;
+    width: 100%;
+    background-color: var(--clr-surface-a20);
+}
+
+.card-list-img {
+    height: 200px;
+    object-fit: cover;
 }
 
 .grayCard {
@@ -161,7 +208,9 @@ body {
     color: var(--tanText);
 }
 
-
+nav {
+    background-color: var(--clr-surface-a20);
+}
 
 nav ul, footer ul {
     padding: 0px;
@@ -197,9 +246,9 @@ a {
     color: var(--blackBackground)
 }
 .scard {
-    margin: 10px;
+    margin-bottom: 10px;
     padding: 10px;
-    background-color: var(--grayBackground);
+    background-color: var(--clr-surface-a20);
 }
 
 .scard.trans {
