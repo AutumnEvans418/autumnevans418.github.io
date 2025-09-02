@@ -1,0 +1,14 @@
+services:
+  my-jekyll-container:
+    image: mywebsite:latest # This is image which built in step 2
+    container_name: local_jekyll
+    #restart: 
+    tty: true
+    volumes:
+      - ./:/app
+      - ./conf:/etc/nginx/conf.d # For nginx setting
+    ports:
+      - "8080:80"
+networks:
+  my-network:
+    driver: bridge
