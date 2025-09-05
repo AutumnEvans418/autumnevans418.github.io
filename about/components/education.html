@@ -1,0 +1,46 @@
+<h3>Education</h3>
+{% for ed in site.data.profile.educations %}
+<div class="row">
+    <div class="col-sm-auto">
+        <img src="{{ed.image}}" title="{{ed.title}}" width="140" height="140" style="object-fit: contain;">
+    </div>
+    <div class="col">
+        <div class="row">
+            <div class="col">
+                <h4>{{ed.title}}</h4>
+            </div>
+            <div class="col">
+                <h4>{{ed.date}}</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>{{ed.college}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a class="btn" data-toggle="collapse" href="#{{ed.id}}" role="button" aria-expanded="false"
+                    aria-controls="{{ed.id}}">
+                    Details
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+
+        <div class="collapse" id="{{ed.id}}">
+            {% for section in ed.sections %}
+            <h4>{{section.name}}</h4>
+            <ul>
+                {% for att in section.attributes %}
+                <li>{{att}}</li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endfor %}

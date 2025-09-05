@@ -1,0 +1,46 @@
+<h3>Profession</h3>
+{% for prof in site.data.profile.professions %}
+<div class="row">
+    <div class="col-auto">
+        {% if prof.image %}
+            <img src="{{prof.image}}" title="{{prof.company}}" width="140" height="140" style="object-fit: contain;">
+        {% else %}
+            <div style="width: 140px; height: 140px;"></div>
+        {% endif %}
+    </div>
+    <div class="col">
+        <div class="row">
+            <div class="col">
+                <h4>{{prof.title}}</h4>
+            </div>
+            <div class="col">
+                <p>{{prof.date}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>{{prof.company}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a class="btn" data-toggle="collapse" href="#{{prof.id}}" role="button" aria-expanded="false"
+                    aria-controls="{{prof.id}}">
+                    Details
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <div class="collapse" id="{{prof.id}}">
+            <ul>
+                {% for att in prof.attributes %}
+                <li>{{att}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endfor %}

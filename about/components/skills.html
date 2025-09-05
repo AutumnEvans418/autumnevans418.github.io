@@ -1,0 +1,10 @@
+<h3>Skills</h3>
+{% for type in site.data.profile.skill-types %}
+<h4>{{type.name}}</h4>
+    <ul>
+        {% for skill in type.skills %}
+            <li>{{skill}}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+<a class="btn" href="/blog/projects/">See them in Action!</a>

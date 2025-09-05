@@ -1,15 +1,17 @@
-name: "Autumn Evans"
-title: "Software Architect"
+name: Autumn Evans
+title: Platform Architect
 github: https://github.com/autumnevans418
 address: Kansas City, MO
+summary:
+  Highly accomplished Platform Architect with 8+ years of expertise designing and implementing scalable and secure cloud-native solutions. Passionate about leveraging technology to solve complex business problems, boosting operational efficiencies, fostering collaborative teams, nurturing developer talent, and driving strategic growth. Experienced with leading complex system modernization efforts and driving technical strategies across enterprise ecosystems. Adept at translating business requirements into scalable and robust technical solutions.
+  <br>
+  Proven expertise in Azure, .NET, AI/ML, databases, data structures, and DevOps automation. Extensive experience with Agile, Scrum, and SDLC.
+resumeUrl: https://1drv.ms/w/c/b46da9d8819f0c8a/EVLUXTaKcUlNqmk_SXqwyZsBUZw4l9L3tsV4PmskLpY4ew?e=iEbF8G
 
 social:
   - title: Github
     url: https://github.com/autumnevans418
     image: /assets/images/github.png
-  - title: Itch
-    url: https://autumnevans.itch.io
-    image: /assets/images/itch.png
   - title: LinkedIn
     url: https://www.linkedin.com/in/autumn-e-3606ab19b/
     image: /assets/images/linkedin.png
@@ -17,84 +19,238 @@ social:
     url: https://stackoverflow.com/users/6895913/autumn
     image: /assets/images/stackoverflow.png
 
+
+
 professions:
-  - title: "DevOps Supervisor"
-    company: "Peerless Products Inc."
-    image: "/assets/images/peerless.png"
-    date: "May 2016-Present"
-    id: peerless
+
+  - title: Platform Architect I 
+    company: Favorite Healthcare Staffing Inc.
+    location: Overland Park, KS
+    date: Jan 2023-Present
+    image: /assets/images/3rdparty/favorite.svg
+    id: fav-arch
     attributes:
-      - "DevOps Supervisor"
-      - "Database Administration"
-      - "Web Development"
-      - "Mobile Development"
-      - "Desktop Development"
-      - "Security Committee Member"
-      - "Safety Champion"
+      - Architected and led the overhaul of a critical payroll system to an event-driven architecture, automating thousands of weekly manual adjustments, resulting in significant operational efficiency gains and compliance adherence across the hundreds of branches.
+      - Designed and created the POC for the migration from critical legacy systems, including client portal and end-user applications, to modern technologies. Migrated from Xamarin and Angular to .NET Blazor, achieving tech-stack standardization, improving maintainability, and enhancing overall user experience.
+      - Architected dashboards built with .NET Blazor and integrated them with the ERP solution, streamlining workflows for recruiters and branches.
+      - Designed and implemented a standardized application security framework across the enterprise, enhancing user experience and accelerating development cycles by an estimated three months.
+      - Collaborated with leadership and cross-functional stakeholders to define strategic technical roadmaps, prioritize initiatives, and solve complex business problems, consistently bringing innovative ideas to the table and driving thoughtful changes.
+      - Architected long-term scalability initiatives for internationalization and globalization of a large ERP solution, enabling the system's expansion to international end-users.
+      - Drove initiatives for the migration of legacy SOAP APIs into Azure Functions by leveraging APIM, reducing tech debt and increasing resiliency.
+      - Trained interns and built an Agile AI team that created solutions to parse documents, generate documents, and rank orders using SQL, RESTful APIs, and Blazor. This improved speed-to-fill and data quality.
+      - Served as a member of a committee dedicated to improving company culture through team building events, community involvement, and celebrating diverse cultures and identities.
+
+  - title: Software Architect
+    company: Moonshot Innovations
+    location: Overland Park, KS
+    date: Jan 2022-Dec 2022
+    image: /assets/images/3rdparty/moonshot.webp
+    id: moon-arch
+    attributes:
+      - Spearheaded the establishment of robust SDLC standards and automated code quality gates, significantly enhancing code maintainability and developer efficiency across multiple projects. Applied creative problem-solving to address critical technical debt and streamline development workflows.
+      - Planned and executed strategic migrations of complex SQL stored procedures to scalable Azure Functions, leveraging modern architectural patterns to improve code maintainability, testability, and reduce technical debt.
+      - Successfully integrated multiple critical 3rd party systems, including ADP for payroll processing and Workday for data synchronization (push and pull), with a custom ERP solution, resolving complex data flow and business process challenges.
+
+  - title: Software Developer
+    company: Moonshot Innovations
+    location: Overland Park, KS
+    date: Apr 2021-Dec 2021
+    id: moon-dev
+    attributes:
+      - Integrated 3rd party systems to receive orders and applicants into a custom ERP solution as part of an agile team.
+      - Optimized complex payroll processes, reducing processing time from overnight to less than an hour.
+      - Automated the developer onboarding process, speeding up application onboarding from taking weeks to less than a day.
+
+  - title: DevOps Manager
+    company: Peerless Products Inc.
+    image: /assets/images/peerless.png
+    date: Jan 2020-Apr 2021
+    id: peerless-man
+    attributes:
+      - Managed software developers, led Agile daily standups, and prioritized projects to align with business objectives.
+      - Built websites and RESTful APIs using ASP.NET Core, Blazor, and SignalR in C# for real-time applications.
+      - Implemented Git source control and CICD using Azure DevOps pipelines.
+      - DevOps Manager.
+      - Database Administration.
+      - Web Development.
+      - Mobile Development.
+      - Desktop Development.
+      - Security Committee Member.
+      - Safety Champion.
+
+  - title: Software Developer
+    company: Peerless Products Inc.
+    date: May 2017-Jan 2020
+    id: peerless-dev
+    attributes:
+      - Built a Xamarin Forms app for tracking order progress from manufacturing through delivery to construction sites.
+      - Created AI models in C# with Encog and WPF to optimize production scheduling on an extrusion press PLC, minimizing changeovers.
+
+  - title: Computer Technician
+    company: Peerless Products Inc.
+    date: May 2016-May 2017
+    id: peerless-tech
+    attributes:
+      - Configured and managed enterprise servers, hardware, and networks in a hybrid cloud environment. Designed and implemented computer networks to support growing manufacturing facilities and processing requirements. 
 
 educations:
-  - title: "Masters of Computer Science"
-    college: "University of Missouri Kansas City"
-    image: "/assets/images/umkc.png"
-    date: "January 2021-Present"
+  - title: Masters of Computer Science
+    college: University of Missouri Kansas City
+    image: /assets/images/umkc.png
+    date: January 2021-Present
     id: umkc
     sections:
       - name: Achievements
         attributes:
-          - "4.0 GPA"
-  - title: "Bachelors of Business Administration in Computer Information Systems"
-    college: "Pittsburg State University"
-    image: "/assets/images/pittstate.png"
-    date: "May 2017-Dec 2019"
+          - 4.0 GPA
+  - title: Bachelors of Business Administration in Computer Information Systems
+    college: Pittsburg State University
+    image: /assets/images/pittstate.png
+    date: May 2017-Dec 2019
     id: pitt
     sections:
       - name: Achievements
         attributes:
-          - "4.0 GPA"
-          - "Summa Cum Laude"
-          - "Kelce Outstanding Senior"
-          - "Kelce Business Scholar"
+          - 4.0 GPA
+          - Summa Cum Laude
+          - Kelce Outstanding Senior
+          - Kelce Business Scholar
       - name: Membership
         attributes:
-          - "President of CISSO"
-          - "Beta Alpha Psi Vice President"
-          - "Omicron Delta Kappa Member"
-          - "Phi Kappa Phi Member"
-          - "National Society of Leadership and Success Member"
-          - "Beta Gamma Sigma Member"
-          - "Tau Sigma National Honor Society Member"
+          - President of Computer Information System Student Organization
+          - Beta Alpha Psi Vice President
+          - Omicron Delta Kappa Member
+          - Phi Kappa Phi Member
+          - National Society of Leadership and Success Member
+          - Beta Gamma Sigma Member
+          - Tau Sigma National Honor Society Member
       - name: Other Activities
         attributes:
-          - "1st place in KC Federal Reserve Code-a-thon 2019"
-          - "Substituted for Introduction to Programming"
-          - "Honors Project Visual Studio Gradebook"
-  - title: "Associate of Arts in General Studies"
-    college: "Crowder College"
-    date: "May 2015-May 2017"
-    image: "/assets/images/crowder.png"
+          - Led team to receiving 1st place in the KC Federal Reserve Code-a-thon 2019.
+          - Substituted for Introduction to Programming.
+          - Honors Project Visual Studio Gradebook.
+  - title: Associate of Arts in General Studies
+    college: Crowder College
+    date: May 2015-May 2017
+    image: /assets/images/crowder.png
     id: crowder
     sections:
       - name: Achievements
         attributes:
-          - "4.0 GPA"
-          - "Summa Cum Laude"
+          - 4.0 GPA
+          - Summa Cum Laude
       - name: Membership
         attributes:
-          - "Phi Theta Kappa"
+          - Phi Theta Kappa
+
 skill-types:
-  - name: "Languages"
+  
+  - name: Software Architecture
+    skills: 
+      - Architecture Design and Patterns
+      - Cloud Architecture
+      - Security Architecture
+      - Enterprise Systems
+      - Software Integration
+
+  - name: Cloud Platforms
+    skills: 
+      - Azure API Management
+      - Azure Functions
+      - SQL Server Managed Instance
+      - PowerBI
+      - Data Lake
+      - Azure Blob Storage
+      - Azure Service Bus
+      - Azure App Services
+      - Azure Key Vault
+
+  - name: Architecture Patterns
     skills:
-      - "C#"
-      - "F#"
-      - "Python"
-      - "JavaScript"
-  - name: "Technologies"
+      - MVC
+      - MVVM
+      - MVU
+      - SOA
+      - MVP
+      - SPA
+      - REST
+      - Microservices
+      - RPC
+      - PWA
+
+  - name: Programming Languages
     skills:
-      - "ASP.NET Core"
-      - "EF Core"
-      - "Xamarin.Forms"
-      - "WPF"
-      - "UWP"
-      - "Unity3D"
-      - "Jekyll"
-      - "Blender"
+      - C#
+      - VB
+      - F#
+      - .NET 4.7.2
+      - .NET Core 3.1-8
+      - Typescript
+      - SQL
+      - Python
+      - JSON
+      - JavaScript
+      - HTML/CSS
+      - XML
+
+  - name: Frameworks
+    skills:
+      - Xamarin
+      - Maui
+      - Blazor
+      - WPF
+      - WinForms
+      - WebForms
+      - Entity Framework Core
+      - Angular
+      - Vue
+      - Django
+      - Jekyll
+      - ASP.NET Core
+      - UWP
+      - Jekyll
+
+  - name: Security
+    skills:
+      - OAuth
+      - Auth0
+      - Microsoft Entra ID
+
+  - name: Infrastructure
+    skills:
+      - Terraform
+      - Docker
+
+  - name: Version Control & CI/CD
+    skills:
+      - Git
+      - Azure DevOps
+      - Azure Pipelines
+
+  - name: Data Management
+    skills:
+      - Relational Databases
+      - Data Structures
+      - SQL Queries and Optimizations
+
+  - name: Artificial Intelligence (AI)
+    skills:
+      - Deep Learning
+      - Machine Learning
+      - Prompt Engineering
+
+  - name: Methodologies
+    skills:
+      - Agile
+      - Scrum
+      - SDLC
+      - Test Driven Development (TDD)
+
+  - name: Leadership & Soft Skills
+    skills:
+      - Team Leadership
+      - Mentoring
+      - Strategic Planning
+      - Estimation
+      - Prioritization
+      - Problem Solving

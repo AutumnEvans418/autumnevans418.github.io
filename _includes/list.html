@@ -1,8 +1,9 @@
 <div class="col">
     <div class="container">
         <div class="row">
-            <h2 class="col d-flex align-items-center">{{include.title}}</h2>
-            <a class="btn col-md-auto d-flex align-items-center" href="{{include.url}}">View All</a>
+            <div class="col">
+                <h2>{{include.title}}</h2>
+            </div>
         </div>
         <div class="row">
             {% for item in include.items limit:4 %}
@@ -27,8 +28,10 @@
             {% endfor %}
 
         </div>
+        <div class="row">
+            <div class="col">
+                <a class="btn" href="{{include.url}}">View All {{include.title}}</a>
+            </div>
+        </div>
     </div>
-
-
-
 </div>

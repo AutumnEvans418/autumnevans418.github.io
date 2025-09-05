@@ -4,120 +4,41 @@ title: About
 ---
 <div class="container">
     <div class="row">
-        <div class="col">
-            <div class="col scard p-3">
-                <div class="row">
-                    <div class="col">
-                        <div>
-                            <h2>{{site.data.profile.name}}</h2>
-                            <h3>{{site.data.profile.title}}</h3>
-                            <div class="row p-2">
-                                {% for soc in site.data.profile.social %}
-                                    <div class="col-2 p-2">
-                                        <a href="{{soc.url}}"><img style="width: 25px" alt="{{soc.title}}" src="{{soc.image}}"></a>
-                                    </div>
-                                {% endfor %}
-                            </div>
-                            <div>
-                                <a href="resume.html" class="btn">Resume</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="col-md scard">
-                <h3>Skills</h3>
-                {% for type in site.data.profile.skill-types %}
-                    <h4>{{type.name}}</h4>
-                    {% for skill in type.skills %}
-                        <p>=> {{skill}}</p>
-                    {% endfor %}
-                {% endfor %}
-                <a class="btn" href="/blog/projects/">See them in Action!</a>
-            </div>
-            
-        </div>
-        <div class="col">
-          
-            <div class="col-md scard">
-                <h3>Profession</h3>
-                {% for prof in site.data.profile.professions %}
-                <div class="row">
-                    <div class="col-sm-auto">
-                        <img src="{{prof.image}}">
-                    </div>
-                    <div class="col">
-                        <div class="row">
-                            <div class="col">
-                               <h4>{{prof.title}}</h4> 
-                            </div>
-                            <div class="col">
-                                <h4 class="special">{{prof.date}}</h4>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <p>{{prof.company}}</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col">
 
-                                <a class="btn" data-toggle="collapse" href="#{{prof.id}}" role="button" aria-expanded="false" aria-controls="{{prof.id}}">
-                                   Details
-                                </a>
-                                  <div class="collapse" id="{{prof.id}}">
-                                    {% for att in prof.attributes %}
-                                        <p>- {{att}}</p>
-                                    {% endfor %}
-                                  </div>
-                            </div>
-                        </div>
+                    <div class="m-1 scard">
+                        {% include_relative components/summary.html %}
                     </div>
                 </div>
-                {% endfor %}
             </div>
-            <div class="col scard">
-                <h3>Education</h3>
-                {% for ed in site.data.profile.educations %}
-                <div class="row">
-                    <div class="col-sm-auto">
-                        <img src="{{ed.image}}">
-                    </div>
-                    <div class="col">
-                        <div class="row">
-                            <div class="col">
-                               <h4>{{ed.title}}</h4> 
-                            </div>
-                            <div class="col">
-                                <h4 class="special">{{ed.date}}</h4>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <p>{{ed.college}}</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <a class="btn" data-toggle="collapse" href="#{{ed.id}}" role="button" aria-expanded="false" aria-controls="{{ed.id}}">
-                                    Details
-                                 </a>
-                                   <div class="collapse" id="{{ed.id}}">
-                                    {% for section in ed.sections %}
-                                        <h4 class="special">{{section.name}}</h4>
-                                        {% for att in section.attributes %}
-                                        <p>- {{att}}</p>
-                                        {% endfor %}
-                                    {% endfor %}
-                                </div>
-                            </div>
-                        </div>
+            <div class="row">
+                <div class="col">
+
+                    <div class="m-1 scard">
+                        {% include_relative components/skills.html %}
                     </div>
                 </div>
-                {% endfor %}
             </div>
         </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col">
+                    <div class="m-1 scard">
+                        {% include_relative components/profession.html %}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+
+                    <div class="m-1 scard">
+                        {% include_relative components/education.html %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>

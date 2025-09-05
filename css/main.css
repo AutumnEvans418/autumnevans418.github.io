@@ -50,6 +50,8 @@ html
 
     --btnHoverColor: var(--clr-dark-a0);
     --btnHoverBgColor: var(--clr-primary-a50);
+
+    --font: 'Arial';
 }
 
 .share {
@@ -204,7 +206,7 @@ a.link:hover, a.stretched-link:hover, .navbar-nav .nav-link:hover, .special:hove
 }
 body {
     background-color: var(--blackBackground);
-    font-family: 'Cascadia Code';
+    font-family: var(--font);
     color: var(--tanText);
 }
 
@@ -282,7 +284,7 @@ pre {
 
 h1 {
     font-size: 2.5em;
-    font-family: 'Cascadia Code';
+    font-family: var(--font);
     color: var(--tanText);
 }
 
@@ -299,14 +301,14 @@ h4 {
 }
 
 p {
-    font-family: 'Cascadia Code';
+    font-family: var(--font);
     font-size: 1em;
     color: var(--tanText);
 }
 footer {
     border-top: 1px solid var(--tanText);
     font-size: .8em;
-    font-family: 'Cascadia Code';
+    font-family: var(--font);
     padding: 5px;
 }
 
