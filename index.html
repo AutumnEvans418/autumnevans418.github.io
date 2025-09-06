@@ -13,26 +13,14 @@ title: Autumn Evans
 </div>
 <div class="container">
 	<div class="row">
-		{% for category in site.categories %}
-
-			{% if category[0] == "project" %}
-				{% assign projects = category[1] %}
-				{% include list.html title='Projects' url='/blog/projects' items=projects %}
-			{% endif %}
-		{% endfor %}
+		{% assign projects = site.posts | where:"category", "project" %}
+		
+		{% include list.html title='Projects' url='/blog/projects' items=projects %}
 	</div>
 	<div class="row">
+		{% assign games = site.posts | where:"category", "game" %}
 
-		{% for category in site.categories %}
-
-			{% if category[0] == "game" %}
-				{% assign games = category[1] %}
-				{% include list.html title='Games' url='/blog/games' items=games %}
-
-			{% endif %}
-		{% endfor %}
-
-
+		{% include list.html title='Games' url='/blog/games' items=games %}
 	</div>
 	
 </div>

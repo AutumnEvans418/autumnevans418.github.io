@@ -5,11 +5,6 @@ description: Where a month of learning blender has taken me
 category: project
 tags: [blender]
 image: /assets/images/blender/ores.png
-buttons:
-  - title: Source Code
-    url: https://github.com/autumnevans418/GameOfLife
-  - title: Play
-    url: /assets/babylon/life/index.html
 ---
 
 Over Christmas break I started watching videos on Blender, a 3D modeling software that can do just about anything.  It's always been a desire of mine to add Blender to my skillset, but has been a daunting task.  I began following a [donut tutorial](https://www.youtube.com/watch?v=TPrnSACiTJ4), learning the very basics of 3D modeling.  It was a little tedious, but I was pretty happy with the result.

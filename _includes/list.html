@@ -15,11 +15,11 @@
                     <img class="card-img-top empty card-list-img" src="/assets/images/empty.png" alt="{{item.title}}">
                     {% endif %}
                     <div class="card-body">
-                        <p class="meta">{{ include.date | date_to_string }}</p>
-
+                        
                         <h3 class="card-title wrap">
                             <a class="stretched-link" href="{{item.url}}">{{item.title}}</a>
                         </h3>
+                        <p>{{ item.date | date_to_string }}</p>
 
                         <p class="card-text wrap">{{item.description}}</p>
                     </div>

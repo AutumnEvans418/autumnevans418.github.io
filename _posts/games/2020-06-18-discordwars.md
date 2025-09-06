@@ -48,5 +48,3 @@ Fortunately, the streamer is the only one that has to enter the token.  People w
 Overall, discordwars was challenging and is a project that I am greatly proud of.  Definitely try it out and let me know what you think!
 
 ![](/assets/images/discordwars2.gif)
-
-## [Play here](/assets/phaser/discordwars/index.html)

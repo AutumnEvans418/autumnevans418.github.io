@@ -1,6 +1,6 @@
 <h2>{{site.data.profile.name}}</h2>
 <h3>{{site.data.profile.title}}</h3>
-<div class="hstack gap-1 pt-1 pb-1">
+<div class="gap-1 pt-1 pb-1">
     {% for soc in site.data.profile.social %}
         <a href="{{soc.url}}" target="_blank"><img style="width: 25px" alt="{{soc.title}}" src="{{soc.image}}"></a>
     {% endfor %}
