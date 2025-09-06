@@ -5,7 +5,9 @@ layout: default
   <div class="left-column">
     <div class="row">
       <div class="col-auto">
+        {% if page.image %}
         <img title="thumbnail" style="max-width: 200px" src="{{page.image}}" />
+        {% endif %}
       </div>
       <div class="col">
         <div class="row">

@@ -23,5 +23,3 @@ Below is the dream team.  So glad that I had the chance to work with all these g
 ## Development
 You can see the tech we used below to develop this site.  We were able to specialize quite a bit with 3 backend developers and 2 front developers.
 ![tech](/assets/images/entre_tech.png)
-
-You can see the [source code here](https://github.com/autumnevans418/entrepreneurchute)

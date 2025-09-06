@@ -10,12 +10,10 @@ description: The world is out of toilet paper. Fortunately, you have some to spa
 buttons:
   - title: Source Code
     url: https://github.com/autumnevans418/DotDodge
-  - title: Android
-    url: https://play.google.com/store/apps/details?id=com.evanssoftware.coronaforce
   - title: Play
     url: https://autumnevans.itch.io/plagueforce
 ---
-Since I am spending a lot more time at home these days, I decided to take the time to learn some Unity3D.  Plagueforce is my first full game made with unity, which you can play here on this site.
+Since I am spending a lot more time at home these days, I decided to take the time to learn some Unity3D.  Plagueforce is my first full game made with unity, which you can play on itch.io.
 
 ### Plot
 Below is the plot I created for the game: A pandemic inspired game to waste time while we social distance.

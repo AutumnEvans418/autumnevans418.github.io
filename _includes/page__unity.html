@@ -5,19 +5,26 @@
 <link rel="stylesheet" href="/css/page__unity.css">
 
 
-<div class="webgl-content">
+<div class="webgl-content" style="display: none;" id="game-content">
     <div id="gameContainer"></div>
     <div class="row">
         <h3 class="col" id="percent">0%</h3>
         <div class="col d-flex justify-content-end">
-            <img alt="Fullscreen" src="\assets\unity\plagueforce\TemplateData\fullscreen.png" onclick="unityInstance.SetFullscreen(1)" />
+            <img alt="Fullscreen" src="\assets\unity\plagueforce\TemplateData\fullscreen.png" onclick="unityInstance?.SetFullscreen(1)" />
         </div>
     </div>
     
 </div>
+<div class="btn" id="game-start" onclick="StartGame()">Load Unity Game</div>
 
 <script>
-  var unityInstance = UnityLoader.instantiate("gameContainer", "{{ site.baseurl}}/assets/unity/{{page.unity_dir}}/Build/{{page.unityname}}.json",{onProgress: UnityProgress});  
+  let unityInstance = null;
+  function StartGame() {
+    document.getElementById("game-content").style.display = "block";
+    unityInstance = UnityLoader.instantiate("gameContainer", "{{ site.baseurl}}/assets/unity/{{page.unity_dir}}/Build/{{page.unityname}}.json",{onProgress: UnityProgress});  
+    document.getElementById("game-start").remove();
+  }
+
   function UnityProgress(gameInstance, progress) {
     if (!gameInstance.Module) {
       return;

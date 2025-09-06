@@ -56,5 +56,3 @@ public class Form1Presenter
     }
 }
 ```
-
-You can see how it works on my [github](https://github.com/autumnevans418/PresenterPatternGenerator)
