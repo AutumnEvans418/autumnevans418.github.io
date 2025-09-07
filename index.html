@@ -13,16 +13,16 @@ title: Autumn Evans
 </div>
 <div class="container">
 	<div class="row">
-		{% assign projects = site.posts | where:"category", "project" %}
+		{% assign projects = site.posts | where:"category", "project" | where:"pin", "true" %}
 		
 		{% include list.html title='Projects' url='/blog/projects' items=projects %}
 	</div>
 	<div class="row">
-		{% assign games = site.posts | where:"category", "game" %}
+		{% assign games = site.posts | where:"category", "game" | where:"pin", "true" %}
 
 		{% include list.html title='Games' url='/blog/games' items=games %}
 	</div>
-	
+	 
 </div>
 
 <script src="/js/index.js"></script>

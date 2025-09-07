@@ -5,6 +5,7 @@ description: Simulating the spread of diseases using the SIR model with vuejs & 
 category: project
 tags: [vuejs,chartjs,interactive]
 image: /assets/images/outbreak.jpg
+pin: true
 buttons:
   - title: Source Code
     url: https://github.com/autumnevans418/autumnevans418.github.io/blob/master/_includes/virus_simulator.html

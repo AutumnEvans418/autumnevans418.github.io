@@ -4,6 +4,7 @@ title: Minesweeper
 category: game
 description: "A crossplatform minesweeper, playable in the browser"
 image: "/assets/images/minesweeper.png"
+pin: true
 buttons:
   - title: "Source Code"
     url: https://github.com/autumnevans418/Minesweeper

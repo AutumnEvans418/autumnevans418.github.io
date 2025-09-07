@@ -6,6 +6,7 @@ category: game
 baseUrl: /assets/phaser/discordwars/
 tags: [playable,phaser,web]
 description: An RTS game played by the discord chat watching the stream
+pin: true
 buttons:
   - title: Source Code
     url: https://github.com/autumnevans418/DiscordWars

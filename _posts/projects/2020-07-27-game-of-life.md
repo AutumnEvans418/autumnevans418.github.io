@@ -5,6 +5,7 @@ description: How I built Conway's Game of Life in 3D using babylon
 category: project
 tags: [phaser,babylon,interactive]
 image: /assets/images/life.jpg
+pin: true
 buttons:
   - title: Source Code
     url: https://github.com/autumnevans418/GameOfLife
@@ -38,7 +39,7 @@ The game of life has 3 rules ([via wikipedia](https://en.wikipedia.org/wiki/Conw
 3. All other live cells die in the next generation. Similarly, all other dead cells stay dead.
 
 ### 2D Implementation
-As seen above, this can be implemented easily using a HTML canvas.  This can be done effectively in typescript using a 2-dimensional array to represent the grid:
+As seen above, this can be implemented easily using an HTML canvas.  This can be done effectively in typescript using a 2-dimensional array to represent the grid:
 ```typescript
 export interface ICell {
     value: number,
@@ -121,5 +122,3 @@ This of course led to pretty poor performance (15 fps).  To improve performance,
 ### Conclusion
 
 Implementing the game of life in 3D was pretty straight forward, and it helped a lot to first test it in 2D, as the algorithm works exactly the same in 3D space as 2D space.  The only change I did was change the rules to better fit the 3D space.  This was also the first time using babylon.js, and it was pretty easy to use.
-
-[You can try the game out here](/assets/babylon/life/index.html).  It includes all of the implementations discussed in this blog.
