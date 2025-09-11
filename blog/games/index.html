@@ -2,17 +2,14 @@
 layout: content
 title: Games
 ---
+<h1 class="row special">{{ page.title }}</h1>
+<div class="row scard">
+    <div class="col">
+        <a class="btn" href="/blog/">View All</a>
+    </div>
+</div>
+{% assign projects = site.posts | where:"category", "game" %}
 
-{% for category in site.categories %}
-
-{% if category[0] == "game" %}
-    {% for project in category[1] %}
-        {% include card.html
-            image=project.image
-            title=project.title
-            description=project.description
-            buttons=project.buttons
-            url=project.url %}
-    {% endfor %}
-{% endif %}
-{% endfor %} 
+{% for project in projects %}
+    {% include blog-listing.html post=project %}
+{% endfor %}

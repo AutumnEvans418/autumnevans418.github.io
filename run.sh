@@ -3,4 +3,4 @@ set -e
 nginx
 bundle update
 bundle install
-bundle exec jekyll serve --baseurl '' --port 8080 --force_polling --incremental
+bundle exec jekyll serve --baseurl '' --port 8080 --force_polling

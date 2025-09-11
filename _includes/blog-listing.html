@@ -1,0 +1,43 @@
+<div class="row scard wrap">
+    <div class="col">
+        <div class="row">
+            {% if include.post.image %}
+            <div class="col">
+                <a href="{{ include.post.url }}" title="{{ include.post.title }}"><img style="max-width: 150px;"
+                        src="{{include.post.image}}"></a>
+            </div>
+            {% endif %}
+            <div class="col">
+                <div class="row justify-content-end pt-1 pb-1">
+                    {% for category in include.post.categories %}
+                        {% include tagcard.html link='categories' name=category %}
+                    {% endfor %}
+                    {% for tag in include.post.tags %}
+                        {% include tagcard.html link='tags' name=tag %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1 style="margin-bottom: 30px"><a href="{{ include.post.url }}" class="special" title="{{ include.post.title }}">{{ include.post.title }}</a></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>{{ include.post.date | date_to_string }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="blog">{{ include.post.content | strip_html | truncatewords: 50 }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a class="btn" href="{{include.post.url}}">Read More</a>
+            </div>
+        </div>
+    </div>
+
+</div>
