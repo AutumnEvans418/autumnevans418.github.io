@@ -1,0 +1,20 @@
+code.language-mermaid {
+  display: flex;
+  justify-content: center;
+}
+pre:has(code.language-mermaid), code.language-mermaid {
+  background-color: transparent;
+}
+/* .edgeLabel {
+  font-size: 92%;
+  opacity: .95;
+  color: #111;
+  padding: 0 3px;
+} */
+.node rect {
+  stroke: transparent !important;
+  fill: var(--btnBgColor) !important;
+}
+.nodeLabel {
+  color: var(--btnColor) !important;
+}
