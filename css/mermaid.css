@@ -18,3 +18,7 @@ pre:has(code.language-mermaid), code.language-mermaid {
 .nodeLabel {
   color: var(--btnColor) !important;
 }
+
+svg > text {
+  fill: var(--clr-light-a0) !important;
+}

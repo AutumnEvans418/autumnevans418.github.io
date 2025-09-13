@@ -1,0 +1,52 @@
+---
+layout: content
+title: Blog Timeline
+---
+<h1 class="row special">{{ page.title }}</h1>
+
+<pre>
+    <code class="language-mermaid">
+        timeline
+        title {{ page.title }}
+        {% assign posts_by_year = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+        {% assign sorted_years = posts_by_year | sort: "name" %}
+        {% for year in sorted_years %}
+            {{ year.name }} 
+            {% assign sorted_posts = year.items | sort: "date" %}
+            {% for post in sorted_posts %}
+                : {{ post.title }},{{ post.url }}
+            {% endfor %}
+        {% endfor %}
+        
+    </code>
+</pre>
+
+{% include mermaid.html %}
+<script>
+// Wait for Mermaid to finish rendering by polling for the SVG
+function injectTimelineLinks() {
+    const svg = document.querySelector('svg[aria-roledescription="timeline"]');
+    if (!svg) {
+        setTimeout(injectTimelineLinks, 100); // Try again in 100ms
+        return;
+    }
+    svg.querySelectorAll('.eventWrapper text tspan').forEach(function(tspan) {
+        const text = tspan.textContent.trim();
+        // Expecting "Title,URL"
+        const parts = text.split(',');
+        if (parts.length === 2) {
+            const title = parts[0].trim();
+            const url = parts[1].trim();
+            const a = document.createElementNS("http://www.w3.org/2000/svg", "a");
+            a.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", url);
+            a.setAttribute("target", "_blank");
+            tspan.textContent = title;
+
+            const text = tspan.parentNode;
+            text.parentNode.replaceChild(a, text);
+            a.appendChild(text);
+        }
+    });
+}
+injectTimelineLinks();
+</script>

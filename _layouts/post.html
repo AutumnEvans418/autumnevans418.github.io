@@ -54,10 +54,6 @@ layout: default
   <div class="right-column">
     {% include recent-blogs.html %}
   </div>
-	<link rel="stylesheet" type="text/css" href="/css/mermaid.css">
 </div>
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.2/+esm'
-  mermaid.initialize({startOnLoad:true,theme:'neutral'})
-  await mermaid.run({querySelector:'code.language-mermaid'})
-</script>
+
+{% include mermaid.html %}
