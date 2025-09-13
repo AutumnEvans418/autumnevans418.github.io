@@ -39,6 +39,9 @@
     width: 100%;
 }
 
+img.contain {
+    object-fit: contain;
+}
 
 .blog a {
     text-decoration: underline;
