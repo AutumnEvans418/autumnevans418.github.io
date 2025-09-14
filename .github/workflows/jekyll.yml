@@ -90,9 +90,7 @@ jobs:
 
       - name: Update README in Profile Repo
         run: |
-          dir
           cd autumnevans418
-          dir
           python3 update_readme.py
           cat README.md
 
