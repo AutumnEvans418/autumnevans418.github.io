@@ -50,7 +50,7 @@ jobs:
 
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" --url "${{ steps.pages.outputs.base_url }}"
         env:
           JEKYLL_ENV: production
           PAGES_REPO_NWO: AutumnEvans418/autumnevans418.github.io
