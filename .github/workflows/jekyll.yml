@@ -83,8 +83,10 @@ jobs:
           curl -s https://autumnevans.dev/blog/machine/ -o latest_blogs.md
 
       - name: Clone Profile Repo
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git clone https://github.com/AutumnEvans418/autumnevans418.git
+          git clone https://x-access-token:${GH_TOKEN}@github.com/AutumnEvans418/autumnevans418.git
           cp latest_blogs.md autumnevans418/latest_blogs.md
           cp update_readme.py autumnevans418/update_readme.py
 
@@ -95,10 +97,13 @@ jobs:
           cat README.md
 
       - name: Commit and Push Changes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd autumnevans418
           git config user.name "README-bot"
           git config user.email "readme-bot@example.com"
           git add README.md
           git commit -m "Update latest blogs" || true
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/AutumnEvans418/autumnevans418.git
           git push
