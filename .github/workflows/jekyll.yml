@@ -50,7 +50,7 @@ jobs:
 
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" --url "${{ steps.pages.outputs.base_url }}"
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
           PAGES_REPO_NWO: AutumnEvans418/autumnevans418.github.io
@@ -80,7 +80,7 @@ jobs:
 
       - name: Fetch Latest Blogs
         run: |
-          curl -s https://autumnevans.dev/blog/machine -o latest_blogs.md
+          curl -s https://autumnevans.dev/blog/machine/ -o latest_blogs.md
 
       - name: Clone Profile Repo
         run: |
