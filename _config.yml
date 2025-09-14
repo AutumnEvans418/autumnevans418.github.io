@@ -4,6 +4,9 @@ permalink: /blog/:year/:month/:day/:title
 
 github: [metadata]
 
+url: "https://autumnevans.dev"
+baseurl: ""
+
 urls:
   - text: Home
     url: /
