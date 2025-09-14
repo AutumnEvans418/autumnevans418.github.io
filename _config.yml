@@ -29,6 +29,8 @@ exclude:
   - ".github"
   - ".jekyll-cache"
   - ".jekyll-metadata"
+  - "vendor"
+
 
 
 plugins:
