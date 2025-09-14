@@ -37,7 +37,7 @@ jobs:
         # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
         uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
         with:
-          ruby-version: '3.1' # Not needed with a .ruby-version file
+          ruby-version: '3.3.8' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Setup Pages
@@ -63,3 +63,33 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  update-profile:
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - name: Checkout Pages Repo
+        uses: actions/checkout@v3
+
+      - name: Fetch Latest Blogs
+        run: |
+          curl -s https://autumnevans.dev/blog/machine -o latest_blogs.md
+
+      - name: Clone Profile Repo
+        run: |
+          git clone https://github.com/AutumnEvans418/autumnevans418.git
+          cp latest_blogs.md autumnevans418/latest_blogs.md
+
+      - name: Update README in Profile Repo
+        run: |
+          cd autumnevans418
+          python ../update_readme.py
+
+      - name: Commit and Push Changes
+        run: |
+          cd profile-repo
+          git config user.name "README-bot"
+          git config user.email "readme-bot@example.com"
+          git add README.md
+          git commit -m "Update latest blogs" || true
+          git push
