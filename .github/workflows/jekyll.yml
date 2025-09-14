@@ -86,15 +86,19 @@ jobs:
         run: |
           git clone https://github.com/AutumnEvans418/autumnevans418.git
           cp latest_blogs.md autumnevans418/latest_blogs.md
+          cp update_readme.py autumnevans418/update_readme.py
 
       - name: Update README in Profile Repo
         run: |
+          dir
           cd autumnevans418
-          python ../update_readme.py
+          dir
+          python3 update_readme.py
+          cat README.md
 
       - name: Commit and Push Changes
         run: |
-          cd profile-repo
+          cd autumnevans418
           git config user.name "README-bot"
           git config user.email "readme-bot@example.com"
           git add README.md
