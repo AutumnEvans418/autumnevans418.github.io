@@ -11,12 +11,6 @@ buttons:
     url: https://white-pebble-0dc9b2110.1.azurestaticapps.net/
 ---
 
-Perfect, I’ll refine the blog post with your direction: reframe the introduction around the idea of intentionally making problems harder (like a playful analogy to hashing), remove the *Getting Started* section, and add a **demo example**.
-
-Here’s the updated draft in markdown:
-
----
-
 # Exploring Mathematical Complexity with *Complexify*
 
 As developers, we usually aim to solve problems by finding the **simplest, most elegant solution**. But what if we flipped that on its head?
@@ -26,7 +20,7 @@ What if, instead of simplifying, we intentionally made problems **more complicat
 That’s the idea behind **Complexify**, a web application that takes a simple mathematical equation and transforms it into a more complex but equivalent version before evaluating the result. Think of it like an overly simplified version of hashing: start with something easy to understand, apply transformations, and end up with something that looks far more difficult to interpret, but still resolves to the same value.
 
 ## Try it out:
-<iframe src="https://white-pebble-0dc9b2110.1.azurestaticapps.net/" title="Complexify" width="100%" height="100%"></iframe>
+<iframe src="https://white-pebble-0dc9b2110.1.azurestaticapps.net/" title="Complexify" width="100%" height="800px"></iframe>
 
 ## What is Complexify?
 
@@ -82,5 +76,6 @@ Working on Complexify was one of the few times I’ve used F# alongside Bolero. 
 Overall, the project reinforced how much fun functional programming can be when paired with modern web frameworks.
 
 ## Conclusion
+
 
 Complexify started as a thought experiment, *what happens if we try to make math more difficult instead of simpler?*, and became a full-fledged project. It’s part puzzle, part playground, and part demonstration of how functional programming can model complexity with elegance.
