@@ -70,34 +70,45 @@ Since the workflow needs to push changes to a separate repository (the profile r
 
 ### 5. Workflow Implementation
 
-The workflow YAML includes steps for cloning the profile repo, downloading the latest blog markdown, running the update script, and committing the changes. Here’s a simplified version of the relevant steps:
+The workflow YAML includes steps for cloning the profile repo, downloading the latest blog markdown, running the update script, and committing the changes. Here’s a simplified version of the relevant steps. [See the full pipeline here](https://github.com/AutumnEvans418/autumnevans418.github.io/blob/master/.github/workflows/jekyll.yml):
 
 ```yaml
-- name: Clone Profile Repo
-  env:
-    PROFILE_REPO_TOKEN: ${{ secrets.PROFILE_REPO_TOKEN }}
-  run: |
-    git clone https://x-access-token:${PROFILE_REPO_TOKEN}@github.com/YourUsername/your-profile-repo.git
-    cp latest_blogs.md your-profile-repo/latest_blogs.md
-    cp update_readme.py your-profile-repo/update_readme.py
+  update-profile:
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - name: Checkout Pages Repo
+        uses: actions/checkout@v3
 
-- name: Update README in Profile Repo
-  run: |
-    cd your-profile-repo
-    python3 update_readme.py
-    cat README.md
+      - name: Fetch Latest Blogs
+        run: |
+          curl -s https://autumnevans.dev/blog/machine/ -o latest_blogs.md
 
-- name: Commit and Push Changes
-  env:
-    PROFILE_REPO_TOKEN: ${{ secrets.PROFILE_REPO_TOKEN }}
-  run: |
-    cd your-profile-repo
-    git config user.name "README-bot"
-    git config user.email "readme-bot@example.com"
-    git add README.md
-    git commit -m "Update latest blogs" || true
-    git remote set-url origin https://x-access-token:${PROFILE_REPO_TOKEN}@github.com/YourUsername/your-profile-repo.git
-    git push
+      - name: Clone Profile Repo
+        env:
+          PROFILE_REPO_TOKEN: ${{ secrets.PROFILE_REPO_TOKEN }}
+        run: |
+          git clone https://x-access-token:${PROFILE_REPO_TOKEN}@github.com/AutumnEvans418/autumnevans418.git
+          cp latest_blogs.md autumnevans418/latest_blogs.md
+          cp update_readme.py autumnevans418/update_readme.py
+
+      - name: Update README in Profile Repo
+        run: |
+          cd autumnevans418
+          python3 update_readme.py
+          cat README.md
+
+      - name: Commit and Push Changes
+        env:
+          PROFILE_REPO_TOKEN: ${{ secrets.PROFILE_REPO_TOKEN }}
+        run: |
+          cd autumnevans418
+          git config user.name "README-bot"
+          git config user.email "readme-bot@example.com"
+          git add README.md
+          git commit -m "Update latest blogs" || true
+          git remote set-url origin https://x-access-token:${PROFILE_REPO_TOKEN}@github.com/AutumnEvans418/autumnevans418.git
+          git push
 ```
 
 ### 6. Update Script for the README
@@ -134,3 +145,4 @@ By combining Jekyll’s templating, GitHub Actions, and a simple Python script, 
 
 If you have questions or want to implement something similar, feel free to reach out or check out the source files in my repositories!
 {% endraw %}
+
